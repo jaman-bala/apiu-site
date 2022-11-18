@@ -1,0 +1,28 @@
+{% extends 'main/base.html' %}
+
+
+{% block title %}Новости на сайте{% endblock %}  
+
+
+{% block content %}
+    <div class="features">
+        <h1>Новости на сайте</h1>
+        
+        {% for el in news  %}
+ 
+        <div class="alert alert-warning">
+            <img src="{{ el.img.url }}" class="card-img-top" alt="...">
+            <h2> {{ el.title}}</h2>
+            <h4> {{el.anons}}</h4>
+            <p> {{ el.full_text }}
+            <a href="#" class="btn btn-primary">Подробнее</a>
+            <p> {{el.date}} </p>
+
+
+        </div>    
+
+        {%  endfor  %}
+
+    </div>
+
+    {%endblock%}    
