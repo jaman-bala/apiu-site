@@ -1,0 +1,24 @@
+{% extends 'main/base.html' %}
+
+
+{% block title %}Онлайн вопросы{% endblock %}  
+
+
+{% block content %}
+    <div class="features">
+        <h1>Онлайн вопросы</h1>
+        
+        {% for el in news  %}
+        
+        <div class="input-group">
+            <span class="input-group-text">First and last name</span>
+            <input type="text" aria-label="First name" class="form-control">
+            <input type="text" aria-label="Last name" class="form-control">
+          </div>
+           
+
+        {%  endfor  %}
+
+    </div>
+
+    {%endblock%}    
