@@ -18,12 +18,9 @@
             <p> {{ el.full_text }} </p>
             <a href="{% url 'news_detail' el.id %}" class="btn btn-primary">Подробнее</a>
             <p> {{el.date}} </p>
-
-
-        </div>    
+            </div>    
 
         {%  endfor  %}
-
     </div>
 
-    {%endblock%}    
+{%endblock%}    
