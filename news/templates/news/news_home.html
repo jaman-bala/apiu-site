@@ -16,7 +16,7 @@
             <h2> {{ el.title}}</h2>
             <h4> {{el.anons}}</h4>
             <p> {{ el.full_text }} </p>
-            <a href="#" class="btn btn-primary">Подробнее</a>
+            <a href="{% url 'news_detail' el.id %}" class="btn btn-primary">Подробнее</a>
             <p> {{el.date}} </p>
 
 
