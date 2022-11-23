@@ -7,20 +7,24 @@
 
 
     <div class="features">
-        <h1>Новости на сайте</h1>
-        
+        <h1 class="features__title">Новости на сайте</h1>
+        <div class="features__row">
         {% for el in news  %}
 
-            <div class="alert alert-warning">
-            <img src="{{ el.img.url }}" class="card-img-top" alt="...">
-            <h2> {{ el.title}}</h2>
-            <h4> {{el.anons}}</h4>
-            <p> {{ el.full_text }} </p>
-            <a href="{% url 'news_detail' el.id %}" class="btn btn-primary">Подробнее</a>
-            <p> {{el.date}} </p>
+            
+                <div class="alert alert-warning">
+                    <img src="{{ el.img.url }}" class="card-img-top" alt="...">
+                    <h2> {{ el.title}}</h2>
+                    <h4> {{el.anons}}</h4>
+                    <p> {{ el.full_text | truncatewords:10}} </p>
+                    <a href="{% url 'news_detail' el.id %}" class="btn btn-primary">Подробнее</a>
+                    <p> {{el.date}} </p>
+                
             </div>    
 
         {%  endfor  %}
+        
+        </div>
     </div>
 
 {%endblock%}    

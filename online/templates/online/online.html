@@ -5,6 +5,7 @@
 {% block content %}
     <div class="features">
         <h1>Онлайн вопросы</h1>
+        <div class="features__row">
         {% if task%}
             {% for on in task%}
             <div class="alert alert-warning mt-2">
@@ -19,7 +20,7 @@
             <p> У нас нет записи </p>
 
         {%endif%}
-    
+        </div>
     </div>
 
 {%endblock%} 

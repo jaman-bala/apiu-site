@@ -6,10 +6,18 @@
 {% block content %}
 
      <div class="features">
-        <h1>{{ article.title }}</h1>
-        <img src="{{ article.img.url }}" class="card-img-top" alt="...">
-        <p>{{ article.date }}</p>
-        <p>{{ article.full_text }}</p> 
+         <div class="features__box">
+             <div class="features__box-info">
+                <h1>{{ article.title }}</h1>
+                <div class="features__img">
+                    <img  src="{{ article.img.url }}" class="card-img-top" alt="...">
+                </div>
+                <p>{{ article.date }}</p>
+                <p>{{ article.full_text }}</p> 
+             </div>
+            
+         </div>
+    
     </div> 
 
 {%endblock%}    
