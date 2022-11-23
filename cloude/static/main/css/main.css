@@ -1,7 +1,10 @@
-head  {
+div img {
         height: 100%;
         /* max-height: 600px; */
-        width: 1000px;
+        
+        width: 300px;
+        margin-top: -5px;
+        padding-left: 2.5%;
         background-color: hsla(200,40%,30%,.4);
         background-image:   
           url('https://78.media.tumblr.com/cae86e76225a25b17332dfc9cf8b1121/tumblr_p7n8kqHMuD1uy4lhuo1_540.png'), 
@@ -54,6 +57,7 @@ aside {
 aside img {
     width: 180px;
     float: left;
+    
 }
 aside .logo {
     font-size: 20px;
@@ -92,7 +96,9 @@ main .features {
     margin-top: 100px;
     text-align: center;
     width: 75%;
+    margin-top: -10px;
 }
+
 main .features h1 {font-size: 50px;}
 main .features p {max-width: 400px; margin: 20px auto;}
 
