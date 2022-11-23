@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .models import Create
 from .forms import CreateForm
-
+from django.views.generic import DetailView
 
 
 def create(request):
@@ -22,4 +22,7 @@ def create(request):
 
 
 def online(request):
-    return render(request, 'online/online.html')
+    task = Create.objects.order_by('-id')
+    return render(request, 'online/online.html', {'task': task})
+
+

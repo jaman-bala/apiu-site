@@ -10,6 +10,6 @@ def news_home(request):
 
 
 class NewsDetailView(DetailView):
-    model = Articles
-    template_name = 'news/details_view.html'
-    context_object_name = 'article'
+        model = Articles
+        template_name = 'news/details_view.html'
+        context_object_name = 'article'

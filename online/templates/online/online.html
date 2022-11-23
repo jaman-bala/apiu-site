@@ -1,13 +1,25 @@
 {% extends 'main/base.html' %}
 
 
-{% block title %}Онлайн вопросы{% endblock %}  
-
 
 {% block content %}
     <div class="features">
         <h1>Онлайн вопросы</h1>
-        
-        
+        {% if task%}
+            {% for on in task%}
+            <div class="alert alert-warning mt-2">
+            <h2> {{ on.title }} </h2>
+            <p> {{ on.text }} </p>
+            <p> Имя: {{ on.first_name }} {{ on.last_name }} </p>
+            <p> Дата: {{ on.date }} </p>
+            </div>
+    
+            {%endfor%}
+        {% else %}
+            <p> У нас нет записи </p>
+
+        {%endif%}
+    
+    </div>
 
 {%endblock%} 
