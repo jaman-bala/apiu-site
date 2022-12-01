@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Create
 from .forms import CreateForm
 from django.views.generic import DetailView
@@ -10,6 +10,7 @@ def create(request):
         form = CreateForm(request.POST)
         if form.is_valid():
             form.save()
+            return redirect('online')
         else:
             error = 'Формат был неверной'
 

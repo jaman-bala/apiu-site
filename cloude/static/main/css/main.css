@@ -96,9 +96,7 @@ aside ul li:hover, aside ul a:hover {
 .features {
     float: left;
     color: #fff;
-  
     text-align: center;
-    
     width: 75%;
     margin-top: 50px;
   }
@@ -107,6 +105,10 @@ aside ul li:hover, aside ul a:hover {
     flex-wrap: wrap;
     align-items: center;
     column-gap: 30px;
+  }
+  .features__row h2{
+    color: #181818;
+    background: #2c2c2c;
   }
   .features__box{
     display: flex;

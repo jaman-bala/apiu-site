@@ -10,7 +10,7 @@
             {% for on in task%}
             <div class="alert alert-warning mt-2">
             <h2> {{ on.title }} </h2>
-            <p> {{ on.text }} </p>
+            <p> {{ on.text | truncatewords:10 }} </p>
             <p> Имя: {{ on.first_name }} {{ on.last_name }} </p>
             <p> Дата: {{ on.date }} </p>
             </div>
