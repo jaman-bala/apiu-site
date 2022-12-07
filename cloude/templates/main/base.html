@@ -34,7 +34,7 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="{% url 'home' %}"
@@ -50,18 +50,25 @@
             <li class="nav-item">
               <a class="nav-link" href="{% url 'about' %}">О Нас</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'online' %}">Онлайн вопросы</a>
+            
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="{% url 'online' %}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Онлайн
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="{% url 'online' %}">Вопросы</a></li>
+                  <li><a class="dropdown-item" href="{% url 'create' %}">Написать вопрос</a></li>
+                  <li><a class="dropdown-item" href="#">Жалоба</a></li>
+                </ul>
               </li>
-            <li class="nav-item">
-              <a button class="btn btn-info" align="right" href="{% url 'create' %}">Задать вопрос</a>
-            </li>
+           
           </ul>
         </div>
       </div>
     </nav>
     </div>
     <main>{% block content %} {% endblock %}</main>
+    
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
