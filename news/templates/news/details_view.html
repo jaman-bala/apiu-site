@@ -1,23 +1,22 @@
-{% extends 'main/base.html' %}
+{% extends 'main/base.html' %} {% block content %}
 
+<div class="container text-center">
+  <div class="row">
+    <div class="features">
+      <div class="features__box">
+        <div class="features__box-info">
+          <p style="font-size: 16px" color="green" align="right" face="Arial">
+            <em>{{ article.date }}</em>
+          </p>
+          <div class="features__img">
+            <img src="{{ article.img.url }}" class="card-img-top" alt="..." />
+            <h1 class="fw-light">{{ article.title }}</h1>
+          </div>
+          <p class="lead text-muted">{{ article.full_text }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-
-
-{% block content %}
-
-     <div class="features">
-         <div class="features__box">
-             <div class="features__box-info">
-                <h1>{{ article.title }}</h1>
-                <div class="features__img">
-                    <img  src="{{ article.img.url }}" class="card-img-top" alt="...">
-                </div>
-                <p>{{ article.date }}</p>
-                <p>{{ article.full_text }}</p> 
-             </div>
-            
-         </div>
-    
-    </div> 
-
-{%endblock%}    
+{%endblock%}

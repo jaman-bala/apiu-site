@@ -1,30 +1,26 @@
-{% extends 'main/base.html' %}
-{% block content %}
+{% extends 'main/base.html' %} {% block content %}
 
-
-
-
-
-
-    <div class="features">
-        <h1 class="features__title">Новости на сайте</h1>
-        <div class="features__row">
-        {% for el in news  %}
-
-            
-                <div class="alert alert-warning">
-                    <img src="{{ el.img.url }}" class="card-img-top" alt="...">
-                    <h2> {{ el.title}}</h2>
-                    <h4> {{el.anons}}</h4>
-                    <p> {{ el.full_text | truncatewords:10}} </p>
-                    <a href="{% url 'news_detail' el.id %}" class="btn btn-primary">Подробнее</a>
-                    <p> {{el.date}} </p>
-                
-            </div>    
-
-        {%  endfor  %}
-        
+<h1 class="text-center">Новости на сайте</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4 mx=auto">
+      <div class="features">
+        {% for el in news %}
+        <div class="alert alert-warning">
+          <img src="{{ el.img.url }}" class="card-img-top" alt="..." />
+          <h2>{{ el.title}}</h2>
+          <h4 class="fw-light">{{el.anons}}</h4>
+          <p class="lead text-muted">{{ el.full_text | truncatewords:10}}</p>
+          <a href="{% url 'news_detail' el.id %}" class="btn btn-primary"
+            >Подробнее</a
+          >
+          <p style="font-size: 16px" color="green" align="right" face="Arial">
+            <em>{{el.date}}</em>
+          </p>
         </div>
+        {% endfor %}
+      </div>
     </div>
-
-{%endblock%}    
+  </div>
+</div>
+{%endblock%}

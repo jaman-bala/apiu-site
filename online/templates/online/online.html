@@ -1,26 +1,26 @@
-{% extends 'main/base.html' %}
-
-
-
-{% block content %}
-    <div class="features">
-        <h1>Онлайн вопросы</h1>
-        <div class="features__row">
-        {% if task%}
-            {% for on in task%}
-            <div class="alert alert-warning mt-2">
-            <h2> {{ on.title }} </h2>
-            <p> {{ on.text | truncatewords:10 }} </p>
-            <p> Имя: {{ on.first_name }} {{ on.last_name }} </p>
-            <p> Дата: {{ on.date }} </p>
-            </div>
+{% extends 'main/base.html' %} {% block content %}
+<dir class="container">
+  <div class="row">
+    <h1 align="center">Онлайн вопросы</h1>
     
-            {%endfor%}
-        {% else %}
-            <p> У нас нет записи </p>
+      {% if task%} {% for on in task%}
+      <div class="alert alert-warning mt-2">
+        <h2 style=margin-left:35px; > {{ on.title }}</h2>
+        <p>Вопрос: {{ on.text | truncatewords:10 }}</p>
+        <p class="lead text-muted" style="font-size: 15px" align="right">
+          <em>Имя: {{ on.first_name }} {{ on.last_name }}</em>
+        </p>
+        <p class="lead text-muted" style="font-size: 12px" align="right">
+          <em>Дата: {{ on.date }}</em>
+        </p>
+      </div>
 
-        {%endif%}
-        </div>
+      {%endfor%} {% else %}
+      <p>У нас нет записи</p>
+
+      {%endif%}
     </div>
 
-{%endblock%} 
+</dir>
+
+{%endblock%}
