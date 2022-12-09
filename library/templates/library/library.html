@@ -9,9 +9,9 @@
             
             <img p-2  src="{{ book.lable.url }}" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">{{ book.title }}</h5>
-              <p class="card-text">Автор: {{ book.author }}</p>
-              <a type="button" href="{{ book.books.url }}" class="btn btn-danger">
+              <h6 class="card-title">{{ book.title }}</h6>
+              <p class="card-text"><small>Автор:</small> {{ book.author }}</p>
+              <a type="button" href="{{ book.books.url }}" class="btn btn-danger" target="_blank">
                 <svg
                   x="0px"
                   y="0px"
