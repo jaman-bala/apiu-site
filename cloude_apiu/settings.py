@@ -41,7 +41,9 @@ INSTALLED_APPS = [
     # APP
     'cloude',
     'news',
-    'online'
+    'online',
+    'library',
+    'account',
 ]
 
 MIDDLEWARE = [
