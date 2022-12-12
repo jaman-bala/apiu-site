@@ -1,38 +1,35 @@
 {% extends 'main/base.html' %} {% block content %} {% load static %}
 
-<div class="container p-5">
-  <div class="row">
-    <div class="container">
 
-        <div class="card " style="width: 18rem;">
-            {% for book in books %}
-            
-            <img p-2  src="{{ book.lable.url }}" class="card-img-top" alt="...">
+     <div class="container p-5">
+      <div class="row row-cols-md-3">
+        {% for book in books %}
+
+          <div class="card">
             <div class="card-body">
-              <h6 class="card-title">{{ book.title }}</h6>
-              <p class="card-text"><small>Автор:</small> {{ book.author }}</p>
-              <a type="button" href="{{ book.books.url }}" class="btn btn-danger" target="_blank">
-                <svg
-                  x="0px"
-                  y="0px"
-                  viewBox="0 -60 800 1000"
-                  fill="white"
-                  width="20"
-                  height="20"
-                >
-                  <path
-                    d="M867.5,500H714.4L500,714.4L285.6,500H132.5L10,745v61.3h980V745L867.5,500z M10,867.5h980v61.3H10V867.5z M561.3,316.3v-245H438.8v245H224.4L500,591.9l275.6-275.6H561.3z"
-                  ></path>
-                </svg>
-                Download
-                <a/>
-              
-              
-              {%endfor%}
-            </div>
-    </div>
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text"><small>Автор:</small> </p>
+                  <a type="button" href="{{ book.books.url }}" class="btn btn-danger" target="_blank">
+                    <svg
+                      x="0px"
+                      y="0px"
+                      viewBox="0 -60 800 1000"
+                      fill="white"
+                      width="20"
+                      height="20"
+                    >
+                      <path
+                        d="M867.5,500H714.4L500,714.4L285.6,500H132.5L10,745v61.3h980V745L867.5,500z M10,867.5h980v61.3H10V867.5z M561.3,316.3v-245H438.8v245H224.4L500,591.9l275.6-275.6H561.3z"
+                      ></path>
+                    </svg>
+                    Download
+                    <a/>
+          </div>
+        </div>
+        {%endfor%}
+  </div>
 </div>
 
 
-  {%endblock%}
 
+  {%endblock%}
