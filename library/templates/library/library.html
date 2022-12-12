@@ -4,11 +4,10 @@
      <div class="container p-5">
       <div class="row row-cols-md-3">
         {% for book in books %}
-
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text"><small>Автор:</small> </p>
+              <h5 class="card-title">{{ book.title }}</h5>
+              <p class="card-text"><small>Автор:</small> {{ book.author }}</p>
                   <a type="button" href="{{ book.books.url }}" class="btn btn-danger" target="_blank">
                     <svg
                       x="0px"

@@ -1,3 +1,23 @@
 body {
     background-color: blueviolet;
 }
+
+.section.home_page_section {
+    padding-top: 50px!important;
+}
+
+.Services_Section__cPIPR {
+    background-color: #183f5b;
+    margin-top: 60px;
+    padding-top: 100px!important;
+    --btn-color: #fff;
+}
+.section {
+    padding: 20px 0 0;
+}
+main2 .card-body {
+    background: rgb(145, 10, 10);
+}
+row {
+    background-color: #183f5b;
+}
