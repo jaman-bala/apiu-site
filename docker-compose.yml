@@ -23,7 +23,7 @@ services:
 
 
   db:
-    container_name: doors_db
+    container_name: apiu_db
     restart: always
     image: postgres:12.4-alpine
     volumes:
