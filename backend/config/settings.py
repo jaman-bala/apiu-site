@@ -122,9 +122,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/media/'
+STATIC_ROOT = os.path.join(BASE_DIR, "/static/")
+
+STATICFILES_DIRS = (
+    STATIC_ROOT,
+) 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
