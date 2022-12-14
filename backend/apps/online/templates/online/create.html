@@ -1,11 +1,12 @@
 {% extends 'main/base.html' %} {% block content %}
 
 <div class="container text-center">
+  <div class="form-floating mb-3">
   <div class="features">
     <h1>Форма по добавлению вопросов</h1>
     <form method="post">
-      {% csrf_token %} {{ form.first_name }}<br />
-      {{ form.last_name }}<br />
+      {% csrf_token %} {{ form.first_name }}<br >
+      {{ form.last_name }}<br/>
       {{ form.phone }}<br />
       {{ form.email }}<br />
       {{ form.title }}<br />
@@ -16,5 +17,6 @@
       <button class="btn btn-success" type="submit">Отправить</button>
     </form>
   </div>
+</div>
 </div>
 {%endblock%}

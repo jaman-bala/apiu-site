@@ -18,7 +18,7 @@ class CreateForm(ModelForm):
                 'placeholder': 'Фамилия'
             }),
             "phone": NumberInput(attrs={
-                'class': 'form-control',
+                'class': 'input-group-text',
                 'placeholder': 'Номер телефона'
             }),
             "email": TextInput(attrs={
@@ -26,7 +26,7 @@ class CreateForm(ModelForm):
                 'placeholder': 'Адрес электронной почты'
             }),
             "title": TextInput(attrs={
-                'class': 'form-control',
+                'class': 'input-group-text',
                 'placeholder': 'Название вопроса'
             }),
             "text": Textarea(attrs={
@@ -34,7 +34,7 @@ class CreateForm(ModelForm):
                 'placeholder': 'Текст'
             }),
             "file": FileInput(attrs={
-                'class': 'form-control',
+                'class': 'input-group-text',
                 'placeholder': 'Текст'
             }),
             "date": DateTimeInput(attrs={
