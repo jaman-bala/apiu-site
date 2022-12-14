@@ -7,11 +7,12 @@ class NewshomeView(ListView):
         model = Articles
         template_name = 'news/news_home.html'
         context_object_name = 'news'
-        paginate_by = 15
+        paginate_by = 5
+        queryset = Articles.objects.all()
 
-def news_home(request):
-    news = Articles.objects.order_by('-date')
-    return render(request, 'news/news_home.html', {'news': news} )
+# def news_home(request):
+#     news = Articles.objects.order_by('-date')
+#     return render(request, 'news/news_home.html', {'news': news} )
 
 
 class NewsDetailView(DetailView):

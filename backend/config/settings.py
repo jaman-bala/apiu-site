@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'backend.apps.online',
     'backend.apps.library',
     'backend.apps.account',
+    'backend.apps.project',
 ]
 
 MIDDLEWARE = [

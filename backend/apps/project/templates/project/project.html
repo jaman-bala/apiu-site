@@ -1,0 +1,17 @@
+{% extends 'main/base.html' %} {% block content %} {% load static %}
+
+
+<h1 class="text-center p-3">ПОДР</h1>
+  <div class="container px-4 text-center p-5">
+    <div class="row row-cols-1 row-cols-md-3 g-4 gx-5">
+        {% for pro in project %}
+      <div class="col">
+       <div class="p-3 border bg-light">
+        <a type="button" href="{{ pro.file.url }}" class="btn btn-danger" target="_blank"> {{ pro.title }}</a>
+    </div>
+      </div>
+      {%endfor%}
+    </div>
+  </div>
+
+{%endblock%}
