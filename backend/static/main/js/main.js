@@ -1,6 +1,0 @@
-$('.dropdown-toggle').dropdown()
-
-
-
-
-  
