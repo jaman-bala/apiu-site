@@ -1,7 +1,3 @@
-main2 .card-body {
-  background: rgb(192, 81, 81);
-}
-
 .scrollbar-deep-purple::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
     background-color: #F5F5F5;
@@ -137,38 +133,4 @@ main2 .card-body {
     }
 }
 
-.container {
-    max-width: 700px;
-    margin: 0 auto;
-  }
 
-  .itc-slider__item {
-    flex: 0 0 33.3333333333%;
-    max-width: 33.3333333333%;
-    height: 250px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: rgba(255,255,255, 0.8);
-    font-size: 7rem;
-  }
-
-  .itc-slider__item:nth-child(1) {
-    background-color: #f44336;
-  }
-
-  .itc-slider__item:nth-child(2) {
-    background-color: #9c27b0;
-  }
-
-  .itc-slider__item:nth-child(3) {
-    background-color: #3f51b5;
-  }
-
-  .itc-slider__item:nth-child(4) {
-    background-color: #03a9f4;
-  }
-
-  .itc-slider__item:nth-child(5) {
-    background-color: #4caf50;
-  }
