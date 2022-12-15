@@ -81,23 +81,23 @@ WSGI_APPLICATION = 'backend.config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.getenv("POSTGRES_DB",default='apiu_db'),
-        'USER' : os.getenv("POSTGRES_USER",default='apiu_user'),
-        'PASSWORD' : os.getenv("POSTGRES_PASSWORD",default='ZAQ12345tgb'),
-        'HOST' : os.getenv("POSTGRES_HOST",default='127.0.0.1'),
-        'PORT' : os.getenv("POSTGRES_PORT", default='5432'),
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': os.getenv("POSTGRES_DB",default='apiu_db'),
+#         'USER' : os.getenv("POSTGRES_USER",default='apiu_user'),
+#         'PASSWORD' : os.getenv("POSTGRES_PASSWORD",default='ZAQ12345tgb'),
+#         'HOST' : os.getenv("POSTGRES_HOST",default='127.0.0.1'),
+#         'PORT' : os.getenv("POSTGRES_PORT", default='5432'),
+#     }
+# }
 
 
 # Password validation
@@ -136,12 +136,8 @@ USE_TZ = True
 
 STATIC_URL = "/static/"
 
-STATIC_ROOT = "/static/"
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "staticfiles"),]
-STATICFILES_FINDERS = (
-    'django.contrib.staticfiles.finders.FileSystemFinder',
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-)
+STATIC_URL = '/static/'
+STATICFILES_DIRS=[os.path.join(BASE_DIR,'static')]
 
 
 MEDIA_URL = "/media/"
