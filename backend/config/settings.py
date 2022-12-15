@@ -81,23 +81,18 @@ WSGI_APPLICATION = 'backend.config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': os.getenv("POSTGRES_DB",default='apiu_db'),
+        'USER' : os.getenv("POSTGRES_USER",default='apiu_user'),
+        'PASSWORD' : os.getenv("POSTGRES_PASSWORD",default='ZAQ12345tgb'),
+        'HOST' : os.getenv("POSTGRES_HOST",default='127.0.0.1'),
+        'PORT' : os.getenv("POSTGRES_PORT", default='5432'),
     }
 }
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': os.getenv("POSTGRES_DB",default='apiu_db'),
-#         'USER' : os.getenv("POSTGRES_USER",default='apiu_user'),
-#         'PASSWORD' : os.getenv("POSTGRES_PASSWORD",default='ZAQ12345tgb'),
-#         'HOST' : os.getenv("POSTGRES_HOST",default='127.0.0.1'),
-#         'PORT' : os.getenv("POSTGRES_PORT", default='5432'),
-#     }
-# }
 
 
 # Password validation
