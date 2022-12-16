@@ -12,4 +12,4 @@ urlpatterns = [
     path('library/', include('backend.apps.library.urls')),
     path('project/', include('backend.apps.project.urls')),
     
-]
+]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
