@@ -5,6 +5,7 @@ class Photo(models.Model):
     img1 = models.ImageField(upload_to='img', blank=True)
     img2 = models.ImageField(upload_to='img', blank=True)
     img3 = models.ImageField(upload_to='img', blank=True)
+   
 
     def __str__(self):
         return str(self.id)

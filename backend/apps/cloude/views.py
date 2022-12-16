@@ -4,7 +4,7 @@ from .additional import Info
 from django.views.generic import ListView
 
 
-class InfoListView(ListView):
+class InfoView(ListView):
         model = Info.objects.all()
         template_name = 'main/index.html'
         context_object_name = 'informations'

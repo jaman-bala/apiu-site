@@ -172,3 +172,7 @@ main2 .card-body {
   .itc-slider__item:nth-child(5) {
     background-color: #4caf50;
   }
+
+body {
+    background: rgb(34, 140, 226);
+}
