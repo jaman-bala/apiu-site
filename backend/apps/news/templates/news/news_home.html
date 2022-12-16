@@ -4,7 +4,23 @@
 
 <div class="container">
   <div class="row row-cols-1 row-cols-md-3 g-4">
-    {% for el in news %}
+    {% comment %} {% for el in news %}
+    <div class="card-group">
+      <div class="card">
+        <img src="{{ el.img.url }}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{ el.title}}</h5>
+          <p class="card-text">{{ el.full_text | truncatewords:15}}</p>
+          <a href="{% url 'news_detail' el.id %}" class="btn btn-primary"
+              >Подробнее</a
+            >
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">{{el.date}}</small>
+        </div>
+      </div>
+      {% endfor %} {% endcomment %}
+  {% for el in news %}
     <div class="cart aria-hidden="true"">
         <div class="features">
           <div class="alert alert-warning">
@@ -22,6 +38,8 @@
         </div>
       </div>
       {% endfor %}
+    </div>
+  </div>
     </div>
   </div> 
 
