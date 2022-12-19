@@ -1,18 +1,19 @@
 {% extends 'main/base.html' %} {% block content %} {% load static %}
 <main3>
 <div class="wrapper">
-  <i class="fa-solid fa-angle-left"></i>
+  <i id="left" class="fa-solid fa-angle-left"></i>
   <div class="carousel">
-    <img src="{% static 'main/img/logot.png' %}" alt="">
-    <img src="{% static 'main/img/logot.png' %}" alt="">
-    <img src="{% static 'main/img/logot.png' %}" alt="">
-    <img src="{% static 'main/img/logot.png' %}" alt="">
-    <img src="{% static 'main/img/logot.png' %}" alt="">
-    <img src="{% static 'main/img/logot.png' %}" alt="">
+    <img src="{% static 'main/img/logot.png' %}" alt="img" draggable="false">
+    <img src="{% static 'main/img/APIU_logo.png' %}" alt="img" draggable="false">
+    <img src="{% static 'main/img/logot.png' %}" alt="img" draggable="false">
+    <img src="{% static 'main/img/logot.png' %}" alt="img" draggable="false">
+    <img src="{% static 'main/img/fon.png' %}" alt="img" draggable="false">
+    <img src="{% static 'main/img/logo.png' %}" alt="img" draggable="false">
   </div>
-  <i class="fa-solid fa-angle-right"></i>
+  <i id="right" class="fa-solid fa-angle-right"></i>
 </div>
 </main3>
+
 {% comment %} <div class="album py-2 bg-light">
 <div class="container  p-3">
   <div class="row">

@@ -14,11 +14,20 @@ main3 {
     align-items: center;
     justify-content: center;
     min-height: 80vh;
-    background: #343F4F;
+    background-image: url('fon.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
+
+
 .wrapper {
-    max-width: 1200px;
+    max-width: 1500px;
     position: relative;
 }
 
@@ -31,13 +40,14 @@ main3 {
     font-size: 1.2rem;
     text-align: center;
     line-height: 45px;
-    background: #fff;
+    background: rgb(255, 255, 255);
     border-radius: 50%;
-    transform: translateY(-30%);
+    transform: translateY( -50%);
 }
 
 .wrapper i:first-child{
     left: -23px;
+    display: none;
 }
 
 .wrapper i:last-child{
@@ -49,13 +59,23 @@ main3 {
     cursor: pointer;
     overflow: hidden;
     white-space: nowrap;
+    scroll-behavior: smooth;
+}
+
+.carousel.dragging{
+    cursor: grab;
+    scroll-behavior: auto;
+}
+
+.carousel.dragging img {
+    pointer-events: none;
 }
 
 .carousel img {
-    height: 300px;
+    height: 340px;
     object-fit: cover;
     margin-left: 14px;
-    width: calc(90% / 3);
+    width: calc(100% / 3);
 }
 
 .carousel img:first-child{
@@ -64,7 +84,7 @@ main3 {
 
 @media screen and (max-width: 900px) {
     .carousel img{
-        width: calc(90% / 2);
+        width: calc(100% / 2);
     }
 }
 
