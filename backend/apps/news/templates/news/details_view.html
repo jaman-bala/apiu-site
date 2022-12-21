@@ -1,30 +1,24 @@
 {% extends 'main/base.html' %} {% block content %} {% load static %}
 
 <div class="container">
-  <div class="row">
-    <div class="features">
-      <div class="features__box">
+
+     
+        <h1 class="fw-light p-3" align="center" >{{ article.title }}</h1>
         <p style="font-size: 16px" color="green" align="right" face="Arial">
           <em>{{ article.date }}</em>
         </p>
-
-        <img
-          src="{{ article.img.url }}"
-          class="col-md-6 float-md-end mb-3 ms-md-3"
-          alt="..."
+        <img src="{{ article.img.url }}" alt="img" width="950px" align="center"
         />
-        <h1 class="fw-light">{{ article.title }}</h1>
-      </div>
+      
       <div>
-        <p class="lead text-muted">{{ article.full_text }}</p>
+        <p class="lead text-muted p-5">{{ article.full_text }}</p>
       </div>
       <div>
         <video controls width="600px">
           <source src="{{ article.video.url }}" />
         </video>
       </div>
-    </div>
+
   </div>
 
-  {%endblock%}
-</div>
+{%endblock%}

@@ -1,32 +1,17 @@
-{% extends 'main/base.html' %} {% block content %} {% load static %}
+{% extends 'main/base.html' %} {% load static %}
 
-<h1 class="text-center p-3"  height="200px" bgcolor="red">Новости на сайте</h1>
+{% block content %}
 
-<div class="container p-3">
-  <div class="row row-cols-1 row-cols-md-3 g-4">
-    {% comment %} {% for el in news %}
-    <div class="card-group">
-      <div class="card">
-        <img src="{{ el.img.url }}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">{{ el.title}}</h5>
-          <p class="card-text">{{ el.full_text | truncatewords:15}}</p>
-          <a href="{% url 'news_detail' el.id %}" class="btn btn-primary"
-              >Подробнее</a
-            >
-        </div>
-        <div class="card-footer">
-          <small class="text-muted">{{el.date}}</small>
-        </div>
-      </div>
-      {% endfor %} {% endcomment %}
-  {% for el in news %}
-    <div class="cart aria-hidden="true"">
+<h1 class="text-center p-3" height="200px">Новости на сайте</h1>
+
+<div class="container">
+<div class="row row-cols-1 row-cols-md-3 g-4">
+{% for el in news %}
+    <div class="cart aria-hidden="true">
         <div class="features">
           <div class="alert alert-warning">
-            <img src="{{ el.img.url }}" class="card-img-top" alt="..." />
+            <img src="{{ el.img.url }}" class="card-img-top" alt="img" />
             <h2>{{ el.title}}</h2>
-            <h4 class="fw-light">{{el.anons}}</h4>
             <p class="lead text-muted">{{ el.full_text | truncatewords:20}}</p>
             <a href="{% url 'news_detail' el.id %}" class="btn btn-primary"
               >Подробнее</a
@@ -40,33 +25,6 @@
       {% endfor %}
     </div>
   </div>
-    </div>
-  </div> 
 
-  <div class="container">
-    <div class="row">
-      {% if is_paginated %}
-     <ul class="pagination">
-        {% if page_obj.has_previous %}
-      <li><a href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
-    {% else %}
-      <li class="disabled"><span>&laquo;</span></li>
-    {% endif %}
-    {% for i in paginator.page_range %}
-      {% if page_obj.number == i %}
-        <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
-      {% else %}
-        <li><a href="?page={{ i }}">{{ i }}</a></li>
-      {% endif %}
-    {% endfor %}
-    {% if page_obj.has_next %}
-      <li><a href="?page={{ page_obj.next_page_number }}">&raquo;</a></li>
-    {% else %}
-      <li class="disabled"><span>&raquo;</span></li>
-    {% endif %}
-  </ul>
-{% endif %}
-    </div>
-  </div>
   
 {%endblock%}

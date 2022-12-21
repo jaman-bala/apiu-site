@@ -1,6 +1,55 @@
 {% extends 'main/base.html' %} {% block content %} {% load static %}
 <main3>
-<div class="wrapper">
+
+
+<div class="slide-conatiner">
+    <span class="slider-span" id="slider-span1"></span>
+    <span class="slider-span" id="slider-span2"></span>
+    <span class="slider-span" id="slider-span3"></span>
+    <span class="slider-span" id="slider-span4"></span>
+    <span class="slider-span" id="slider-span5"></span>
+    <span class="slider-span" id="slider-span6"></span>
+    <span class="slider-span" id="slider-span7"></span>
+
+    <div class="image-slider">
+      <div class="slides-div" id="slide-1">
+        <img src="{% static 'img/wb.png' %}" alt="" class="img" id="img1">
+        <a href="#slider-span1" class="button" id="button-1"></a>
+      </div>
+      <div class="slides-div" id="slide-2"> 
+        <img src="{% static 'img/fon.png' %}" alt="" class="img" id="img2">
+        <a href="#slider-span2" class="button" id="button-2"></a>
+      </div>
+      <div class="slides-div" id="slide-3">
+        <img src="{% static 'img/arislogo.png' %}" alt="" class="img" id="img3">
+        <a href="#slider-span3" class="button" id="button-3"></a>
+      </div>
+      <div class="slides-div" id="slide-4">
+        <img src="{% static 'img/logot.png' %}" alt="" class="img" id="img4">
+        <a href="#slider-span4" class="button" id="button-4"></a>
+      </div>
+      <div class="slides-div" id="slide-5">
+        <img src="{% static 'img/logot.png' %}" alt="" class="img" id="img5">
+        <a href="#slider-span5" class="button" id="button-5"></a>
+      </div>
+      <div class="slides-div" id="slide-6">
+        <img src="{% static 'img/logot.png' %}" alt="" class="img" id="img5">
+        <a href="#slider-span6" class="button" id="button-6"></a>
+      </div>
+      <div class="slides-div" id="slide-7">
+        <img src="{% static 'img/logot.png' %}" alt="" class="img" id="img5">
+        <a href="#slider-span7" class="button" id="button-7"></a>
+      </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+{% comment %} <div class="wrapper">
   <i id="left" class="fa-solid fa-angle-left"></i>
   <div class="carousel">
     <img src="{% static 'img/logot.png' %}" alt="img" draggable="false">
@@ -11,7 +60,7 @@
     <img src="{% static 'img/logo.png' %}" alt="img" draggable="false">
   </div>
   <i id="right" class="fa-solid fa-angle-right"></i>
-</div>
+</div> {% endcomment %}
 </main3>
 
 {% comment %} <div class="album py-2 bg-light">
@@ -137,9 +186,27 @@
 
 <div class="container-center">
   <h1 class="text-center p-3">Полезные ссылки</h1>
- </div>
+</div>
+<div class="container-box">
 
-<div class="container">
+  <div class="box">
+   <a href="https://www.aris.kg/index.php?option=com_content&view=category&layout=blog&id=8&Itemid=160&lang=ru"> <img src="{% static 'img/arislogo.png' %}" alt="img" ></a> 
+  </div>
+  <div class="box">
+    <a href="https://www.ifad.org/en/"><img src="{% static 'img/ifad.png' %}" alt="img" /><a/>
+  </div>
+  <div class="box">
+    <a href="https://www.vsemirnyjbank.org/ru/home"><img src="{% static 'img/wb.png' %}" alt="img" /></a>
+  </div>
+  <div class="box">
+    <a href="https://www.un.org/ru/"><img src="{% static 'img/un-logo-big.png' %}" alt="img" /></a>
+  </div>
+  <div class="box">
+    <img src="{% static 'img/logot.png' %}" alt="img" />
+  </div>
+ </div>
+</div>
+
   
 
 </div>
