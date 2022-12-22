@@ -9,6 +9,7 @@ class Photo(models.Model):
     img5 = models.ImageField(upload_to='img', blank=True)
     img6 = models.ImageField(upload_to='img', blank=True)
     img7 = models.ImageField(upload_to='img', blank=True)
+    
    
 
     def __str__(self):

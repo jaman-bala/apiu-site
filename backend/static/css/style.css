@@ -1,36 +1,3 @@
-/* * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-
-/* .container {
-    display: flex;
-    justify-content: center;
-} */
-
-/* .card {
-    background: white;
-    width: 270px;
-    margin: 10px;
-    border-radius: 15px;
-    
-}
-
-.alert alert-warning {
-    width: 270px;
-    height: 170%;
-    margin-bottom: 15px;
-    background-size: cover;
-}
-
-.card h2 {
-    padding: 10px;
-}
-.card p {
-    padding: 10px;
-} */ 
-
 .container-box {
     width: 90%;
     padding: 20px;

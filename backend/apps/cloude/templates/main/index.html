@@ -1,8 +1,10 @@
 {% extends 'main/base.html' %} {% block content %} {% load static %}
+
+
+
+
 <main3>
-
-
-<div class="slide-conatiner">
+  <div class="slide-conatiner">
     <span class="slider-span" id="slider-span1"></span>
     <span class="slider-span" id="slider-span2"></span>
     <span class="slider-span" id="slider-span3"></span>
@@ -44,153 +46,34 @@
     </div>
     {%endfor%}
 </div>
-
-
-
-
-
-
-
-{% comment %} <div class="wrapper">
-  <i id="left" class="fa-solid fa-angle-left"></i>
-  <div class="carousel">
-    <img src="{% static 'img/logot.png' %}" alt="img" draggable="false">
-    <img src="{% static 'img/APIU_logo.png' %}" alt="img" draggable="false">
-    <img src="{% static 'img/logot.png' %}" alt="img" draggable="false">
-    <img src="{% static 'img/logot.png' %}" alt="img" draggable="false">
-    <img src="{% static 'img/fon.png' %}" alt="img" draggable="false">
-    <img src="{% static 'img/logo.png' %}" alt="img" draggable="false">
-  </div>
-  <i id="right" class="fa-solid fa-angle-right"></i>
-</div> {% endcomment %}
 </main3>
-
-{% comment %} <div class="album py-2 bg-light">
-<div class="container  p-3">
-  <div class="row">
-    <div
-      id="carouselExampleSlidesOnly"
-      class="carousel carusel-dark slide"
-      data-bs-ride="carousel"
-    >
-      <div
-        id="carouselExampleControls"
-        class="carousel slide"
-        data-bs-ride="carousel"
-      >
-        <div class="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#carouselExampleDark"
-            data-bs-slide-to="0"
-            class="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleDark"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleDark"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
-        </div>
-        <div class="carusel-control-color" width:>
-
-        <div class="carousel-inner">
-          {% for pp in photo %}
-          <div class="carousel-item active">
-            <img src="{{ pp.img1.url }}" class="d-block w-100" alt="..." />
-          </div>
-          <div class="carousel-item">
-            <img src="{{ pp.img2.url }}" class="d-block w-100" alt="..." />
-          </div>
-          <div class="carousel-item">
-            <img src="{{ pp.img3.url }}" class="d-block w-100" alt="..." />
-          </div>
-          {%endfor%}
-        </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleControls"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleControls"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </div>
-  </div>
-</div> {% endcomment %}
-
 </div>
 
 <main1>
-  <div class="container p-5">
-    <div class="conatiner text-center">
-      <h1>Информация</h1>
-    </div>
 
-<div class="row">
-  <div class="col-md-6 mb-4">
-    <div class="card example-1 scrollbar-ripe-malinka">
-      <div class="card-body">
-       asd
+  <div class="container__vi">
+    <h1>Видео галерия</h>
+      
+      <div class="video-container">
+        <div class="video"><video src="media/videos_uploaded/4K HDR 5.1 IMAX _ Avatar_ The Way of Water ( 2022 ) - Mastered by TEKNO3D _ Dolby Vision Grading.mp4" muted></video></div>
+        <div class="video"><video src="media/videos_uploaded/8K HDR _ The Mirror Dimension (Spider-Man_ No Way Home) _ Dolby 5.1.mp4" muted></video></div>
+        <div class="video"><video src="media/videos_uploaded/Bali in 8k ULTRA HD HDR -  Paradise of Asia (60 FPS).mp4" muted></video></div>
+        <div class="video"><video src="media/videos_uploaded/Everyday Objects in Macro in 8K ULTRA HD _ 8K TV.mp4" muted></video></div>
+        <div class="video"><video src="media/videos_uploaded/Switzerland in 8K ULTRA HD HDR - Heaven of Earth (60 FPS).mp4" muted></video></div>
+        <div class="video"><video src="media/videos_uploaded/4K_free_video__60FPS_FUHD__1_minute_9q83cuA.mp4" muted></video></div>
       </div>
-    </div>
-  </div>
-
-  <div class="col-md-6 mb-4">
-    <div class="card example-1 square scrollbar-cyan bordered-cyan">
-      <div class="card-body">
-        dfg
-      </div>
-    </div>
+      <div class="popup-video">
+        <span>&times;</span>
+        <video src="media/videos_uploaded/4K HDR 5.1 IMAX _ Avatar_ The Way of Water ( 2022 ) - Mastered by TEKNO3D _ Dolby Vision Grading.mp4" muted autoplay controls></video>
   </div>
 </div>
-
-<div class="row">
-  <div class="col-md-6 mb-4">
-    <div class="card example-1 scrollbar-deep-purple bordered-deep-purple thin">
-      <div class="card-body">
-        lll
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-6">
-    <div class="card example-1 square scrollbar-dusty-grass square thin">
-      <div class="card-body">
-      aaa
-      </div>
-    </div>
-  </div>
-</div>
-
 </main1>
 
 <main2>
-
 <div class="container-center">
   <h1 class="text-center p-3">Полезные ссылки</h1>
 </div>
 <div class="container-box">
-
   <div class="box">
    <a href="https://www.aris.kg/index.php?option=com_content&view=category&layout=blog&id=8&Itemid=160&lang=ru"> <img src="{% static 'img/arislogo.png' %}" alt="img" ></a> 
   </div>
@@ -207,11 +90,5 @@
     <img src="{% static 'img/logot.png' %}" alt="img" />
   </div>
  </div>
-</div>
-
-  
-
-</div>
-
 </main2>
 {%endblock%}

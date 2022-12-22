@@ -8,7 +8,7 @@ class Info(models.Model):
     
 
     def __str__(self):
-        return str(self.title)
+        return str(self.id)
 
 
     class Meta:
