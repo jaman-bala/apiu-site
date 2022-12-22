@@ -46,29 +46,25 @@
     </div>
     {%endfor%}
 </div>
-</main3>
 </div>
+</main3>
+
 
 <main1>
 
   <div class="container__vi">
     <h1>Видео галерия</h>
-      
+      {% for vi in informations %}     
       <div class="video-container">
-        <div class="video"><video src="media/videos_uploaded/4K HDR 5.1 IMAX _ Avatar_ The Way of Water ( 2022 ) - Mastered by TEKNO3D _ Dolby Vision Grading.mp4" muted></video></div>
-        <div class="video"><video src="media/videos_uploaded/8K HDR _ The Mirror Dimension (Spider-Man_ No Way Home) _ Dolby 5.1.mp4" muted></video></div>
-        <div class="video"><video src="media/videos_uploaded/Bali in 8k ULTRA HD HDR -  Paradise of Asia (60 FPS).mp4" muted></video></div>
-        <div class="video"><video src="media/videos_uploaded/Everyday Objects in Macro in 8K ULTRA HD _ 8K TV.mp4" muted></video></div>
-        <div class="video"><video src="media/videos_uploaded/Switzerland in 8K ULTRA HD HDR - Heaven of Earth (60 FPS).mp4" muted></video></div>
-        <div class="video"><video src="media/videos_uploaded/4K_free_video__60FPS_FUHD__1_minute_9q83cuA.mp4" muted></video></div>
-        <div class="video"><video src="media/videos_uploaded/4K_free_video__60FPS_FUHD__1_minute_9q83cuA.mp4" muted></video></div>
-        <div class="video"><video src="media/videos_uploaded/4K_free_video__60FPS_FUHD__1_minute_9q83cuA.mp4" muted></video></div>
+        <div class="video"><video src="{{vi.video.url}}" muted></video></div>
+        
       </div>
       <div class="popup-video">
         <span>&times;</span>
-        <video src="media/videos_uploaded/4K HDR 5.1 IMAX _ Avatar_ The Way of Water ( 2022 ) - Mastered by TEKNO3D _ Dolby Vision Grading.mp4" muted autoplay controls></video>
+        <video src="{{vi.video.url}}" muted autoplay controls></video>
         
   </div>
+  {%endfor%}
 </div>
 </main1>
 
