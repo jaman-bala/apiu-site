@@ -2,7 +2,36 @@
 
 {% block content %}
 
-<h1 class="text-center p-3" height="200px">Новости на сайте</h1>
+<fon>
+  <div class="container__news">
+
+    <h1 class="heading">Новости</h1>
+ 
+    <div class="box-container">
+      {% for el in news %}
+       <div class="box">
+          <div class="image">
+             <img src="{{ el.img.url }}" alt="">
+          </div>
+          <div class="content">
+             <h3>{{ el.title}}</h3>
+             <p>{{ el.full_text | truncatewords:8}}</p>
+             <a href="{% url 'news_detail' el.id %}" class="btn">Подробнее</a>
+             <div class="icons">
+                <span> <i class="fas fa-calendar"></i>{{el.date}}</span>
+                
+             </div>
+          </div>
+       </div>
+       {% endfor %}
+      </div>
+      <div id="load-more"> load more </div>
+   </div>
+</fon>
+
+
+
+{% comment %} <h1 class="text-center p-3" height="200px">Новости на сайте</h1>
 
 <div class="container">
 <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -24,7 +53,7 @@
       </div>
       {% endfor %}
     </div>
-  </div>
+  </div> {% endcomment %}
 
   
 {%endblock%}
