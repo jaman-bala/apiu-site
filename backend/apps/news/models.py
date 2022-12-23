@@ -6,7 +6,7 @@ class Articles(models.Model):
     img = models.ImageField('Добавить фото', upload_to='img', blank=True, null=True)
     specs = models.FileField('Добавить файл', upload_to='specs', blank=True, null=True)
     date = models.DateTimeField('Дата публикации')
-    video = models.FileField('Добавить видео', upload_to='videos_uploaded',null=True, blank=True)
+    
 
 
     def __str__(self):
