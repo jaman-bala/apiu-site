@@ -3,9 +3,7 @@ from django.db import models
 
 
 
-
-
-class File(models.Model):
+class Study(models.Model):
     title = models.CharField(verbose_name='Наименование', max_length=50)
     file = models.FileField(upload_to='media', blank=True, verbose_name="Добавить файл") 
 
@@ -13,7 +11,7 @@ class File(models.Model):
 
     class Meta:
         verbose_name = "Добавить"
-        verbose_name_plural = "Добавить файл"
+        verbose_name_plural = "Исследование"
         
 
     def __str__(self):

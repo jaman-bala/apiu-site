@@ -1,0 +1,19 @@
+{% extends 'main/base.html' %} {% block content %} {% load static %}
+
+<disain>
+
+    <div class="swiper mySwiper">
+        {% for dis in disain %}
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><a href="{{dis.file.url}}">{{dis.title}}</a></div>
+     
+    </div>
+    {%endfor%}
+</div>
+   
+
+
+
+
+</disain>
+{%endblock%}
