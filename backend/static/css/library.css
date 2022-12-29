@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap');
+
+
+*{
+    font-family: 'Montserrat', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+library {
+    background-color: #334;
+}
+  /* Поплавок четыре колонки бок о бок */
+.column__bi {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap:20px;
+}
+
+
+  /* Удалите лишние левые и правые поля из-за заполнения столбцов */
+.row__bi{
+    margin-left: 250px;
+    margin-top: 45px;
+}
+  
+  /* Очистить поплавки после столбцов */
+
+  /* Стиль встречных карт */
+.card {
+    margin-top: 35px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* это добавляет эффект "карточек" */
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+}
+
+.card h5 {
+    line-height: 1.1;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    font-weight: 700;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    word-break: break-word;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+
+.button3 {
+    border: none;
+    color: white;
+    padding: 7px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 3px;
+    cursor: pointer;
+    background-color: #f44336;
+}
+
+.column__bi .column__bi .card:nth-child(1),
+.column__bi .column__bi .card:nth-child(2),
+.column__bi .column__bi .card:nth-child(3){
+    display: inline-block;
+}
+  
+  /* Адаптивные столбцы - один макет столбца (вертикальный) на небольших экранах */
+@media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      /* display: block; */
+      /* margin-bottom: 20px; */
+    }
+}
+
+#load-more{
+    margin-top: 20px;
+    display: inline-block;
+    padding:13px 30px;
+    border:1px solid #334;
+    color:#334;
+    font-size: 16px;
+    background-color: #fff;
+    cursor: pointer;
+}
+  
+#load-more:hover{
+    background-color: crimson;
+    border-color: crimson;
+    color:#fff;
+}
+
+@media (max-width:450px){
+     
+    row__bi .heading{
+        font-size: 25px;
+    }
+  
+    row__bi .column__bi {
+    grid-template-columns: 1fr;
+    }
+  
+    row__bi .column__bi .card {
+    height: 200px;
+    }
+  
+
+  
+}
+  

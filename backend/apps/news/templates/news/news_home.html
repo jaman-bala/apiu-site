@@ -4,22 +4,19 @@
 
 <fon>
   <div class="container__news">
-
     <h1 class="heading">Новости</h1>
- 
-    <div class="box-container">
+     <div class="box-container">
       {% for el in news %}
        <div class="box">
           <div class="image">
-             <img src="{{ el.img.url }}" alt="">
+             <img src="{{ el.img.url }}" alt="img">
           </div>
           <div class="content">
              <h3>{{ el.title}}</h3>
              <p>{{ el.full_text | truncatewords:8}}</p>
              <a href="{% url 'news_detail' el.id %}" class="btn">Подробнее</a>
              <div class="icons">
-                <span> <i class="fas fa-calendar"></i>{{el.date}}</span>
-                
+                <span> <i class="fas fa-calendar"></i>{{el.date}}</span>               
              </div>
           </div>
        </div>
@@ -28,32 +25,5 @@
       <div id="load-more"> load more </div>
    </div>
 </fon>
-
-
-
-{% comment %} <h1 class="text-center p-3" height="200px">Новости на сайте</h1>
-
-<div class="container">
-<div class="row row-cols-1 row-cols-md-3 g-4">
-{% for el in news %}
-    <div class="cart aria-hidden="true">
-        <div class="features">
-          <div class="alert alert-warning">
-            <img src="{{ el.img.url }}" class="card-img-top" alt="img" />
-            <h2>{{ el.title}}</h2>
-            <p class="lead text-muted">{{ el.full_text | truncatewords:20}}</p>
-            <a href="{% url 'news_detail' el.id %}" class="btn btn-primary"
-              >Подробнее</a
-            >
-            <p style="font-size: 16px" color="green" align="right" face="Arial">
-              <em>{{el.date}}</em>
-            </p>
-          </div>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-  </div> {% endcomment %}
-
   
 {%endblock%}

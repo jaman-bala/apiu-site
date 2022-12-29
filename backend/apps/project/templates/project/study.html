@@ -1,10 +1,10 @@
 {% extends 'main/base.html' %} {% block content %} {% load static %}
 
 
-<div class="container-study">
-<h1> Проект ПОДР </h>
-
-
+<div class="conatainer__button">
+    {% for stu in study %}
+    <a type="button" href="{{stu.file.url}}" class="button1" target="_blank">{{stu.title}}</a>
+    {% endfor %}
 </div>
 
 {%endblock%}

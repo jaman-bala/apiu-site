@@ -12,7 +12,7 @@ class Library(models.Model):
 
     class Meta:
         verbose_name = "Добавить"
-        verbose_name_plural = "Добавить данные"
+        verbose_name_plural = "Добавить файл"
         
 
     def __str__(self):
