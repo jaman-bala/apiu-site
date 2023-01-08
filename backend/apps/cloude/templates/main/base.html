@@ -12,19 +12,20 @@
     <link rel="stylesheet" href="{% static '/css/news.css' %}" />      
     <link rel="stylesheet" href="{% static '/css/main4.css' %}" />      
     <link rel="stylesheet" href="{% static '/css/disain.css' %}" />
-    <link rel="stylesheet" href="{% static '/css/library.css' %}" />       
+    <link rel="stylesheet" href="{% static '/css/library.css' %}" />
+    <link rel="stylesheet" href="{% static '/css/footer.css' %}" />       
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
     />
-    {% comment %} <link
+    <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">  {% endcomment %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">  
 
 
 
@@ -77,7 +78,40 @@
     {% block content %} {% endblock %}
    
 
-
+    <footer id="footer" class="footer">
+      <div class="container">
+          <div class="footer__content">
+              <div class="header__top-logo">
+                  <img class="header__top-img" src="{% static '/img/APIU_logo.png' %}" alt="APIU">
+                  <h2 class="footer__title">
+                      APIU
+          
+                  </h2>
+                  
+              </div>
+              <div class="footer__info">
+                  <p class="footer__address">Адрес: Кыргызская Республика г. Бишкек, ул. Киевская № 92а 5-этаж</p>
+                  <p>Телефон: <a href="tel: +996 999-99-99" class="footer__number"> +996 312 00-00-00</a></p>
+                  <p class="footer__email">Email: office@apiu.kg</p>
+                  <ul class="footer__socials">
+                      <li class="footer__link">
+                          <a href="https://www.instagram.com/apiu_kyrgyzrepublic/?igshid=YWJhMjlhZTc=">
+                              <img class="footer__icon" src="{% static './icons/instagram-white.svg' %}" alt="Instagram">
+                          </a>
+                      </li>
+                      <li class="footer__link">
+                          <a href="https://m.facebook.com/apiu2019">
+                              <img class="footer__icon" src="{% static '/icons/facebook-white.svg' %}" alt="Facebook">
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <div class="footer__bottom">
+          Copyright 2023 APIU
+      </div>
+    </footer>
 
 
     {% comment %} <script
