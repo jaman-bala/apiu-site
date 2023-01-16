@@ -10,35 +10,35 @@ class CreateForm(ModelForm):
 
         widgets = {
             "first_name": TextInput(attrs={
-                'class': 'input-group-text',
+              
                 'placeholder': 'Имя'
             }),
             "last_name": TextInput(attrs={
-                'class': 'input-group-text',
+    
                 'placeholder': 'Фамилия'
             }),
             "phone": NumberInput(attrs={
-                'class': 'input-group-text',
-                'placeholder': 'Номер телефона'
+
+                'placeholder': '+996 '
             }),
             "email": TextInput(attrs={
-                'class': 'form-control',
+
                 'placeholder': 'Адрес электронной почты'
             }),
             "title": TextInput(attrs={
-                'class': 'input-group-text',
-                'placeholder': 'Название вопроса'
+
+                'placeholder': 'Вопроса'
             }),
             "text": Textarea(attrs={
-                'class': 'form-control',
-                'placeholder': 'Текст'
+
+                'placeholder': 'Введите свой вопрос'
             }),
             "file": FileInput(attrs={
-                'class': 'input-group-text',
-                'placeholder': 'Текст'
+
+                'placeholder': 'Файл'
             }),
             "date": DateTimeInput(attrs={
-                'class': 'form-control',
+
                 'type': "date",
                 'placeholder': 'Дата'
             }),

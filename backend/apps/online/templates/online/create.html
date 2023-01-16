@@ -5,17 +5,100 @@
   <div class="features">
     <h1>Форма по добавлению вопросов</h1>
     <form method="post">
-      {% csrf_token %} {{ form.first_name }}<br >
-      {{ form.last_name }}<br/>
-      {{ form.phone }}<br />
-      {{ form.email }}<br />
-      {{ form.title }}<br />
-      {{ form.text }}<br />
-      {{ form.file }}<br />
-      {{ form.date }}<br />
-      <span> {{ error}} </span>
-      <button class="btn btn-success" type="submit">Отправить</button>
-    </form>
+      {% csrf_token %}
+      <div class="container__forms">
+  {% comment %} <form action="/action_page.php"> {% endcomment %}
+  <div class="row__forms">
+    <div class="col-25">
+      <label for="fname">Имя</label>
+    </div>
+    <div class="col-75">
+      {{ form.first_name }}
+    </div>
+  </div>
+  <div class="row__forms">
+    <div class="col-25">
+      <label for="lname">Фамилия</label>
+    </div>
+    <div class="col-75">
+      {{ form.last_name }}
+    </div>
+  </div>
+  <div class="row__forms">
+    <div class="col-25">
+      <label for="lname">Номер телефона</label>
+    </div>
+    <div class="col-75">
+      {{ form.phone }}
+    </div>
+  </div>
+  <div class="row__forms">
+    <div class="col-25">
+      <label for="lname">Почта</label>
+    </div>
+    <div class="col-75">
+      {{ form.email  }}
+    </div>
+  </div>
+  <div class="row__forms">
+    <div class="col-25">
+      <label for="country">Страна</label>
+    </div>
+    <div class="col-75">
+      <select id="country" name="country">
+        <option value="bishkek">Бишкек</option>
+        <option value="chuy">Чуй</option>
+        <option value="issyk-kul">Ыссык-Кол</option>
+        <option value="naryn">Нарын</option>
+        <option value="talas">Талас</option>
+        <option value="jalal-abad">Жалал-Абад</option>
+        <option value="osh">Ош</option>
+        <option value="batken">Баткен</option>
+      </select>
+    </div>
+  </div>
+  <div class="row__forms">
+    <div class="col-25">
+      <label for="lname">Тема вопроса</label>
+    </div>
+    <div class="col-75">
+      {{ form.title   }}
+    </div>
+  </div>
+  <div class="row__forms">
+    <div class="col-25">
+      <label for="subject">Вопрос</label>
+    </div>
+    <div class="col-75">
+      {{ form.text }}
+    </div>
+  </div>
+  <div class="row__forms">
+    <div class="col-25">
+      <label for="lname">Прикрепить файл</label>
+    </div>
+    <div class="col-75">
+      {{ form.file }}
+    </div>
+  </div>
+  <div class="row__forms">
+    <div class="col-25">
+      <label for="lname">Дата</label>
+    </div>
+    <div class="col-75">
+      {{ form.date}}
+    </div>
+  </div>
+  <br>
+  <div class="row__forms">
+    <input type="submit" value="Отправить">
+  </div>
+  </form>
+</div>
+
+
+
+
   </div>
 </div>
 </div>

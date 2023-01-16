@@ -87,16 +87,23 @@
 <main1>
 
   <div class="container__vi">
-    <h1>Видео галерея</h1>
-      {% for vi in informations %}     
-      <div class="video-container">      
-        <video src="{{vi.video.url}}" controls></video>
-      </div>
+    <h1>Видео галерея</h>
+      {% if  informations%}
+      <ul>
+        {% for vi in informations %}     
 
-        
-  </div>
-  {%endfor%}
-</div>
+            <li>
+    <!-- link passed to embed code, this shows up as blank -->
+    <iframe width="560" height="345" src="{{ vi.link }}?rel=0" frameborder="0" allowfullscreen></iframe>
+    
+    <!-- YouTube embed link copy/pasted as is -->
+    <iframe width="560" height="345" src="http://www.youtube.com/embed/vLmNvYTTWXM?rel=0" frameborder="0" allowfullscreen></iframe>
+            </li>
+
+            {%endfor%}
+        </ul>
+{%endif%}
+</div> 
 </main1>
 
 <main2>

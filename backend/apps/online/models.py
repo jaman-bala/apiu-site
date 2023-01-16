@@ -5,7 +5,7 @@ class Create(models.Model):
     last_name = models.CharField("Фамилия", max_length=50)
     email = models.EmailField("Почта")
     phone = models.CharField("Номер телефона", max_length=16)
-    title = models.CharField("Название", max_length=50)
+    title = models.CharField("Вопрос", max_length=50)
     text = models.TextField("Описание")
     file = models.FileField(upload_to='file', blank=True, null=True)
     date = models.DateTimeField("Дата публикации")
