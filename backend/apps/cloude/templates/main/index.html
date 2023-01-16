@@ -1,6 +1,6 @@
 {% extends 'main/base.html' %} {% block content %} {% load static %}
-
-<img src="{% static 'img/logo.png' %}" class="p-auto"  width="100%"  alt="img-logo">
+{% load i18n %}
+{% comment %} <img src="{% static 'img/logo.png' %}" class="p-фгещ"  width="100%"  alt="img-logo"> {% endcomment %}
 
 
 <main3>
@@ -49,6 +49,31 @@
 </div>
 </main3>
 
+<fon>
+  <div class="container__news">
+    <h1 class="heading">{% trans 'Новости' %}</h1>
+    <div class="box-container">
+      {% for el in news %}
+       <div class="box">
+          <div class="image">
+             <img src="{{ el.img.url }}" alt="">
+          </div>
+          <div class="content__more">
+             <h3>{{ el.title}}</h3>
+             <p>{{ el.full_text | truncatewords:8}}</p>
+             <a href="{% url 'news_detail' el.id %}" class="btn">{% trans 'Подробнее' %}</a>
+             <div class="icons">
+                <span> <i class="fas fa-calendar"></i>{{el.date}}</span>
+                
+             </div>
+          </div>
+       </div>
+       {% endfor %}
+      </div>
+      <a href="{% url 'news_home' %}"><div id="load-more">{% trans 'Подробнее' %}</div></a>
+   </div>
+</fon>
+
 <main4>
 
 <section>
@@ -62,15 +87,12 @@
 <main1>
 
   <div class="container__vi">
-    <h1>Видео галерея</h>
+    <h1>Видео галерея</h1>
       {% for vi in informations %}     
-      <div class="video-container">
-        <div class="video"><video src="{{vi.video.url}}" muted></video></div>
-        
+      <div class="video-container">      
+        <video src="{{vi.video.url}}" controls></video>
       </div>
-      <div class="popup-video">
-        <span>&times;</span>
-        <video src="{{vi.video.url}}" muted autoplay controls></video>
+
         
   </div>
   {%endfor%}

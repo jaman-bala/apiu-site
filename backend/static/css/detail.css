@@ -1,0 +1,26 @@
+.container{
+    margin-top: 125px;
+}
+.container__detail h1{
+    text-align: center;
+    padding: 10px;
+    font-size: 21px;
+
+}
+
+.container__detail p{
+    padding: 10px;
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+.container__detail img {
+    width: 650px;
+    height: 450px;
+    margin-left: 330px;
+}
+
+.container__detail .text-mute{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}

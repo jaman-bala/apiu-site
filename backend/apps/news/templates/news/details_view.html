@@ -1,24 +1,22 @@
 {% extends 'main/base.html' %} {% block content %} {% load static %}
-
+{% load i18n %}
 <div class="container">
 
-     
-        <h1 class="fw-light p-3" align="center" >{{ article.title }}</h1>
-        <p style="font-size: 16px" color="green" align="right" face="Arial">
-          <em>{{ article.date }}</em>
-        </p>
-        <img src="{{ article.img.url }}" alt="img" width="950px" align="center"
-        />
-      
-      <div>
-        <p class="lead text-muted p-5">{{ article.full_text }}</p>
-      </div>
-      <div>
-        <video controls width="600px">
-          <source src="{{ article.video.url }}" />
-        </video>
-      </div>
-
-  </div>
+  <div class="container__detail">
+  
+       
+          <h1>{{ article.title }}</h1>
+          <p>
+            <em>{{ article.date }}</em>
+          </p>
+          <img src="{{ article.img.url }}" alt="img"/>
+        
+        <div>
+          <p class="text-muted">{{ article.full_text }}</p>
+        </div>
+       
+  
+    </div>
+</div>
 
 {%endblock%}

@@ -1,10 +1,4 @@
-* {
-    padding: 0;
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    text-transform: capitalize;
-    text-decoration: none;
-}
+
 
 header {
     position: fixed;
@@ -34,10 +28,14 @@ header .navbar ul li {
 
 header .navbar ul li a {
     font-size: 20px;
-    padding: 20px;
+    padding: 10px;
     color: #333;
     display: block;
     align-items: center;
+}
+
+header .navbar ul li ul a {
+    padding-left: 10px;
 }
 
 header .navbar ul li a:hover {
