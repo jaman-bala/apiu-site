@@ -1,12 +1,12 @@
 from .models import Create
-from django.forms import ModelForm, TextInput, DateTimeInput, Textarea, NumberInput, FileInput
+from django.forms import ModelForm, TextInput, DateTimeInput, Textarea, FileInput
 
 
 
 class CreateForm(ModelForm):
     class Meta:
         model = Create
-        fields = ['first_name', 'last_name', 'email', 'phone', 'title', 'text', 'file', 'date']
+        fields = ['first_name', 'last_name', 'email', 'city' ,'phone', 'title', 'text', 'file', 'date']
 
         widgets = {
             "first_name": TextInput(attrs={
@@ -17,13 +17,17 @@ class CreateForm(ModelForm):
     
                 'placeholder': 'Фамилия'
             }),
-            "phone": NumberInput(attrs={
+            "phone": TextInput(attrs={
 
                 'placeholder': '+996 '
             }),
             "email": TextInput(attrs={
 
                 'placeholder': 'Адрес электронной почты'
+            }),
+            "city": TextInput(attrs={
+
+                'placeholder': 'Адрес'
             }),
             "title": TextInput(attrs={
 

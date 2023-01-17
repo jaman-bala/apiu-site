@@ -1,22 +1,16 @@
 {% extends 'main/base.html' %} {% block content %} {% load static %}
 {% load i18n %}
 <div class="container">
-
   <div class="container__detail">
-  
-       
           <h1>{{ article.title }}</h1>
           <p>
             <em>{{ article.date }}</em>
           </p>
           <img src="{{ article.img.url }}" alt="img"/>
-        
-        <div>
-          <p class="text-muted">{{ article.full_text }}</p>
+          <div>
+          <p class="text-muted">{% autoescape off %}{{ article.full_text }}{% endautoescape %}</p>
         </div>
-       
-  
-    </div>
+      </div>
 </div>
 
 {%endblock%}

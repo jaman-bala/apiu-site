@@ -31,7 +31,7 @@
     <div class="col-75">
       {{ form.phone }}
     </div>
-  </div>
+  </div> 
   <div class="row__forms">
     <div class="col-25">
       <label for="lname">Почта</label>
@@ -42,19 +42,10 @@
   </div>
   <div class="row__forms">
     <div class="col-25">
-      <label for="country">Страна</label>
+      <label for="lname">Адрес проживания</label>
     </div>
     <div class="col-75">
-      <select id="country" name="country">
-        <option value="bishkek">Бишкек</option>
-        <option value="chuy">Чуй</option>
-        <option value="issyk-kul">Ыссык-Кол</option>
-        <option value="naryn">Нарын</option>
-        <option value="talas">Талас</option>
-        <option value="jalal-abad">Жалал-Абад</option>
-        <option value="osh">Ош</option>
-        <option value="batken">Баткен</option>
-      </select>
+      {{ form.city   }}
     </div>
   </div>
   <div class="row__forms">

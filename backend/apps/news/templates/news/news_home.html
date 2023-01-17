@@ -13,7 +13,6 @@
           </div>
           <div class="content">
              <h3>{{ el.title}}</h3>
-             <p>{{ el.full_text | truncatewords:8}}</p>
              <a href="{% url 'news_detail' el.id %}" class="btn">Подробнее</a>
              <div class="icons">
                 <span> <i class="fas fa-calendar"></i>{{el.date}}</span>               
@@ -22,7 +21,7 @@
        </div>
        {% endfor %}
       </div>
-      <div id="load-more"> load more </div>
+      <div id="load-more"> Далее </div>
    </div>
 </fon>
   

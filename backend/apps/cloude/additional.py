@@ -5,8 +5,8 @@ class Info(models.Model):
     video = models.URLField(null=True, blank=True)
     
 
-    def __unicode__(self):
-        return self.title
+    def __str__(self):
+        return str(self.title)
 
 
     class Meta:

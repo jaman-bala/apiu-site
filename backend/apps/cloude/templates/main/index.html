@@ -51,20 +51,18 @@
 
 <fon>
   <div class="container__news">
-    <h1 class="heading">{% trans 'Новости' %}</h1>
-    <div class="box-container">
+    <h1 class="heading">Новости</h1>
+     <div class="box-container">
       {% for el in news %}
        <div class="box">
           <div class="image">
-             <img src="{{ el.img.url }}" alt="">
+             <img src="{{ el.img.url }}" alt="img">
           </div>
-          <div class="content__more">
+          <div class="content">
              <h3>{{ el.title}}</h3>
-             <p>{{ el.full_text | truncatewords:8}}</p>
-             <a href="{% url 'news_detail' el.id %}" class="btn">{% trans 'Подробнее' %}</a>
+             <a href="{% url 'news_detail' el.id %}" class="btn">Подробнее</a>
              <div class="icons">
-                <span> <i class="fas fa-calendar"></i>{{el.date}}</span>
-                
+                <span> <i class="fas fa-calendar"></i>{{el.date}}</span>               
              </div>
           </div>
        </div>
@@ -93,12 +91,9 @@
         {% for vi in informations %}     
 
             <li>
-    <!-- link passed to embed code, this shows up as blank -->
-    <iframe width="560" height="345" src="{{ vi.link }}?rel=0" frameborder="0" allowfullscreen></iframe>
-    
-    <!-- YouTube embed link copy/pasted as is -->
-    <iframe width="560" height="345" src="http://www.youtube.com/embed/vLmNvYTTWXM?rel=0" frameborder="0" allowfullscreen></iframe>
-            </li>
+
+    <iframe width="560" height="345" src="{{ vi.video }}?rel=0" frameborder="0" allowfullscreen></iframe>
+
 
             {%endfor%}
         </ul>
