@@ -1,6 +1,6 @@
 {% extends 'main/base.html' %} {% block content %} {% load static %}
 {% load i18n %}
-{% comment %} <img src="{% static 'img/logo.png' %}" class="p-фгещ"  width="100%"  alt="img-logo"> {% endcomment %}
+
 
 
 <main3>
@@ -72,16 +72,6 @@
    </div>
 </fon>
 
-<main4>
-
-<section>
-
-
-</section>
-
-</main4>
-
-
 <main1>
 
   <div class="container__vi">
@@ -105,35 +95,38 @@
   <div class="container-box">
     <h1 class="text-center">Полезные ссылки</h1>
   <div class="box">
-   <a href="https://www.aris.kg/index.php?option=com_content&view=category&layout=blog&id=8&Itemid=160&lang=ru"> <img src="{% static 'img/arislogo.png' %}" alt="img" ></a>
+   <a href="https://www.aris.kg/index.php?option=com_content&view=category&layout=blog&id=8&Itemid=160&lang=ru"> <img src="{% static './src/images/arislogo.png' %}" alt="img" ></a>
    <p class="title">
     Агентство развития и инвестирования сообществ Кыргызской Республики
    </p> 
   </div>
   <div class="box">
-    <a href="https://www.ifad.org/en/"><img src="{% static 'img/ifad.png' %}" alt="img" /><a/>
+    <a href="https://www.ifad.org/en/"><img src="{% static './src/images/ifad.png' %}" alt="img" /><a/>
       <p class="title">
         International Fund for Agricultural Development
        </p> 
   </div>
   <div class="box">
-    <a href="https://www.vsemirnyjbank.org/ru/home"><img src="{% static 'img/wb.png' %}" alt="img" /></a>
+    <a href="https://www.vsemirnyjbank.org/ru/home"><img src="{% static './src/images/wb.png' %}" alt="img" /></a>
     <p class="title">
       THE WORLD BANK
      </p>
   </div>
   <div class="box">
-    <a href="https://www.un.org/ru/"><img src="{% static 'img/un-logo-big.png' %}" alt="img" /></a>
+    <a href="https://www.un.org/ru/"><img src="{% static './src/images/un-logo-big.png' %}" alt="img" /></a>
     <p class="title">
       UNITED NATIONS
      </p>
   </div>
   <div class="box">
-    <a href="https://agro.gov.kg/ru/main/"><img src="{% static 'img/msh2-2.png' %}" alt="img" /></a>
+    <a href="https://agro.gov.kg/ru/main/"><img src="{% static './src/images/msh2-2.png' %}" alt="img" /></a>
     <p class="title">
       МИНИСТЕРСТВО СЕЛЬСКОГО ХОЗЯЙСТВА КЫРГЫЗСКОЙ РЕСПУБЛИКИ
      </p>
   </div>
  </div>
 </main2>
+
+
+
 {%endblock%}

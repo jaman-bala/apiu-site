@@ -4,17 +4,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static '/css/main.css' %}" />
-    <link rel="stylesheet" href="{% static '/css/style.css' %}" />
-    <link rel="stylesheet" href="{% static '/css/main1.css' %}" />
-    <link rel="stylesheet" href="{% static '/css/project.css' %}" />      
-    <link rel="stylesheet" href="{% static '/css/navbar.css' %}" />      
-    <link rel="stylesheet" href="{% static '/css/news.css' %}" />      
-    <link rel="stylesheet" href="{% static '/css/main4.css' %}" />      
-    <link rel="stylesheet" href="{% static '/css/disain.css' %}" />
-    <link rel="stylesheet" href="{% static '/css/library.css' %}" />
-    <link rel="stylesheet" href="{% static '/css/detail.css' %}" />       
-    <link rel="stylesheet" href="{% static '/css/forms.css' %}" /> 
+    <link rel="stylesheet" href="{% static './src/css/main.css' %}" />
+    <link rel="stylesheet" href="{% static './src/css/style.css' %}" />
+    <link rel="stylesheet" href="{% static './src/css/main1.css' %}" />
+    <link rel="stylesheet" href="{% static './src/css/project.css' %}" />      
+    <link rel="stylesheet" href="{% static './src/css/navbar.css' %}" />      
+    <link rel="stylesheet" href="{% static './src/css/news.css' %}" />      
+    <link rel="stylesheet" href="{% static './src/css/main4.css' %}" />      
+    <link rel="stylesheet" href="{% static './src/css/disain.css' %}" />
+    <link rel="stylesheet" href="{% static './src/css/library.css' %}" />
+    <link rel="stylesheet" href="{% static './src/css/detail.css' %}" />       
+    <link rel="stylesheet" href="{% static './src/css/forms.css' %}" /> 
+    <link rel="stylesheet" href="{% static './src/css/footer.css' %}" />       
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
@@ -27,20 +28,16 @@
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"> 
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">  
 
 
 
 <title>Главная сраница</title>
   </head>
-  
-  <body>
-    
-
-    <header>
-
+    <body>
+        <header>
       <a href="/" class="logo"><img
-        src="{% static '/img/APIU_logo.png' %}"
+        src="{% static './src/images/APIU_logo.png' %}"
         alt="Logo"
         width="70"
       /></a>
@@ -73,21 +70,14 @@
     </header>
     </div>
 
-
-
-
     {% block content %} {% endblock %}
    
     <footer id="footer" class="footer">
       <div class="container">
           <div class="footer__content">
               <div class="header__top-logo">
-                  <img class="header__top-img" src="{% static './img/APIU_logo.png' %}" alt="APIU">
-               
-                  
+                  <img class="header__top-img" src="{% static './src/images/APIU_logo.png' %}" alt="APIU">     
               </div>
-
-
     <div class="footer__info">
       <p class="footer__address">{% trans 'Адрес: Кыргызская Республика г. Бишкек, ул. Киевская № 96а' %}</p>
       <p>{% trans 'Телефон:' %} <a href="#" class="footer__number"> +996 312 66-56-25, 701 66-56-25</a></p>
@@ -112,19 +102,11 @@ Copyright 2022 {% trans 'Отдел рализации сельскохозяй�
 </div>
 </footer>
 
-    {% comment %} <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
-      integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
-      crossorigin="anonymous"
-    ></script> {% endcomment %}
-    {% comment %} <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script> {% endcomment %}
-    {% comment %} <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script> {% endcomment %}
-    <script src="{% static './js/main.js' %}"  defer></script>
-    <script src="{% static 'js/main1.js' %}"  defer></script>
-    <script src="{% static 'js/news.js' %}"  defer></script>
-    <script src="{% static 'js/main4.js' %}"  defer></script>
+   
+    <script src="{% static './src/js/main.js' %}"  defer></script>
+    <script src="{% static './src/js/main1.js' %}"  defer></script>
+    <script src="{% static './src/js/news.js' %}"  defer></script>
+    <script src="{% static './src/js/main4.js' %}"  defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
 
