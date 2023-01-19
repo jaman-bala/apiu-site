@@ -1,23 +1,33 @@
 from django.db import models
+from django.contrib.auth.models import User
+from django.utils.timezone import now
 
-class Photo(models.Model):
-    title = models.CharField('Название', max_length=10, blank=True)
-    img1 = models.ImageField(upload_to='img', blank=True)
-    img2 = models.ImageField(upload_to='img', blank=True)
-    img3 = models.ImageField(upload_to='img', blank=True)
-    img4 = models.ImageField(upload_to='img', blank=True)
-    img5 = models.ImageField(upload_to='img', blank=True)
-    img6 = models.ImageField(upload_to='img', blank=True)
-    img7 = models.ImageField(upload_to='img', blank=True)
-    
-   
+class Folder(models.Model):
+    name = models.CharField(max_length=255)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    date_created = models.DateTimeField(auto_now_add=True)
+    date_modified = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return str(self.id)
+        return self.name
 
 
     class Meta:
-        verbose_name = 'Фото'
-        verbose_name_plural = 'Добавить фото'
+        verbose_name = 'Папка'
+        verbose_name_plural = 'Добавить папку'
+
+class File(models.Model):
+    name = models.CharField(max_length=255)
+    file = models.FileField(upload_to='files/')
+    folder = models.ForeignKey(Folder, on_delete=models.CASCADE)
+    date_created = models.DateTimeField(default=now)
+    date_modified = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'Файл'
+        verbose_name_plural = 'Добавить файд'
 
 

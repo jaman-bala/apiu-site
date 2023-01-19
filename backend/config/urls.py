@@ -5,12 +5,13 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('backend.apps.cloude.urls')),
+    path('', include('backend.apps.main.urls')),
     path('news/', include('backend.apps.news.urls')),
     path('online/', include('backend.apps.online.urls')),
     path('account/', include('backend.apps.account.urls')),
     path('library/', include('backend.apps.library.urls')),
     path('project/', include('backend.apps.project.urls')),
+    path('cloude/', include('backend.apps.cloude.urls')),
     path('ckeditor/', include('ckeditor_uploader.urls')),
     
 ]
