@@ -1,0 +1,34 @@
+{% load static %}{% load i18n %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{% static './src/css/cloude.css' %}" />    
+
+    <title>{% block title %}Default Title{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <details>
+            <summary></summary>
+            <nav class="menu">
+              <a href="#link">Создать папку</a>
+              <a href="#link">Загрузить файл</a>
+              <a href="#link">Загрузить папку</a>
+             
+            </nav>
+          </details>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        Copyright 2023
+    </footer>
+
+
+
+
+    
+    <script src="{% static './src/js/cloude.js' %}"  defer></script>
+</body>
+</html>

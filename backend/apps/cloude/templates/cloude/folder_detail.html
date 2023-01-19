@@ -1,8 +1,18 @@
 
 
-{% extends 'main/base.html' %} {% block content %} {% load static %}
+{% extends 'cloude/base.html' %} {% block content %} {% load static %}
 <div class="cloude">
-
+    <div class="file-list">
+        {% for file in files %}
+        <div class="file-item">
+            <img src="{% static 'path/to/file_icon.svg' %}" alt="{{ file.name }}">
+            <span class="file-name">{{ file.name }}</span>
+        </div>
+        {% endfor %}
+    </div>
+    <style>
+        /* some css styles for file-list and file-item */
+    </style>
 
 
 </div>
