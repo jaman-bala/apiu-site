@@ -7,10 +7,10 @@ from backend.apps.news.models import Articles
 
 def index(request):
     video = Video.objects.all()
-    photo = Photo.objects.all()
+    photos = Photo.objects.all()
     news = Articles.objects.all()
     context = {
-        "photo":photo,
+        "photos":photos,
         "video":video,
         "news": news,
     }

@@ -1,9 +1,8 @@
-{% extends 'main/base.html' %} {% block content %} {% load static %}
-
-
+{% extends 'main/base.html' %}
+ {% block content %}
+  {% load static %}
 
 <login>
-
 	<div class="center__login">
 		<img  src="{% static 'src/images/APIU_logo.png' %}" alt="" class="center-img">
 		<h1 id="form-title">ВХОД</h1>
@@ -22,11 +21,7 @@
 		  </div>
 		</form>
 	  </div>
-
-
-
 </login>
 
-
-  {%endblock%}
+{%endblock%}
 

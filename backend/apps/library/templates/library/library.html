@@ -1,35 +1,41 @@
-{% extends 'main/base.html' %} {% block content %} {% load static %}
-
+{% extends 'main/base.html' %}
+{% block content %}
+{% load static %}
+ {% load i18n %}
 <library>
-<div class="row__bi">
-  <div class="column__bi">
-    {% for book in books %}
-    <div class="card">
-      <h5>{{ book.title }}</h5>
-      <p><small>Автор:</small> {{ book.author }}</p>
-      <a type="button" href="{{ book.books.url }}" class="button3" target="_blank">
-        <svg
-          x="0px"
-          y="0px"
-          viewBox="0 -60 800 1000"
-          fill="white"
-          width="20"
-          height="20"
-        >
-          <path
-            d="M867.5,500H714.4L500,714.4L285.6,500H132.5L10,745v61.3h980V745L867.5,500z M10,867.5h980v61.3H10V867.5z M561.3,316.3v-245H438.8v245H224.4L500,591.9l275.6-275.6H561.3z"
-          ></path>
-        </svg>
-        Скачать
-        <a/>
-    </div>
-    {%endfor%}
-  </div>
-</div>
+    <section class="library">
+        <div class="container">
+            <div class="library__top">
+                <h2 class="title">Библиотека</h2>
+                <form class="example"  style="margin:auto;max-width:300px">
+                    <input type="text" placeholder="Search.." name="q">
+                    <button type="submit"><i class="fa fa-search" alt="Search"></i></button>
+                  </form>
+            </div>
+            <div class="library__row">
+                {% for book in books %}
+                <div class="library__block">
+                    {% if book.image %}
+                    <div class="library__block-img">
+                        <img src="{{book.image.url}}" alt="News">
+                    </div>
+                    {% endif %}
+                    <h3 class="library__block-title">{{book.title}}</h3>
+                    <p class="library__block-ti">автор: {{book.author}}</p>
+                       <button class="btn" type="button">
+                           <a href="{{book.books.url}}">
+                               Открыть
+                            </a>
+                       </button>
+                </div>
+                {%endfor%}
+            </div>
+        </div>
+    </section>
 </library>
 
-<video>
 
 
-</video>
+
+
   {%endblock%}
