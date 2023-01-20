@@ -1,7 +1,7 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .forms import CreateFolderForm, UploadFileForm
 from .models import Folder, File
-from django import forms
+from django.http import FileResponse
 
 MAX_FILE_SIZE = 10485760 # 10MB
 
@@ -43,3 +43,15 @@ def folder_detail(request, folder_id):
     folder = Folder.objects.get(id=folder_id)
     files = File.objects.filter(folder=folder)
     return render(request, 'cloude/folder_detail.html', {'folder': folder, 'files': files})
+
+
+def download_file(request, file_id):
+    file = get_object_or_404(File, id=file_id)
+    response = FileResponse(file.file)
+    response['Content-Disposition'] = 'attachment; filename="{}"'.format(file.name)
+    return response
+
+def delete_file(request, file_id):
+    file = get_object_or_404(File, id=file_id)
+    file.delete()
+    return redirect('folder_detail', folder_id=file.folder.id)

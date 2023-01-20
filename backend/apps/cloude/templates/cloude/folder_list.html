@@ -3,14 +3,14 @@
 
 {% extends 'cloude/base.html' %} {% block content %} {% load static %}
 
-<div class="cloude">
+
   <h1>Folders</h1>
   <ul>
     {% for folder in folders %}
       <li><a href="{% url 'folder_detail' folder.id %}">{{ folder.name }}</a></li>
     {% endfor %}
   </ul>
-</div>
+
 {% endblock %}
 
 

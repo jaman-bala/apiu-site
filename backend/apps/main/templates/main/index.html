@@ -76,18 +76,15 @@
 
   <div class="container__vi">
     <h1>Видео галерея</h>
-      {% if  informations%}
-      <ul>
-        {% for vi in informations %}     
-
+     <ul class="stolb">
+       {% for videos in video  %}
             <li>
-
-    <iframe width="560" height="345" src="{{ vi.video }}?rel=0" frameborder="0" allowfullscreen></iframe>
-
-
-            {%endfor%}
+              <iframe width="560" height="315" src="{{ videos.url}}" frameborder="0"
+               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+               <h5> {{ videos.title}}</h5>
+            </li>
+            {% endfor %}
         </ul>
-{%endif%}
 </div> 
 </main1>
 

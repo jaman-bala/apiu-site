@@ -18,7 +18,7 @@ def sign_in(request):
             if user is not None:
                 if user.is_active:
                     login(request, user)
-                    return redirect('library')
+                    return redirect('folder_list')
                 else:
                     return HttpResponse("Аккаунт неактивирован")
             else:

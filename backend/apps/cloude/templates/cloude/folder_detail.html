@@ -1,21 +1,34 @@
 
 
 {% extends 'cloude/base.html' %} {% block content %} {% load static %}
-<div class="cloude">
-    <div class="file-list">
-        {% for file in files %}
-        <div class="file-item">
-            <img src="{% static 'path/to/file_icon.svg' %}" alt="{{ file.name }}">
-            <span class="file-name">{{ file.name }}</span>
-        </div>
-        {% endfor %}
-    </div>
-    <style>
-        /* some css styles for file-list and file-item */
-    </style>
 
-
+<div class="container">
+    <h2>{{ folder.name }}</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>File Name</th>
+                <th>File Format</th>
+                <th>File Size</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for file in files %}
+                <tr>
+                    <td>{{ file.name }}</td>
+                    <td>{{ file.format }}</td>
+                    <td>{{ file.size }}</td>
+                    <td>
+                        <a href="{% url 'download_file' file.id %}" class="btn btn-primary">Download</a>
+                        <a href="{% url 'delete_file' file.id %}" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this file?')">Delete</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </div>
+
 
 {%endblock%}
 

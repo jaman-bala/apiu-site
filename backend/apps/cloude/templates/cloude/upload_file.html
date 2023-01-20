@@ -1,42 +1,16 @@
 {% extends 'cloude/base.html' %} {% block content %} {% load static %}
 
-<div class="cloude">
-    <h1>Upload File</h1>
+
+    <h1>Загрузить файл</h1>
     <form method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        <div class="toolbar">
-          <div class="toolbar__item">
-            <input type="file" name="files" id="files" multiple>
-            <label for="files" class="btn btn-primary">Upload files</label>
-          </div>
-          <div class="toolbar__item">
-            <input type="submit" value="Save changes" class="btn btn-secondary">
-          </div>
-        </div>
-        <div class="upload-list">
-          <table>
-            <thead>
-              <tr>
-                <th>File name</th>
-                <th>File format</th>
-                <th>File size</th>
-              </tr>
-            </thead>
-            <tbody>
-              {% for file in files %}
-              <tr>
-                <td>{{ file.name }}</td>
-                <td>{{ file.format }}</td>
-                <td>{{ file.size }}</td>
-              </tr>
-              {% endfor %}
-            </tbody>
-          </table>
-        </div>
-      </form>
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="Upload File">
+  </form>
+  
       
 
-</div>
+
 {%endblock%}
 
 

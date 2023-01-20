@@ -9,7 +9,9 @@
     background: #b5d8ec;
 }
 
-
+.stolb {
+    column-count: 3;
+}
 
 .container__vi .video-container {
     display: flex;
