@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="{% static './src/css/forms.css' %}" /> 
     <link rel="stylesheet" href="{% static './src/css/footer.css' %}" />
     <link rel="stylesheet" href="{% static './src/css/account.css' %}" />
+    <link rel="stylesheet" href="{% static './src/css/staff.css' %}" />
             
     <link
       rel="stylesheet"
@@ -49,6 +50,11 @@
       <nav class="navbar">
         <ul>
           <li><a href="/">Главная</a></li>
+          <li><a href="{% url 'about' %}">О Нас</a>
+            <ul>
+              <li><a href="{% url 'staff' %}">Сотрудники</a></li>
+            </ul>
+            </li>
           <li><a href="#">Проекты +</a>
             <ul>
               <li><a href="#">ПОДР +</a>
@@ -62,7 +68,6 @@
               </li>      
           <li><a href="{% url 'news_home' %}">Новости</a></li>
           <li><a href="{% url 'books' %}">Библиотека</a></li>
-          <li><a href="{% url 'about' %}">О Нас</a></li>
           <li><a href="">Онлайн +</a>
           <ul>
             <li><a href="{% url 'online' %}">Вопрос</a></li>

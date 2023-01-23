@@ -1,0 +1,32 @@
+{% extends 'main/base.html' %} {% block content %} {% load static %}
+
+<div class="container">
+<table class="table">
+	<thead>
+		<tr>
+			<th>Ф.И.О</th>
+			<th>Должность</th>
+			<th>Телефон</th>
+			<th>Эл. почта</th>
+            <th>Кабинет</th>
+			
+		</tr>
+	</thead>
+	<tbody>
+        {% for staf in staff %}
+		<tr>
+			<td>{{ staf.title }}</td>
+			<td>{{ staf.position }}</td>
+			<td>{{ staf.phone }}</td>
+			<td>{{ staf.email }}</td>
+            <td>{{ staf.kab }}</td>
+			
+		</tr>
+		{%endfor%}
+	</tbody>
+</table>
+
+</div>
+
+
+{%endblock%}

@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Photo
+from .staff import Staff
 from .additional import Video
 from ..news.models import Articles
 from backend.apps.news.models import Articles
@@ -19,3 +20,11 @@ def index(request):
 
 def about(request):
     return render(request, 'main/about.html')   
+
+
+def staff(request):
+    staff = Staff.objects.all()
+    context = {
+        "staff": staff,
+    }
+    return render(request, 'main/staff.html', context) 

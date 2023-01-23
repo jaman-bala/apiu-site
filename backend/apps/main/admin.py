@@ -1,5 +1,6 @@
 from django.contrib import admin
 from .models import Photo
+from .staff import Staff
 from .additional import Video
 # Register your models here.
 
@@ -7,3 +8,4 @@ from .additional import Video
 
 admin.site.register(Photo)
 admin.site.register(Video)
+admin.site.register(Staff)
