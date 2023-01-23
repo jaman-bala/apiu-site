@@ -1,13 +1,12 @@
 {% extends 'main/base.html' %} {% block content %}
 
-<div class="container text-center">
+<div class="container">
   <div class="form-floating mb-3">
-  <div class="features">
+  <div class="features__title">
     <h1>Форма по добавлению вопросов</h1>
     <form method="post">
       {% csrf_token %}
       <div class="container__forms">
-  {% comment %} <form action="/action_page.php"> {% endcomment %}
   <div class="row__forms">
     <div class="col-25">
       <label for="fname">Имя</label>

@@ -1,14 +1,13 @@
 
-.container-box .text-center{
-    padding: 75px;
+.text-center{
     font-size: 40px;
-    margin-bottom: 20px;
-    color:#334;
+    text-align: center;
+    margin-top: 15px;
 }
 .container-box {
     width: 90%;
-    padding: 20px;
-    margin: 100px auto;
+
+    margin: 50px auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
