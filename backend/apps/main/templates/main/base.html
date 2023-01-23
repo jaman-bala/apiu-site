@@ -61,7 +61,7 @@
                 </ul>
               </li>      
           <li><a href="{% url 'news_home' %}">Новости</a></li>
-          <li><a href="{% url 'library' %}">Библиотека</a></li>
+          <li><a href="{% url 'books' %}">Библиотека</a></li>
           <li><a href="{% url 'about' %}">О Нас</a></li>
           <li><a href="">Онлайн +</a>
           <ul>
@@ -83,7 +83,7 @@
                   <img class="header__top-img" src="{% static './src/images/APIU_logo.png' %}" alt="APIU">     
               </div>
     <div class="footer__info">
-      <p class="footer__address">{% trans 'Адрес: Кыргызская Республика г. Бишкек, ул. Киевская № 96а' %}</p>
+      <p class="footer__address">{% trans 'Адрес: Кыргызская Республика г. Бишкек, ул. Киевская № 96а 5-этаж' %}</p>
       <p>{% trans 'Телефон:' %} <a href="#" class="footer__number"> +996 312 66-56-25, 701 66-56-25</a></p>
       <p class="footer__email">Email: office@apiu.kg</p>
       <ul class="footer__socials">
@@ -99,12 +99,17 @@
           </li>
           <li class="footer__link">
             <a href="https://www.youtube.com/@apiu6342/">
-                <img class="footer__icon" src="{% static './src/images/icons/free-icon-youtube-3938026.png' %}" alt="Facebook">
+                <img class="footer__icon" src="{% static './src/images/icons/free-icon-youtube-3938026.png' %}" alt="Youtube">
             </a>
         </li>
         <li class="footer__link">
+          <a href="https://t.me/apiu2019/">
+              <img class="footer__icon" src="{% static './src/images/icons/telegram.png' %}" alt="Telegram">
+          </a>
+      </li>
+        <li class="footer__link">
           <a href="{% url 'sign_in' %}">
-              <img class="footer__icon" src="{% static './src/images/icons/free-icon-user-3979363.png' %}" alt="Facebook">
+              <img class="footer__icon" src="{% static './src/images/icons/free-icon-user-3979363.png' %}" alt="Icon">
           </a>
       </li>
       </ul>

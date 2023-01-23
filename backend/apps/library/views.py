@@ -8,7 +8,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 class LibraryView(LoginRequiredMixin, ListView):
     model = Library
-    template_name = "library/library.html"
+    template_name = "books/books.html"
     context_object_name = "books"
 
     def get_queryset(self):  # new

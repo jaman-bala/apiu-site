@@ -1,95 +1,107 @@
+.library__top {
+  margin-top: 10px;
+  margin-left: 550px;
+}
 
-  
-  .library__top{
-    margin-top: 10px;
-    margin-left: 550px;
-  }
-  
-  .library__block-img img{
-    width: 200px;
-  
-  }
-  
-  .library__block-title {
-        padding-top: 0;
-        margin-top: -8px;
 
-  
+.library__block-img img {
+  width: 200px;
+  border-radius: 25px;
+}
+
+.library__block-title {
+  padding-top: 0;
+
+}
+
+.library__block-ti {
+  margin-top: -35px;
+}
+
+.btn__btn {
+  background-color: #ffffff; 
+  border-radius: 12px;
+  color: rgb(255, 255, 255);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+}
+
+.btn__btn:hover {
+  background-color: #d60202; 
+  color: white;
+}
+.btn__btn a {
+  color: #000000;
+}
+
+/* Поплавок четыре колонки бок о бок */
+.library__row {
+  margin: 25px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+/* Удалите лишние левые и правые поля из-за заполнения столбцов */
+.library__row {
+  margin-left: 250px;
+  margin-top: 45px;
+}
+
+/* Очистить поплавки после столбцов */
+
+/* Стиль встречных карт */
+.library__block {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* это добавляет эффект "карточек" */
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+.library__row .library__row .library__block:nth-child(1),
+.library__row .library__row .library__block:nth-child(2),
+.library__row .library__row .library__block:nth-child(3) {
+  display: inline-block;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
   }
-  
-  .library__block-ti {
-    margin-top: -45px;
-  
-  }
-  
-  
-  
-    /* Поплавок четыре колонки бок о бок */
-  .column__bi {
-      margin: 25px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap:20px;
-  }
-    
-    /* Удалите лишние левые и правые поля из-за заполнения столбцов */
-  .row__bi{
-      margin-left: 250px;
-      margin-top: 45px;
-  }
-    
-    /* Очистить поплавки после столбцов */
-  
-    /* Стиль встречных карт */
-  .card {
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* это добавляет эффект "карточек" */
-      padding: 16px;
-      text-align: center;
-      background-color: #f1f1f1;
-  }
-  
-  .column__bi .column__bi .card:nth-child(1),
-  .column__bi .column__bi .card:nth-child(2),
-  .column__bi .column__bi .card:nth-child(3){
-      display: inline-block;
-  }
-    
-  
-  @media screen and (max-width: 600px) {
-      .column {
-        width: 100%;
-        display: block;
-        margin-bottom: 20px;
-      }
-  }
-  
-  form.example input[type=text] {
-    padding: 10px;
-    font-size: 17px;
-    border: 1px solid grey;
-    float: left;
-    width: 80%;
-    background: #f1f1f1;
-  }
-  
-  form.example button {
-    float: left;
-    width: 20%;
-    padding: 10px;
-    background: #2196F3;
-    color: white;
-    font-size: 17px;
-    border: 1px solid grey;
-    border-left: none;
-    cursor: pointer;
-  }
-  
-  form.example button:hover {
-    background: #0b7dda;
-  }
-  
-  form.example::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
+}
+
+form.example input[type="text"] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196f3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
