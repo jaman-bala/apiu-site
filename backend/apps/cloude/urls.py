@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import create_folder, upload_file, folder_list, folder_detail, download_file, delete_file
+from .views import create_folder, upload_file, folder_list, folder_detail, download_file, delete_file, delete_folder
 
 urlpatterns = [
     path('create/', create_folder, name='create_folder'), # Создание папки
@@ -8,4 +8,6 @@ urlpatterns = [
     path('<int:folder_id>/', folder_detail, name='folder_detail'), # Деталии
     path('download_file/<int:file_id>/', download_file, name='download_file'),
     path('delete_file/<int:file_id>/', delete_file, name='delete_file'),
+    path('delete_folder/<int:folder_id>/', delete_folder, name='delete_folder'),
+
 ]

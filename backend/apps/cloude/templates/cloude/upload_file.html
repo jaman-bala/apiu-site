@@ -1,10 +1,17 @@
 {% extends 'cloude/base.html' %} {% block content %} {% load static %}
 
 
-    <h1>Загрузить файл</h1>
+    <h1>Загрузить файл папку</h1>
     <form method="post" enctype="multipart/form-data">
-      {% csrf_token %}
-      {{ form.as_p }}
+      
+      <div id="progress-bar-container">
+        {% csrf_token %}
+        <div id="progress-bar"></div>
+        <div id="percentage"></div>
+        {{ form.as_p }}
+    </div>
+      
+      
       <input type="submit" value="Upload File">
   </form>
   

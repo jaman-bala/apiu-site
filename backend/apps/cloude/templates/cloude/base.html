@@ -3,14 +3,25 @@
 <html>
 <head>
     <link rel="stylesheet" href="{% static './src/css/cloude.css' %}" />    
+ 
 
     <title>{% block title %}Default Title{% endblock %}</title>
 </head>
-<body>
-    <header>
 
+<nav>
+    <div class="navicon">
+      <div>
         
-    </header>
+      </div>
+    </div>
+  
+    <a href="{% url 'create_folder' %}">Создать папку</a>
+    <a href="{% url 'upload_file' %}">Загрузить файл</a>
+    <a href="{% url 'folder_list' %}">Список папок</a>
+    
+  </nav>
+        
+
     
     <main>
         {% block content %}{% endblock %}

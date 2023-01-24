@@ -55,3 +55,8 @@ def delete_file(request, file_id):
     file = get_object_or_404(File, id=file_id)
     file.delete()
     return redirect('folder_detail', folder_id=file.folder.id)
+
+def delete_folder(request, folder_id):
+    folder = Folder.objects.get(id=folder_id)
+    folder.delete()
+    return redirect('folder_list')

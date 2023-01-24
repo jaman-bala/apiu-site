@@ -7,6 +7,6 @@ class CreateFolderForm(forms.Form):
     name = forms.CharField(max_length=255)
 
 class UploadFileForm(forms.Form):
-    file = forms.FileField(widget=forms.ClearableFileInput(attrs={'multiple': True}))
+    file = forms.FileField(widget=forms.ClearableFileInput(attrs={'multiple': True, 'placeholder': 'Название файла'}))
     folder = forms.ModelChoiceField(queryset=Folder.objects.all())
 

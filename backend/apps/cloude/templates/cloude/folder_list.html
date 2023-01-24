@@ -4,10 +4,16 @@
 {% extends 'cloude/base.html' %} {% block content %} {% load static %}
 
 
-  <h1>Folders</h1>
+  <h1>Созданные папки</h1>
   <ul>
     {% for folder in folders %}
-      <li><a href="{% url 'folder_detail' folder.id %}">{{ folder.name }}</a></li>
+      <li>
+        <a href="{% url 'folder_detail' folder.id %}">{{ folder.name }}</a>
+        <form action="{% url 'delete_folder' folder.id %}" method="post">
+          {% csrf_token %}
+          <input type="submit" value="Delete">
+        </form>
+      </li>
     {% endfor %}
   </ul>
 
