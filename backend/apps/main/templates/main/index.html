@@ -1,81 +1,36 @@
 {% extends 'main/base.html' %} {% block content %} {% load static %}
 {% load i18n %}
 
-
-
 <main3>
-  <div class="slide-conatiner">
-    <span class="slider-span" id="slider-span1"></span>
-    <span class="slider-span" id="slider-span2"></span>
-    <span class="slider-span" id="slider-span3"></span>
-    <span class="slider-span" id="slider-span4"></span>
-    <span class="slider-span" id="slider-span5"></span>
-    <span class="slider-span" id="slider-span6"></span>
-    <span class="slider-span" id="slider-span7"></span>
-
-    <div class="image-slider">
-        {%for photo in photos%}
-      <div class="slides-div" id="slide-1">
-        <img src="{{ photo.img1.url }}" alt="" class="img" id="img1">
-        <a href="#slider-span1" class="button" id="button-1"></a>
-      </div>
-      <div class="slides-div" id="slide-2"> 
-        <img src="{{ photo.img2.url }}" alt="" class="img" id="img2">
-        <a href="#slider-span2" class="button" id="button-2"></a>
-      </div>
-      <div class="slides-div" id="slide-3">
-        <img src="{{ photo.img3.url }}" alt="" class="img" id="img3">
-        <a href="#slider-span3" class="button" id="button-3"></a>
-      </div>
-      <div class="slides-div" id="slide-4">
-        <img src="{{ photo.img4.url }}" alt="" class="img" id="img4">
-        <a href="#slider-span4" class="button" id="button-4"></a>
-      </div>
-      <div class="slides-div" id="slide-5">
-        <img src="{{ photo.img5.url }}" alt="" class="img" id="img5">
-        <a href="#slider-span5" class="button" id="button-5"></a>
-      </div>
-      <div class="slides-div" id="slide-6">
-        <img src="{{ photo.img6.url }}" alt="" class="img" id="img6">
-        <a href="#slider-span6" class="button" id="button-6"></a>
-      </div>
-      <div class="slides-div" id="slide-7">
-        <img src="{{ photo.img7.url }}" alt="" class="img" id="img7">
-        <a href="#slider-span7" class="button" id="button-7"></a>
-      </div>
+  <div class="container">
+    <div>
+        <div id="Slider">
+            {%for photo in photos%}
+              <img src="{{ photo.img1.url }}">
+              <img src="{{ photo.img2.url }}">
+              <img src="{{ photo.img3.url }}">
+              <img src="{{ photo.img4.url }}">
+              <img src="{{ photo.img5.url }}">
+            {%endfor%}
+        </div>
     </div>
-    {%endfor%}
-</div>
-</div>
+  </div>
 </main3>
 
 <fon>
-  <div class="container__news">
-    <h1 class="heading">Новости</h1>
-     <div class="box-container">
-      {% for el in news %}
-       <div class="box">
-          <div class="image">
-             <img src="{{ el.img.url }}" alt="img">
-          </div>
-          <div class="content">
-             <h3>{{ el.title}}</h3>
-             <a href="{% url 'news_detail' el.id %}" class="btn">Подробнее</a>
-             <div class="icons">
-                <span> <i class="fas fa-calendar"></i>{{el.date}}</span>               
-             </div>
-          </div>
-       </div>
-       {% endfor %}
-      </div>
+  <div class="container">
+
+    <h1>Новости</h1>
+
+
       <a href="{% url 'news_home' %}"><div id="load-more">{% trans 'Подробнее' %}</div></a>
    </div>
 </fon>
 
 <main1>
 
-  <div class="container__vi">
-    <h1>Видео галерея</h>
+<div class="container">
+  <h1>Видео</h1>
      <ul class="stolb">
        {% for videos in video  %}
             <li>
@@ -85,10 +40,11 @@
             {% endfor %}
         </ul>
 </div> 
+</div>
 </main1>
 
 <main2>
-  <h1 class="text-center">Полезные ссылки</h1>
+  <h1 class="text-center">Наши партнеры</h1>
   <div class="container-box">
     <div class="box">
       <a href="https://agro.gov.kg/ru/main/"><img src="{% static './src/images/msh2-2.png' %}" alt="img" /></a>

@@ -7,10 +7,7 @@ class Photo(models.Model):
     img2 = models.ImageField(upload_to='img', blank=True)
     img3 = models.ImageField(upload_to='img', blank=True)
     img4 = models.ImageField(upload_to='img', blank=True)
-    img5 = models.ImageField(upload_to='img', blank=True)
-    img6 = models.ImageField(upload_to='img', blank=True)
-    img7 = models.ImageField(upload_to='img', blank=True)
-    
+    img5 = models.ImageField(upload_to='img', blank=True)   
    
 
     def __str__(self):
