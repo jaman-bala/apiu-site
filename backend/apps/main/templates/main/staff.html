@@ -1,36 +1,57 @@
 {% extends 'main/base.html' %} {% block content %} {% load static %}
 
-<div class="container">
-    <div class="container__staff">
-    <h4> Данные сотрудников</h4>
-    <h5>Отдел Реализации Сельскохозяйственных Проектов </h5>
-</div>
-<table class="table">
-	<thead>
-		<tr>
-			<th>Ф.И.О</th>
-			<th>Должность</th>
-			<th>Телефон</th>
-			<th>Эл. почта</th>
-            <th>Кабинет</th>
-			
-		</tr>
-	</thead>
-	<tbody>
-        {% for staf in staff %}
-		<tr>
-			<td>{{ staf.title }}</td>
-			<td>{{ staf.position }}</td>
-			<td>{{ staf.phone }}</td>
-			<td>{{ staf.email }}</td>
-            <td>{{ staf.kab }}</td>
-			
-		</tr>
-		{%endfor%}
-	</tbody>
-</table>
+<div class="page-wrapper">
+
+
+	<div class="left-panel-wrapper">
+		<div class="left-panel">
+			<div class="container">
+				<div class="container__staff">
+					<h4> Данные сотрудников</h4>
+						<h5>Отдел Реализации Сельскохозяйственных Проектов </h5>
+				</div>
+					<table class="table">
+						<thead>
+							<tr>
+								<th>Ф.И.О</th>
+								<th>Должность</th>
+								<th>Телефон</th>
+								<th>Эл. почта</th>
+								<th>Кабинет</th>
+								
+							</tr>
+						</thead>
+						<tbody>
+							{% for staf in staff %}
+							<tr>
+								<td>{{ staf.title }}</td>
+								<td>{{ staf.position }}</td>
+								<td>{{ staf.phone }}</td>
+								<td>{{ staf.email }}</td>
+								<td>{{ staf.kab }}</td>	
+							</tr>
+							{%endfor%}
+						</tbody>
+					</table>
+			</div>
+		</div>
+	</div>
+
+	<div class="content-wrapper">
+		<div class="about">
+			<p> <b>Адрес:</b> г. Бишкек, ул. Киевская, 96 а, 5 этаж<br>
+				<b>Телефоны:</b> (312) 665 625, (312) 975 974,<br>
+				<b>e-mail:</b> office@apiu.kg<br>
+			<p>
+				<b>Страницы в социальных сетях:</b> <br>
+				<b><img class="footer__icon" src="{% static './src/images/icons/free-icon-facebook.png' %}" alt="Facebook"> Фейсбук:</b> Отдел реализации сельскохозяйственных проектов, <br>
+				<b><img class="footer__icon" src="{% static './src/images/icons/free-icon-instagram.png' %}" alt="Instagram"> Инстаграм:</B> apiu_kyrgyzrepublic, <br>
+				<b><img class="footer__icon" src="{% static './src/images/icons/telegram.png' %}" alt="Telegram"> Телеграм:</b> APIU <br></p>
+			</p>
+		</div>
+	</div>
+
+
 
 </div>
-
-
 {%endblock%}

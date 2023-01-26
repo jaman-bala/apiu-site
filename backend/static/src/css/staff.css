@@ -17,6 +17,7 @@
 .container__staff h4 {
     text-align: center;
 
+
 }
 
 .container__staff h5 {
@@ -52,4 +53,29 @@
 }
 .table tbody tr:last-child td:last-child {
 	border-radius: 0 0 20px 0;
+}
+
+
+.page-wrapper {
+	align-self: center;
+	margin: 50px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+  
+.content-wrapper {
+	display: table-cell;
+	
+} 
+.about {
+	margin: 195px auto;
+  }
+
+.about__pro {
+	margin: 130px auto;
+	align-items: center;
+	width: 320px;
+	height: 450px;
 }

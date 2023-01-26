@@ -1,12 +1,51 @@
 {% extends 'main/base.html' %} {% block content %} {% load static %}
 
 
+<div class="page-wrapper-disain">
 
-<div class="conatainer__button">
-    {% for dis in disain %}
-    <a type="button" href="{{dis.file.url}}" class="button1" target="_blank">{{dis.title}}</a>
-    {% endfor %}
+            <div class="left-panel-wrapper-disain">
+                <div class="left-panel">
+                        <div class="container">
+                            {% for dis in disain %}
+                            <div class="card">
+                                <div class="card-header">
+                                    {{dis.title}}
+                                </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">краткое описание</h5>
+                                            <p class="card-text">Текст</p>
+                                        <a href="{{dis.file.url}}" class="btn btn-primary" target="_blank">Открыть проект</a>
+                                    </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                </div>
+            </div>
+
+        <div class="content-wrapper">
+            <div class="about__pro">
+                <div class="list-group">
+                    <a href="{% url 'disain' %}" class="list-group-item list-group-item-primary">Дизайн проекта</a>
+                    <a href="{% url 'study' %}" class="list-group-item list-group-item-secondary">Исследование</a>
+                    <a href="{% url 'report' %}" class="list-group-item list-group-item-info">Отчёты</a>
+                </div>
+                <section class="ftco-section">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="calendar calendar-first" id="calendar_first">
+                            <div class="calendar_header">
+                                <button class="switch-month switch-left"> <i class="fa fa-chevron-left"></i></button>
+                                 <h2></h2>
+                                <button class="switch-month switch-right"> <i class="fa fa-chevron-right"></i></button>
+                            </div>
+                            <div class="calendar_weekdays"></div>
+                            <div class="calendar_content"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
 </div>
-
-
 {%endblock%}

@@ -31,8 +31,7 @@
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"> 
-
-
+    
 
 
 
@@ -50,25 +49,18 @@
       <nav class="navbar">
         <ul>
           <li><a href="/">Главная</a></li>
-          <li><a href="{% url 'about' %}">О Нас +</a>
+          <li><a href="{% url 'about' %}">О Нас ▼</a>
             <ul>
               <li><a href="{% url 'staff' %}">Сотрудники</a></li>
             </ul>
             </li>
-          <li><a href="#">Проекты +</a>
+          <li><a href="#">Проекты ▼</a>
             <ul>
-              <li><a href="{% url 'project' %}">ПОДР +</a>
-                <ul>
-                  <li><a href="{% url 'disain' %}">Дизайн проекта</a></li>
-                  <li><a href="{% url 'study' %}">Исследование</a></li>
-                  <li><a href="{% url 'report' %}">Отчёты</a></li>
-                </ul>
-              </li>  
-                </ul>
-              </li>      
+              <li><a href="{% url 'project' %}">ПОДР</a>   
+              </ul>
           <li><a href="{% url 'news_home' %}">Новости</a></li>
           <li><a href="{% url 'books' %}">Библиотека</a></li>
-          <li><a href="">Онлайн +</a>
+          <li><a href="">Обратная связь ▼</a>
           <ul>
             <li><a href="{% url 'online' %}">Вопрос</a></li>
             <li><a href="{% url 'create' %}">Задать</a></li>

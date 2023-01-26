@@ -3,13 +3,13 @@
 
 
 .conatainer__button {
-  text-align: center;
-  margin-top: 85px;
+  align-self: center;
+	margin: 10px auto;
+  justify-content: center;
 }
 
 .button1 {
-    background-color: #2d80b8;
-    border-radius: 12px;
+    background-color: rgb(235, 215, 215);
     color: rgb(0, 0, 0);
     padding: 15px 32px;
     text-align: center;
@@ -20,4 +20,22 @@
     margin: 4px 2px;
     cursor: pointer;
     
+}
+
+.left-panel-wrapper-disain {
+  padding-top: 5px;
+  width: 1150px;
+}
+
+.page-wrapper-disain {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.card {
+  margin-top: 8px;
+}
+.card .card-body {
+  color: blueviolet;
 }
