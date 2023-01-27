@@ -140,6 +140,22 @@
   
 }
 
+.slider-container {
+  max-width: 1120px;
+  width: 100%;
+  background-color: gray;
+  padding: 40px 0;
+}
+
+.slider-content {
+  margin: 0 40px;
+}
+
+.card {
+  border-radius: 25px;
+  background-color: #FFF;
+}
+
 .image-content, 
 .card-content {
   display: flex;
@@ -148,18 +164,26 @@
   padding: 10px 14px;
 }
 
-.slider-content {
-  margin: 0 40px;
-}
-
 .image-content {
+  position: relative;
   row-gap: 5px;
+  padding: 25px 0;
 }
 
-.card {
-  width: 320px;
-  border-radius: 25px;
-  background-color: rgb(180, 168, 168);
+.overlay::before,
+.overlay::after{
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+  height: 40px;
+  width: 40px;
+  background-color: #4070F4;
+}
+
+.overlay::after {
+  border-radius: 0 25px 0 0;
+  background-color: #fff;
 }
 
 .card-image {
@@ -169,6 +193,15 @@
   border-radius: 50%;
   background: #fff;
   padding: 3px;
+}
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #4070F4;
+  left: 0;
+  top: 0;
+  border-radius: 25px 25px 0 25px;
 }
 
 .card-image .card-img {
@@ -200,6 +233,7 @@
   border-radius: 6px;
   margin: 14px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .button:hover {
