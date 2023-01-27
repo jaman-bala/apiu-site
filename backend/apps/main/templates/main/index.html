@@ -20,28 +20,30 @@
 <fon class='fon'>
   <div class="container">
     <h1>Новости</h1>
-    <div class="slider-container swiper">
-      <div class="slider-content">
+    <div class="slide-container swiper">
+      <div class="slide-content">
         <div class="card-wrapper swiper-wrapper">
                     {% for el in news %}
                     <div class="card swiper-slide">
                       <div class="image-content">
                         <span class="overlay"></span>
+
                         <div class="card-image">
                           <img src="{{ el.img.url }}" alt="News" class="card-img">
                         </div>
                       </div>
+
                       <div class="card-content">
-                        <h2 class="name">{{ el.title}}</h2>
-                        <p class="description">{{ el.full_text|truncatechars:100 }}</p>
+                        <h2 class="name">{{ el.title|truncatechars:10}}</h2>
+                        <p class="description">{{ el.full_text|truncatechars:45 }}</p>
                         <a href="{% url 'news_detail' el.id %}" class="news__block-link"><button class="button">Подробнее</button></a>
                       </div>
                     </div>
                     {% endfor %}
                   </div>
                 </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next swiper-navBtn"></div>
+                <div class="swiper-button-prev swiper-navBtn"></div>
                 <div class="swiper-pagination"></div>
               </div>
 
