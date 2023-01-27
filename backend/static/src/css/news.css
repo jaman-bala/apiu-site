@@ -143,13 +143,11 @@
 .slide-container {
   max-width: 1120px;
   width: 100%;
-
   padding: 40px 0;
 }
 
 .slide-content {
   margin: 0 40px;
-  background-color: red;
   overflow: hidden;
   border-radius: 25px;
 }
@@ -271,4 +269,13 @@
 
 .swiper-pagination-bullet-active {
   background-color: #4070F4;
+}
+
+@media screen and (max-width: 768px) {
+  .slide-content {
+    margin: 0 10px;
+  }
+  .swiper-navBtn {
+    display: none;
+  }
 }
