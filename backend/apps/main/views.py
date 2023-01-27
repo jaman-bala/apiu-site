@@ -9,7 +9,7 @@ from backend.apps.news.models import Articles
 def index(request):
     video = Video.objects.all()
     photos = Photo.objects.all()
-    news = Articles.objects.all()[:3]
+    news = Articles.objects.all()        # если добавить то только выйдет 3 информации[:3]
     context = {
         "photos":photos,
         "video":video,
