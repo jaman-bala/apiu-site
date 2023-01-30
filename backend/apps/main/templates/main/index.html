@@ -52,18 +52,18 @@
 
 <main1>
 
-<div class="container">
+{% comment %} <div class="container"> {% endcomment %}
   <h1 class="vi">Видео</h1>
      <ul class="stolb">
        {% for videos in video  %}
-            <li>
+            <li class="li">
               <iframe width="560" height="315" src="{{ videos.url}}" frameborder="0"
                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></h5></iframe>
               </li>
             {% endfor %}
         </ul>
 </div> 
-</div>
+{% comment %} </div> {% endcomment %}
 </main1>
 
 <main2>
