@@ -19,7 +19,7 @@
               <i class="fas fa-calendar"></i>
                Date - <time>{{el.date}}</time>
              </span>
-             <a href="{% url 'news_detail' el.id %}" class="news__block-link"><button class="button__new">Подробнее</button></a>
+             <div class="add"><a href="{% url 'news_detail' el.id %}" class="news__block-link"><button class="button__new">Подробнее</button></a></div>
           </div>
         </article>
         {% endfor %}

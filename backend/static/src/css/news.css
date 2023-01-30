@@ -1,20 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap');
 
 
-fon {
-  font-family: 'Raleway', sans-serif;
-  line-height: 1.5;
-  font-size: 1rem;
-  color: #444;
-  margin: 0;
-  background-color: #efe9e9;
-}
-
-
 i{
   color: #888;
 }
 
+.add {
+  text-align: right;
+}
 .button__new {
   background-color: #008CBA; 
   border: none;
@@ -25,6 +18,7 @@ i{
   font-size: 16px;
   transition-duration: 0.4s;
   justify-content: center;
+  text-align: center;
 }
 
 .button__new:hover {
@@ -102,7 +96,9 @@ i{
 
 
 
-
+fon a {
+  justify-content: center;
+}
 
 .ne {
   text-align: center;
@@ -193,6 +189,10 @@ i{
   text-align: center;
 }
 
+.but {
+  text-align: center;
+}
+
 .button {
   border: none;
   font-size: 16px;
@@ -203,10 +203,11 @@ i{
   margin: 14px;
   cursor: pointer;
   transition: all 0.3s ease;
+  justify-content: center;
 }
 
 .button:hover {
-  background: #265DF2;
+  background: #000000;
 }
 
 .swiper-navBtn {
