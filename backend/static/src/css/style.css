@@ -112,9 +112,11 @@
   }
 
 
+.vi {
+  text-align: center;
+}
 
 
-bootstrap
 
 [tabindex="-1"]:focus {
   outline: 0 !important; }

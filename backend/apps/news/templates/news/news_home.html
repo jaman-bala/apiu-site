@@ -3,26 +3,27 @@
 {% block content %}
 
 <fon>
-  <div class="container__news">
-    <h1 class="heading">Новости</h1>
-     <div class="box-container">
+   <div class="container">
+      <h1 class="ne">Новости</h1>
       {% for el in news %}
-       <div class="box">
-          <div class="image">
-             <img src="{{ el.img.url }}" alt="img">
+      <!--card with shadow-->
+        <article class="card__ca shadow">
+          <div>
+            <img src="{{ el.img.url }}" alt="image">
           </div>
-          <div class="content">
-             <h3>{{ el.title}}</h3>
-             <a href="{% url 'news_detail' el.id %}" class="btn">Подробнее</a>
-             <div class="icons">
-                <span> <i class="fas fa-calendar"></i>{{el.date}}</span>               
-             </div>
+    
+          <div>
+            <h5><strong>{{ el.title}}</strong></h5>
+            <p>{{ el.full_text|truncatechars:150 }}</p>
+            <span>
+              <i class="fas fa-calendar"></i>
+               Date - <time>{{el.date}}</time>
+             </span>
+             <a href="{% url 'news_detail' el.id %}" class="news__block-link"><button class="button__new">Подробнее</button></a>
           </div>
-       </div>
-       {% endfor %}
+        </article>
+        {% endfor %}
       </div>
-      <div id="load-more"> Далее </div>
-   </div>
 </fon>
   
 {%endblock%}

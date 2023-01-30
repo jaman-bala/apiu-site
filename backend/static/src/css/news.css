@@ -1,144 +1,112 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap');
 
 
-
-/* .container__news {
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-    padding:25px 20px;
+fon {
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.5;
+  font-size: 1rem;
+  color: #444;
+  margin: 0;
+  background-color: #efe9e9;
 }
 
-.container__news .heading {
-    padding: 75px;
-    font-size: 40px;
-    margin-bottom: 20px;
-    color:#334;
+
+i{
+  color: #888;
+}
+
+.button__new {
+  background-color: #008CBA; 
+  border: none;
+  color: white;
+  padding: 12px 28px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  justify-content: center;
+}
+
+.button__new:hover {
+  background-color: #000000;
+  color: white;
+}
+
+.container {
+  width: 96%;
+  margin: 1rem auto;
+}
+
+.card__ca {
+  height: 190px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.card__ca div:first-child {
+  flex-basis: 35%;
+}
+
+.card__ca div:last-child {
+  flex-basis: 65%;
+  padding: 0 0.5rem 0.25rem;
+}
+
+.card__ca img {
+  display: block;
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+.card__ca p {
+  margin-top: 0.5rem;
+  margin-bottom: 0.35rem;
+}
+
+.shadow {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.border {
+  border: 1px solid #ddd;
+}
+
+.curve {
+  border-radius: 0.35rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 60%;
   }
-  
-.container__news .box-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap:20px;
-}
-  
-.container__news .box-container .box{
-    background-color: #fff;
-    padding:20px;
-    border-radius: 5px;
-    width: 350px;
-    box-shadow: 0 10px 10px rgba(0,0,0,.2);
-    display: none;
+
+  .card__ca div:first-child {
+    flex-basis: 30%;
   }
-  
-.container__news .box-container .box:nth-child(1),
-.container__news .box-container .box:nth-child(2),
-.container__news .box-container .box:nth-child(3){
-    display: inline-block;
+
+  .card__ca div:last-child {
+    flex-basis: 70%;
+  }
 }
-  
-.container__news .box-container .box .image{
-    margin-bottom: 20px;
-    overflow: hidden;
-    height: 250px;
-    border-radius: 5px;
+
+
+
+
+
+
+
+
+
+
+
+.ne {
+  text-align: center;
 }
-  
-.container__news .box-container .box .image img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-  
-.container__news .box-container .box:hover .image img{
-    transform: scale(1.1);
-}
-  
-.container__news .box-container .box .content h3{
-    font-size: 20px;
-    color:#334;
-}
-  
-.container__news .box-container .box .content p{
-    font-size: 15px;
-    color:#777;
-    line-height: 2;
-    padding:15px 0;
-}
-  
-.container__news .box-container .box .content .btn{
-    display: inline-block;
-    padding:10px 30px;
-    border:1px solid #334;
-    color:#334;
-    font-size: 16px;
-}
-  
-.container__news .box-container .box .content .btn:hover{
-    background-color: crimson;
-    border-color: crimson;
-    color:#fff;
-}
-  
-.container__news .box-container .box .content .icons{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 20px;
-    padding-top: 15px;
-    border-top:1px solid #334;
-}
-  
-.container__news .box-container .box .content .icons span{
-    font-size: 14px;
-    color:#777;
-}
-  
-.container__news .box-container .box .content .icons span i{
-    color:crimson;
-    padding-right: 5px;
-}
-  
-#load-more{
-    margin-top: 20px;
-    display: inline-block;
-    padding:13px 30px;
-    border:1px solid #334;
-    color:#334;
-    font-size: 16px;
-    background-color: #fff;
-    cursor: pointer;
-}
-  
-#load-more:hover{
-    background-color: crimson;
-    border-color: crimson;
-    color:#fff;
-}
-  
-@media (max-width:450px){
-     
-    .container__news .heading{
-        font-size: 25px;
-    }
-  
-.container__news .box-container {
-    grid-template-columns: 1fr;
-    }
-  
-.container__news .box-container .box .image {
-  height: 200px;
-}
-  
-.container__news .box-container .box .content p {
-  font-size: 12px;
-}
-  
-.container__news .box-container .box .content .icons span {
-  font-size: 12px;
-}
-  
-} */
 
 .slide-container {
   max-width: 1120px;

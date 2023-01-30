@@ -19,7 +19,7 @@
 
 <fon class='fon'>
   <div class="container">
-    <h1>Новости</h1>
+    <h1 class="ne">Новости</h1>
     <div class="slide-container swiper">
       <div class="slide-content">
         <div class="card-wrapper swiper-wrapper">
@@ -46,30 +46,6 @@
                 <div class="swiper-button-prev swiper-navBtn"></div>
                 <div class="swiper-pagination"></div>
               </div>
-
-
-{% comment %} 
-    {% for el in news %}
-    <div class="news__content">
-      <div class="news__block">
-          <div class="news__block-image">
-              <img src="{{ el.img.url }}" alt="News">
-          </div>
-          <div class="news__block-text">
-              <div class="news__block-title">{{ el.title}}</div>
-              <p class="news__block-desc">{{ el.full_text|truncatechars:100 }}</p>
-              <div class="news__block-bottom">
-                  <div class="news__block-date">
-                      <img class="news__block-icon" src="{% static './src/images/icons/date.svg' %}" alt="Date">
-                      <p class="news__block-date-number">{{el.date}}</p>
-                  </div>
-                  <a href="{% url 'news_detail' el.id %}" class="news__block-link">Подробнее</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        {% endfor %} {% endcomment %}
-
       <a href="{% url 'news_home' %}"><div id="load-more">{% trans 'Подробнее' %}</div></a>
    </div>
 </fon>
@@ -77,7 +53,7 @@
 <main1>
 
 <div class="container">
-  <h1>Видео</h1>
+  <h1 class="vi">Видео</h1>
      <ul class="stolb">
        {% for videos in video  %}
             <li>

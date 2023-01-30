@@ -9,11 +9,11 @@
                             {% for dis in disain %}
                             <div class="card">
                                 <div class="card-header">
-                                    {{dis.title}}
+                                   <h5>Названия</h5>
                                 </div>
                                     <div class="card-body">
-                                        <h5 class="card-title">краткое описание</h5>
-                                            <p class="card-text">Текст</p>
+                                        <h5 class="card-title"> {{dis.title}}</h5>
+                                        
                                         <a href="{{dis.file.url}}" class="btn btn-primary" target="_blank">Открыть проект</a>
                                     </div>
                             </div>
