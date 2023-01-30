@@ -38,6 +38,7 @@ INSTALLED_APPS = [
 
     # Dependencies
     'ckeditor',
+    'minio_storage',
 ]
 
 MIDDLEWARE = [
@@ -148,6 +149,16 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+DEFAULT_FILE_STORAGE = "minio_storage.storage.MinioMediaStorage"
+MINIO_STORAGE_ENDPOINT = '10.11.11.8:9000'
+MINIO_STORAGE_ACCESS_KEY = 's3igtWTcQqq2uyp7'
+MINIO_STORAGE_SECRET_KEY = 'DozBIJDceDimmGHLwUaMDiX8j13bF2oM'
+MINIO_STORAGE_USE_HTTPS = False
+MINIO_STORAGE_MEDIA_BUCKET_NAME = 'media'
+MINIO_STORAGE_AUTO_CREATE_MEDIA_BUCKET = True
+MINIO_STORAGE_STATIC_BUCKET_NAME = 'static'
+MINIO_STORAGE_AUTO_CREATE_STATIC_BUCKET = True
 
 
 CKEDITOR_UPLOAD_PATH = 'uploads/'
