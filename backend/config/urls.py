@@ -13,6 +13,7 @@ urlpatterns = [
     path('project/', include('backend.apps.project.urls')),
     path('cloude/', include('backend.apps.cloude.urls')),
     path('ckeditor/', include('ckeditor_uploader.urls')),
+    path('gallery/', include('backend.apps.gallery.urls')),
     
 ]
 

@@ -1,0 +1,39 @@
+{% extends 'main/base.html' %}
+{% block content %}
+{% load static %}
+ {% load i18n %}
+
+
+<gallery>
+    <section class="library">
+        <div class="container">
+            <div class="library__top">
+                <form class="example"  style="margin:auto;max-width:300px">
+                    <input type="text" placeholder="Search.." name="q">
+                    <button type="submit"><i class="fa fa-search" alt="Search"></i></button>
+                  </form>
+            </div>
+           
+            
+            <div class="grid-container">
+                {% for ga in gallery %}
+                <div class="item">
+                    <a href="{% url 'gallery_detail' ga.id %}">
+                        <img src="{{ ga.photo_add.url }}" alt="image"></a>
+                        <p>
+                            {{ ga.country}}<br>
+                            {{ ga.title}}<br>
+                            {{ga.date}}<br>
+                        </p>
+                    </div>
+                {% endfor %}
+              </div>
+            </div>
+    </section>
+</gallery>
+
+
+
+
+
+  {%endblock%}

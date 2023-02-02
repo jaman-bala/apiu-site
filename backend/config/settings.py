@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'backend.apps.account',
     'backend.apps.project',
     'backend.apps.main',
+    'backend.apps.gallery',
 
     # Dependencies
     'ckeditor',
@@ -142,7 +143,7 @@ LOCALE_PATHS = [os.path.join(BASE_DIR, "locale")]
 # Static files (CSS, JavaScript, Images)
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles/static')
+STATIC_ROOT = os.path.join(BASE_DIR, '/static')
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
