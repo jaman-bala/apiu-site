@@ -21,9 +21,9 @@
                     <a href="{% url 'gallery_detail' ga.id %}">
                         <img src="{{ ga.photo_add.url }}" alt="image"></a>
                         <p>
-                            {{ ga.country}}<br>
+                            <b>{{ ga.country}}</b><br>
                             {{ ga.title}}<br>
-                            {{ga.date}}<br>
+                            <em>{{ga.date}}</em><br>
                         </p>
                     </div>
                 {% endfor %}

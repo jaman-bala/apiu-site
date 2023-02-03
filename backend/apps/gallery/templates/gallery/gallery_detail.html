@@ -1,7 +1,19 @@
 {% extends 'main/base.html' %} {% block content %} {% load static %}
 {% load i18n %}
+
 <div class="container">
- 
+    <div class="gallery__detail">
+        <img src="{{ gallery_detail.photo_add.url }}" alt="img"/>
+         <ul>
+            <p>
+            <li><b>ID:</b> {{ gallery_detail.id}}<br></li>
+            <li><b>Город:</b> {{ gallery_detail.country }}<br></li>
+            <li><b>Название:</b> {{ gallery_detail.title }}<br></li>
+            <li><b>Описание:</b> {{ gallery_detail.description }}<br></li>
+            </p>
+        </ul>
+      </div>
+    </div>
 </div>
 
 {%endblock%}
