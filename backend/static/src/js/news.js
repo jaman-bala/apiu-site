@@ -1,21 +1,3 @@
-// let loadMoreBtn = document.querySelector("#load-more");
-// let currentItem = 3;
-
-// loadMoreBtn.onclick = () => {
-//   let boxes = [
-//     ...document.querySelectorAll(".container__news .box-container .box"),
-//   ];
-//   for (var i = currentItem; i < currentItem + 3; i++) {
-//     boxes[i].style.display = "inline-block";
-//   }
-//   currentItem += 3;
-
-//   if (currentItem >= boxes.length) {
-//     loadMoreBtn.style.display = "none";
-//   }
-// };
-
-
 var swiper = new Swiper(".slide-content", {
   slidesPerView: 3,
   spaceBetween: 25,
@@ -45,3 +27,24 @@ var swiper = new Swiper(".slide-content", {
   }
 });
 
+
+
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}

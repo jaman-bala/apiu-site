@@ -3,15 +3,49 @@
 
 <div class="container">
     <div class="gallery__detail">
-        <img src="{{ gallery_detail.photo_add.url }}" alt="img"/>
-         <ul>
-            <p>
-            <li><b>ID:</b> {{ gallery_detail.id}}<br></li>
-            <li><b>Город:</b> {{ gallery_detail.country }}<br></li>
-            <li><b>Название:</b> {{ gallery_detail.title }}<br></li>
-            <li><b>Описание:</b> {{ gallery_detail.description }}<br></li>
-            </p>
+      <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            {% if page_obj.has_previous %}
+            <li class="page-item">
+            <a class="page-link" href="?page={{page_obj.previous_page_number}}" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+            </li>
+            {% endif %}
+            <li class="page-item"><a class="page-link" href="?page={{page_obj.number}}">{{page_obj.number}}</a></li>
+            <li class="page-item">
+            {% if page_obj.has_next %}
+            <a class="page-link" href="?page={{page_obj.next_page_number}}" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+            {% endif %}
+            </li>
         </ul>
+        </nav>
+        <img id="myImg" src="{{ gallery_detail.photo_add.url }}"  alt="{{ gallery_detail.title }}"/>
+        <div id="myModal" class="modal">
+          <span class="close">×</span>
+          <img class="modal-content" id="img01">
+          <div id="caption"></div>
+        </div>
+              <table  class="table">
+                <tr>
+                    <td><b>ID:</b></td>
+                    <td> {{ gallery_detail.id}}<br></td>
+                </tr>
+                  <tr>
+                    <td><b>Область:</b> </td>
+                    <td>{{ gallery_detail.country }}<br></td>
+                </tr>
+                <tr>
+                    <td><b>Название:</b></td>
+                      <td>{{ gallery_detail.title }}<br></td>
+                </tr>
+                <tr>
+                    <td><b>Описание:</b></td>
+                    <td> {{ gallery_detail.description|safe }}<br></td>
+                </tr>
+          </table>
       </div>
     </div>
 </div>

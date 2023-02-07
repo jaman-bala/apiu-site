@@ -6,7 +6,7 @@ from django.forms import ModelForm, TextInput, DateTimeInput, Textarea, FileInpu
 class CreateForm(ModelForm):
     class Meta:
         model = Create
-        fields = ['first_name', 'last_name', 'email', 'city' ,'phone', 'title', 'text', 'file', 'date']
+        fields = ['first_name', 'last_name', 'email', 'city' ,'phone', 'title', 'text', 'file']
 
         widgets = {
             "first_name": TextInput(attrs={
@@ -41,10 +41,6 @@ class CreateForm(ModelForm):
 
                 'placeholder': 'Файл'
             }),
-            "date": DateTimeInput(attrs={
 
-                'type': "date",
-                'placeholder': 'Дата'
-            }),
 
         }

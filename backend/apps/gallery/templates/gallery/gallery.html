@@ -23,11 +23,32 @@
                         <p>
                             <b>{{ ga.country}}</b><br>
                             {{ ga.title}}<br>
-                            <em>{{ga.date}}</em><br>
+                            <em><i class="fas fa-calendar"></i>{{ga.date}}</em><br>
                         </p>
                     </div>
                 {% endfor %}
               </div>
+                <div class="paggin">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            {% if page_obj.has_previous %}
+                            <li class="page-item">
+                            <a class="page-link" href="?page={{page_obj.previous_page_number}}" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                            </li>
+                            {% endif %}
+                            <li class="page-item"><a class="page-link" href="?page={{page_obj.number}}">{{page_obj.number}}</a></li>
+                            <li class="page-item">
+                            {% if page_obj.has_next %}
+                            <a class="page-link" href="?page={{page_obj.next_page_number}}" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                            {% endif %}
+                            </li>
+                        </ul>
+                        </nav>
+                </div>
             </div>
     </section>
 </gallery>

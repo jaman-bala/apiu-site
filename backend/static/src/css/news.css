@@ -32,7 +32,7 @@ i{
 }
 
 .card__ca {
-  height: 190px;
+  height: 230px;
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
@@ -60,6 +60,10 @@ i{
 .card__ca p {
   margin-top: 0.5rem;
   margin-bottom: 0.35rem;
+}
+
+.card__ca h5 {
+  margin-top: 15px;
 }
 
 .shadow {

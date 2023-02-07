@@ -6,7 +6,7 @@ class NewshomeView(ListView):
         model = Articles
         template_name = 'news/news_home.html'
         context_object_name = 'news'
-        paginate_by = 10
+        paginate_by = 15
         queryset = Articles.objects.all()
 
 

@@ -3,6 +3,9 @@ import os
 import django.conf.locale
 from django.conf import global_settings
 from django.utils.translation import gettext_lazy as _
+from easy_thumbnails.conf import Settings as thumbnail_settings
+
+
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -40,7 +43,9 @@ INSTALLED_APPS = [
     # Dependencies
     'ckeditor',
     'minio_storage',
+
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -176,3 +181,4 @@ CKEDITOR_CONFIGS = {
             ]),
         },
 }
+

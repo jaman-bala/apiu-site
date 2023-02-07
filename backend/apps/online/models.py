@@ -10,7 +10,7 @@ class Create(models.Model):
     title = models.CharField("Вопрос", max_length=200)
     text = models.TextField("Описание")
     file = models.FileField(upload_to='file', blank=True, null=True)
-    date = models.DateTimeField("Дата публикации")
+    created = models.DateTimeField(verbose_name="Дата создание", auto_now_add=True)
 
 
     def __str__(self):

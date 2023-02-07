@@ -5,19 +5,22 @@ from django.views.generic import DetailView
 
 
 def create(request):
+    data = {}
     if request.method == 'POST':
         form = CreateForm(request.POST, request.FILES)
-
-        return redirect('online')
+        if form.is_valid():
+            form.save()
+            return redirect('online')
     else:
         error = 'Формат был неверной'
+        form = CreateForm()
+        data = {
+            'form': form,
+            'error': error
+        }
+    return render(request, 'online/create.html', data)
 
-    form = CreateForm
-    data = {
-        'form': form,
-        'error': error
-    }
-    return render(request, 'online/create.html', data )
+
 
 
 def online(request):

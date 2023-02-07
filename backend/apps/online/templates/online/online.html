@@ -1,4 +1,4 @@
-{% extends 'main/base.html' %} {% block content %}
+{% extends 'main/base.html' %}{% load static %} {% block content %}
 
 
 
@@ -15,13 +15,12 @@
           <em>Имя: {{ on.first_name }} {{ on.last_name }}</em>
         </p>
         <p class="lead text-muted" style="font-size: 12px" align="right">
-          <em>Дата: {{ on.date }}</em>
+          <em>Дата: {{ on.created }}</em>
         </p>
       </div>
 
       {%endfor%} {% else %}
-      <p>У нас нет записи</p>
-
+      <img src="{% static './src/images/error404.png' %}"  alt="img"/>
       {%endif%}
     </div>
 

@@ -35,7 +35,7 @@
 
                       <div class="card-content">
                         <h2 class="name">{{ el.title|truncatechars:10}}</h2>
-                        <p class="description">{{ el.full_text|truncatechars:45 }}</p>
+                        <p class="description">{{ el.full_text|truncatechars:45|safe }}</p>
                         <a href="{% url 'news_detail' el.id %}" class="news__block-link"><button class="button">Подробнее</button></a>
                       </div>
                     </div>
@@ -62,8 +62,8 @@
               </li>
             {% endfor %}
         </ul>
-
 </div>
+
 </main1>
 
 <main2>
