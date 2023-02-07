@@ -14,3 +14,9 @@
     
 }
 
+.stolb__cent {
+    column-count: 5;
+    justify-content: center;
+    margin-left: 150px;
+    
+}
