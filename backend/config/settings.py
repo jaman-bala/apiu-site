@@ -89,8 +89,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': os.getenv("POSTGRES_DB",default='apiu_db'),
-        'USER' : os.getenv("POSTGRES_USER",default='apiu_user'),
-        'PASSWORD' : os.getenv("POSTGRES_PASSWORD",default='ZAQ12345tgb'),
+        'USER' : os.getenv("POSTGRES_USER",default='apiu_superuser'),
+        'PASSWORD' : os.getenv("POSTGRES_PASSWORD",default='ZAQ!@#$%tgb'),
         'HOST' : os.getenv("POSTGRES_HOST",default='127.0.0.1'),
         'PORT' : os.getenv("POSTGRES_PORT", default='5432'),
     }
