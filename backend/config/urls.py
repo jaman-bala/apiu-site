@@ -15,6 +15,7 @@ urlpatterns = [
     path('cloude/', include('backend.apps.cloude.urls')),
     path('ckeditor/', include('ckeditor_uploader.urls')),
     path('gallery/', include('backend.apps.gallery.urls')),
+    path('gallery/', include('backend.apps.tender.urls')),
     
 ]
 

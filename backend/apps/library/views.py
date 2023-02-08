@@ -2,11 +2,11 @@ from django.shortcuts import render
 from .models import Library
 from django.views.generic import ListView
 from django.db.models import Q
-from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 
-class LibraryView(LoginRequiredMixin, ListView):
+
+class LibraryView(ListView):
     model = Library
     template_name = "books/books.html"
     context_object_name = "books"

@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'backend.apps.project',
     'backend.apps.main',
     'backend.apps.gallery',
+    'backend.apps.tender',
 
     # Dependencies
     'ckeditor',

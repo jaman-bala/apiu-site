@@ -62,8 +62,14 @@
               <li><a href="{% url 'project' %}">ПОДР</a>   
               </ul>
           <li><a href="{% url 'news_home' %}">Новости</a></li>
-          <li><a href="{% url 'gallery' %}">Галерия</a></li>
+          <li><a href="{% url 'gallery' %}">Галерея</a></li>
           <li><a href="{% url 'books' %}">Библиотека</a></li>
+          <li><a href="{% url 'tender' %}">Тендер ▼</a>
+            <ul>
+              <li><a href="{% url 'vacancy' %}">Вакансии</a></li>
+              <li><a href="{% url 'other' %}">Другое</a></li>
+            </ul>
+          
           <li><a href="">Обратная связь ▼</a>
           <ul>
             <li><a href="{% url 'online' %}">Вопрос</a></li>
