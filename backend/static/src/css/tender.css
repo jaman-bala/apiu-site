@@ -9,7 +9,7 @@
     font-size: 2rem;
 }
 
-.container__tender h1 {
+.container__tender h6 {
     text-align: center;
     margin-top: 15px;
     font-size: 3rem;
@@ -24,4 +24,9 @@
 
 .content-wrapper__w {
     margin-left: 105px;
+}
+
+
+.container__tender__detail {
+    text-align: center;
 }

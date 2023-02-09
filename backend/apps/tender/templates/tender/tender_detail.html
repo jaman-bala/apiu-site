@@ -6,12 +6,11 @@
 					<div class="left-panel">
 						<div class="container">
 							<div class="container__tender__detail">
-								<h1>{{ tender_detail.country}}</h1>
-                                <h2>{{ tender_detail.title}}</h2>
-                                <h2>{{ tender_detail.title_contracts}}</h2>
-                                <h2>{{ tender_detail.finance}}</h2>
-                                <h2>{{ tender_detail.pricath}}</h2>
+                                <h6><b>Тема: </b> {{ tender_detail.title}}</h6>
+                                <h6><b>Название контракта: </b>{{ tender_detail.title_contracts}}</h6>
+                                <h6><b>Номер приказа: </b>{{ tender_detail.pricath}}</h6>
                                 <p>{{ tender_detail.text|safe }}</p>
+								<b>Прикреплённый файл: </b><a href="{{tender_detail.file.url}}" target="_blank">{{tender_detail.file}}</a>
 							</div>
 						</div>
 					</div>
