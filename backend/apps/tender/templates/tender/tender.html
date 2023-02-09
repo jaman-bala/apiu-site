@@ -1,25 +1,64 @@
 {% extends 'main/base.html' %} {% block content %} {% load static %}
 
+<div class="page-wrapper">
+
+	<div class="left-panel-wrapper">
+		<div class="left-panel">
+			<div class="container">
+				<div class="container__tender">
+					<table class="table table-bordered">
+						<thead class="table-info">
+							<tr>
+								<th>Наименование</th>
+								<th>Дата публикации</th>
+								<th>Срок подачи заявок</th>
+								
+							</tr>
+						</thead>
+						<tbody>
+							{%  for tenders in tender%}
+							<tr>
+								<td class="table-Warning"><h5><a href="{% url 'tender_detail' tenders.id %}">{{tenders.title}}</h5></td>
+								<td>{{ tenders.created }}</td>
+								<td>{{ tenders.date }}</td>
+
+							</tr>
+							{%endfor%}
+						</tbody>
+					</table>
+			</div>
+		</div>
+	</div>
+</div>
 
 
-
-
-
-
-
-
-
-
-
-
+						<nav aria-label="Page navigation example">
+							<ul class="pagination">
+									{% if page_obj.has_previous %}
+								<li class="page-item">
+									<a class="page-link" href="?page={{page_obj.previous_page_number}}" aria-label="Previous">
+										<span aria-hidden="true">&laquo;</span>
+									</a>
+								</li>
+								{% endif %}
+								<li class="page-item"><a class="page-link" href="?page={{page_obj.number}}">{{page_obj.number}}</a></li>
+								<li class="page-item">
+									{% if page_obj.has_next %}
+										<a class="page-link" href="?page={{page_obj.next_page_number}}" aria-label="Next">
+										<span aria-hidden="true">&raquo;</span>
+										</a>
+									{% endif %}
+								</li>
+							</ul>
+						</nav>
 
 
 	<div class="content-wrapper">
 		<div class="about__pro">
 			<div class="list-group">
-				<a href="{% url 'disain' %}" class="list-group-item list-group-item-primary">Дизайн проекта</a>
-				<a href="{% url 'study' %}" class="list-group-item list-group-item-secondary">Исследование</a>
-				<a href="{% url 'report' %}" class="list-group-item list-group-item-primary">Отчёты</a>
+				<a href="{% url 'vacancy' %}" class="list-group-item list-group-item-primary">Вакансии</a>
+				<a href="{% url 'other' %}" class="list-group-item list-group-item-secondary">Другое</a>
+				<a href="{% url 'tender' %}" class="list-group-item list-group-item-primary">Тендер</a>
 			</div>
 			<section class="ftco-section">
 				<div class="row">
@@ -39,5 +78,5 @@
 		</div>
 	</div>
 
-
+</div>
 {%endblock%}

@@ -16,11 +16,11 @@
 							</tr>
 						</thead>
 						<tbody>
-							{%  for others in other%}
+							{%  for vacanc in vacancy%}
 							<tr>
-								<td class="table-Warning"><h5><a href="{% url 'other_detail' others.id %}">{{others.title}}</h5></td>
-								<td>{{ others.created }}</td>
-								<td>{{ others.date }}</td>
+								<td class="table-Warning"><h5><a href="{% url 'vacancy_detail' vacanc.id %}">{{vacanc.title}}</h5></td>
+								<td>{{ vacanc.created }}</td>
+								<td>{{ vacanc.date }}</td>
 
 							</tr>
 							{%endfor%}

@@ -1,0 +1,44 @@
+{% extends 'main/base.html' %} {% block content %} {% load static %}
+
+<div class="page-wrapper">
+
+				<div class="left-panel-wrapper">
+					<div class="left-panel">
+						<div class="container">
+							<div class="container__tender__detail">
+								<h3>{{ vacancy_detail.country}}</h3>
+                                <h4>{{ vacancy_detail.title}}</h4>
+                                <p>{{ vacancy_detail.text|safe }}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+	<div class="content-wrapper__w">
+		<div class="about__pro">
+			<div class="list-group">
+				<a href="{% url 'vacancy' %}" class="list-group-item list-group-item-primary">Вакансии</a>
+				<a href="{% url 'other' %}" class="list-group-item list-group-item-secondary">Другое</a>
+				<a href="{% url 'tender' %}" class="list-group-item list-group-item-primary">Тендер</a>
+			</div>
+			<section class="ftco-section">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="calendar calendar-first" id="calendar_first">
+						<div class="calendar_header">
+							<button class="switch-month switch-left"> <i class="fa fa-chevron-left"></i></button>
+							 <h2></h2>
+							<button class="switch-month switch-right"> <i class="fa fa-chevron-right"></i></button>
+						</div>
+						<div class="calendar_weekdays"></div>
+						<div class="calendar_content"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+</div>
+
+{%endblock%}

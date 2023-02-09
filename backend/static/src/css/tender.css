@@ -1,0 +1,27 @@
+
+.container__tender {
+    margin: 155px;
+}
+
+.container__tender h2 {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 2rem;
+}
+
+.container__tender h1 {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 3rem;
+}
+
+.container__tender p {
+    text-align: center;
+    margin-top: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.5rem;
+}
+
+.content-wrapper__w {
+    margin-left: 425px;
+}
