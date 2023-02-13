@@ -2,107 +2,154 @@
 {% load i18n %}
 
 <main3>
-  <div class="container">
-    <div>
-        <div id="Slider">
-            {%for photo in photos%}
-              <img src="{{ photo.img1.url }}">
-              <img src="{{ photo.img2.url }}">
-              <img src="{{ photo.img3.url }}">
-              <img src="{{ photo.img4.url }}">
-              <img src="{{ photo.img5.url }}">
-            {%endfor%}
+  <div class="container__swipers">
+  <div class="swiper mySwiper">
+    {%for photo in photos%}
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="{{ photo.img1.url }}"  alt="Error404-img...">
+        <div class="carousel-caption">
+          <h5>{{ photo.title1 }}</h5>
+          <p>{{photo.text1}}</p>
         </div>
+      </div>
+      
+      <div class="swiper-slide">
+        <img src="{{ photo.img2.url }}" alt="Error404-img...">
+        <div class="carousel-caption">
+          <h5>{{ photo.title2 }}</h5>
+          <p>{{photo.text2}}</p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img src="{{ photo.img3.url }}" alt="Error404-img...">
+        <div class="carousel-caption">
+          <h5>{{ photo.title3 }}</h5>
+          <p>{{photo.text3}}</p>
+        </div>
+      </div>
+      
+      <div class="swiper-slide">
+        <img src="{{ photo.img4.url }}" alt="Error404-img...">
+        <div class="carousel-caption">
+          <h5>{{ photo.title4 }}</h5>
+          <p>{{photo.text4}}</p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img src="{{ photo.img5.url }}" alt="Error404-img...">
+        <div class="carousel-caption">
+          <h5>{{ photo.title5 }}</h5>
+          <p>{{photo.text5}}</p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img src="{{ photo.img6.url }}" alt="Error404-img...">
+        <div class="carousel-caption">
+          <h5>{{ photo.title6 }}</h5>
+          <p>{{photo.text6}}</p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img src="{{ photo.img7.url }}" alt="Error404-img...">
+        <div class="carousel-caption">
+          <h5>{{ photo.title7 }}</h5>
+          <p>{{photo.text7}}</p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img src="{{ photo.img8.url }}" alt="Error404-img...">
+        <div class="carousel-caption">
+          <h5>{{ photo.title8 }}</h5>
+          <p>{{photo.text8}}</p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img src="{{ photo.img9.url }}"alt="Error404-img...">
+        <div class="carousel-caption">
+          <h5>{{ photo.title9 }}</h5>
+          <p>{{photo.text9}}</p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img src="{{ photo.img10.url }}"alt="Error404-img...">
+        <div class="carousel-caption">
+          <h5>{{ photo.title10 }}</h5>
+          <p>{{photo.text10}}</p>
+        </div>
+      </div>
     </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+    {%endfor%}
   </div>
+</div>
 </main3>
 
 <fon class='fon'>
   <div class="container">
     <h1 class="ne">Новости</h1>
-    <div class="slide-container swiper">
-      <div class="slide-content">
-        <div class="card-wrapper swiper-wrapper">
-                    {% for el in news %}
-                    <div class="card swiper-slide">
-                      <div class="image-content">
-                        <span class="overlay"></span>
-
-                        <div class="card-image">
-                          <img src="{{ el.img.url }}" alt="News" class="card-img">
-                        </div>
-                      </div>
-
-                      <div class="card-content">
-                        <h2 class="name">{{ el.title|truncatechars:10}}</h2>
-                        <p class="description">{{ el.full_text|truncatechars:45|safe }}</p>
-                        <a href="{% url 'news_detail' el.id %}" class="news__block-link"><button class="button">Подробнее</button></a>
-                      </div>
-                    </div>
-                    {% endfor %}
-                  </div>
-                </div>
-                <div class="swiper-button-next swiper-navBtn"></div>
-                <div class="swiper-button-prev swiper-navBtn"></div>
-                <div class="swiper-pagination"></div>
-              </div>
-     <div class="but"><a href="{% url 'news_home' %}"><button class="button">Перейти</button></a></div>
-   
+    <div class="row">
+      {% for el in news %}
+      <div class="col-md-6 mb-4">
+        <div class="card">
+          <a href="{% url 'news_detail' el.id %}">
+            <img src="{{ el.img.url }}" alt="News" class="card-img-top">
+          </a>
+            <div class="card-body">
+              <h5>{{ el.title|truncatechars:35}}</h5>
+              <p >{{ el.full_text|truncatechars:65|safe }}</p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
 </fon>
 
 <main1>
-
 <div class="container">
      <ul class="stolb">
        {% for videos in video  %}
             <li class="li">
               <iframe width="410" height="200"  src="{{ videos.url}}" frameborder="0"
                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>></iframe>
-              </li>
-            {% endfor %}
-        </ul>
+            </li>
+        {% endfor %}
+      </ul>
 </div>
-<div class="container">
+
   <ul class="stolb__cent">
     {% for ga in gallery %}
-
-             <div class="card-image">
+            <div class="card-image">
               <a href="{% url 'gallery_detail' ga.id %}">
-            <img src="{{ ga.photo_add.url }}" alt="News" class="card-img">
-          </a>
-          </div>
-
-         {% endfor %}
-     </ul>
-
-
-
-
-</div>
-
+                <img src="{{ ga.photo_add.url }}" alt="News" class="card-img">
+              </a>
+            </div>
+    {% endfor %}
+  </ul>
 </main1>
 
 <main2>
-  <h1 class="text-center">Наши партнеры</h1>
+    <h1 class="text-center">Наши партнеры</h1>
   <div class="container-box">
-    <div class="box">
-      <a href="https://agro.gov.kg/ru/main/"><img src="{% static './src/images/msh2-2.png' %}" alt="img" /></a>
+            <div class="box">
+              <a href="https://agro.gov.kg/ru/main/"><img src="{% static './src/images/msh2-2.png' %}" alt="img" /></a>
+            </div>
+              <div class="box">
+                <a href="https://www.aris.kg/index.php?option=com_content&view=category&layout=blog&id=8&Itemid=160&lang=ru"> <img src="{% static './src/images/arislogo.png' %}" alt="img" ></a>
+              </div>
+            <div class="box">
+              <a href="https://www.ifad.org/en/"><img src="{% static './src/images/ifad.png' %}" alt="img" /><a/>
+            </div>
+              <div class="box">
+                <a href="https://www.vsemirnyjbank.org/ru/home"><img src="{% static './src/images/wb.png' %}" alt="img" /></a>
+              </div>
+            <div class="box">
+              <a href="https://www.un.org/ru/"><img src="{% static './src/images/un-logo-big.png' %}" alt="img" /></a>
+            </div>
 
-    </div>
-  <div class="box">
-   <a href="https://www.aris.kg/index.php?option=com_content&view=category&layout=blog&id=8&Itemid=160&lang=ru"> <img src="{% static './src/images/arislogo.png' %}" alt="img" ></a>
   </div>
-  <div class="box">
-    <a href="https://www.ifad.org/en/"><img src="{% static './src/images/ifad.png' %}" alt="img" /><a/>
-  </div>
-  <div class="box">
-    <a href="https://www.vsemirnyjbank.org/ru/home"><img src="{% static './src/images/wb.png' %}" alt="img" /></a>
-  </div>
-  <div class="box">
-    <a href="https://www.un.org/ru/"><img src="{% static './src/images/un-logo-big.png' %}" alt="img" /></a>
-  </div>
-  
- </div>
 </main2>
 
 

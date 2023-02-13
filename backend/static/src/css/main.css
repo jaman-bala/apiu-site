@@ -3,21 +3,64 @@
 
 main3 {
     display: flex;
-    padding: 0 35px;
-    padding: 0 10px;
     align-items: center;
     justify-content: center;
-    min-height: 80vh;
-    background-image: url('fon.png');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    margin-top: 85px;
+}
 
+.container__swipers {
+    margin-top: 110px;
+    width: 100%;
+}
+
+.swiper {
+    width: 1400px;
+    height: 850px;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+ 
+} 
+
+.carousel-caption {
+    background-color: rgba(227, 30, 36, 0.8);
+    padding: 20px 25px 20px 25px;
+    width: 85%;
+}
+
+.carousel-caption h5 {
+    text-align: left;
+    font-size: 2.5em; /* 30px/16=1.875em */
+    color: rgb(32, 9, 245);
+    font-family: 'georgia';
+}
+
+.carousel-caption p {
+    color: #ffffff;
+    font-family: 'georgia';
+    text-align: left;
+}
+
+.card-img-top {
+    width: 1200px;
+    height: 400px;
+}
+
+
+.card-body h5 {
+    color: rgb(0, 0, 7);
+    font-family: 'georgia';
+    text-align: left;
+    padding-left: 20px;
+}
+
+.card-body p {
+    color: rgb(49, 151, 116);
+    font-family: 'georgia';
+    text-align: left;
+    margin-top: -15px;
 }
 
 table {
