@@ -8,7 +8,6 @@ from .models import Articles
 class ArticlesAdmin(admin.ModelAdmin):
     list_display = (
         'title',
-        'full_text',
         'img',
         'date',
         'is_active',
@@ -20,7 +19,6 @@ class ArticlesAdmin(admin.ModelAdmin):
     )
     search_fields = (
         'title',
-        'full_text',
     )
     readonly_fields = ["preview"]
 

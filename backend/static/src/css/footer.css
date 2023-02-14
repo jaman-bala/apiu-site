@@ -1,9 +1,9 @@
 .footer {
-    background: rgb(64, 15, 97);
+    background: rgb(17, 103, 184);
     color: #fff;
   }
   .footer__title {
-    font-weight: 500;
+    font-weight: 500px;
     font-size: 18px;
     color: #fff;
   }
@@ -14,9 +14,7 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    
     padding: 40px 0;
   }
   .footer__info {

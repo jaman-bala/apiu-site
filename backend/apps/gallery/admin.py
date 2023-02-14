@@ -7,8 +7,8 @@ from .models import Gallery
 
 @admin.register(Gallery)
 class GalleryAdmin(admin.ModelAdmin):
-    list_display = ('title', 'photo_add', 'country', 'description', 'date', 'created')
-    search_fields = ('title', 'description')
+    list_display = ('title', 'photo_add', 'country', 'date', 'created')
+    search_fields = ('title',)
     list_filter = ('is_active', 'created')
 
     readonly_fields = ["preview"]
