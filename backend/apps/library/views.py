@@ -4,14 +4,12 @@ from django.views.generic import ListView
 from django.db.models import Q
 
 
-
-
 class LibraryView(ListView):
     model = Library
     template_name = "books/books.html"
     context_object_name = "books"
 
-    def get_queryset(self):  # new
+    def get_queryset(self):  # new search
         query = self.request.GET.get("q")
         if query:
             object_list = Library.objects.filter(

@@ -6,11 +6,18 @@
 					<div class="left-panel">
 						<div class="container">
 							<div class="container__tender__detail">
-                                <h6><b>Тема: </b> {{ tender_detail.title}}</h6>
-                                <h6><b>Название контракта: </b>{{ tender_detail.title_contracts}}</h6>
-                                <h6><b>Номер приказа: </b>{{ tender_detail.pricath}}</h6>
+                                <h6><b>Тема: </b><em>{{ tender_detail.title}}</em></h6>
+                                <h6><b>Название контракта: </b><em>{{ tender_detail.title_contracts}}</em></h6>
+                                <h6><b>Номер приказа: </b><em>{{ tender_detail.pricath}}</em></h6>
                                 <p>{{ tender_detail.text|safe }}</p>
-								<b>Прикреплённый файл: </b><a href="{{tender_detail.file.url}}" target="_blank"><i class="bi-file-earmark-arrow-down-fill" style="font-size: 24px;"> посмотреть</i></a>
+								<b>Прикреплённый файл: </b>
+									{% if tender_detail.file %}
+									<a href="{{tender_detail.file.url}}" target="_blank">
+										<img class="icons__file" src="{% static './src/images/icons/file.png' %}" alt="File">
+									</a>
+									{% else %}
+												Файл не прикреплен
+									{% endif %}
 							</div>
 						</div>
 					</div>

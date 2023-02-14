@@ -1,88 +1,86 @@
-{% extends 'main/base.html' %} {% block content %}
+{% extends 'main/base.html' %} {% load static %} {% block content %}
 
 <div class="container">
-  <div class="form-floating mb-3">
-  <div class="features__title">
-    <h1>Форма по добавлению вопросов</h1>
-    <form action="." method="POST">
-      {% csrf_token %}
-      <div class="container__forms">
-  <div class="row__forms">
-    <div class="col-25">
-      <label for="fname">Имя</label>
-    </div>
-    <div class="col-75">
-      {{ form.first_name }}
-    </div>
-  </div>
-  <div class="row__forms">
-    <div class="col-25">
-      <label for="lname">Фамилия</label>
-    </div>
-    <div class="col-75">
-      {{ form.last_name }}
-    </div>
-  </div>
-  <div class="row__forms">
-    <div class="col-25">
-      <label for="lname">Номер телефона</label>
-    </div>
-    <div class="col-75">
-      {{ form.phone }}
-    </div>
-  </div> 
-  <div class="row__forms">
-    <div class="col-25">
-      <label for="lname">Почта</label>
-    </div>
-    <div class="col-75">
-      {{ form.email  }}
-    </div>
-  </div>
-  <div class="row__forms">
-    <div class="col-25">
-      <label for="lname">Адрес проживания</label>
-    </div>
-    <div class="col-75">
-      {{ form.city   }}
-    </div>
-  </div>
-  <div class="row__forms">
-    <div class="col-25">
-      <label for="lname">Тема вопроса</label>
-    </div>
-    <div class="col-75">
-      {{ form.title   }}
-    </div>
-  </div>
-  <div class="row__forms">
-    <div class="col-25">
-      <label for="subject">Вопрос</label>
-    </div>
-    <div class="col-75">
-      {{ form.text }}
-    </div>
-  </div>
-  <div class="row__forms">
-    <div class="col-25">
-      <label for="lname">Прикрепить файл</label>
-    </div>
-    <div class="col-75">
-      {{ form.file }}
-    </div>
-  </div>
-  </div>
-  <br>
-  <div class="row__forms">
-    <input type="submit" value="Отправить">
-  </div>
-  </form>
-</div>
+    <div class="form-floating mb-3">
+      <div class="features__title">
+        <h1>Форма по добавлению вопросов</h1>
 
-
-
-
+                    <form action="." method="POST">
+                      {% csrf_token %}
+                      <div class="container__forms">
+                  <div class="row__forms">
+                    <div class="col-25">
+                      <label for="fname">Имя</label>
+                    </div>
+                    <div class="col-75">
+                      {{ form.first_name }}
+                    </div>
+                  </div>
+                  <div class="row__forms">
+                    <div class="col-25">
+                      <label for="lname">Фамилия</label>
+                    </div>
+                    <div class="col-75">
+                      {{ form.last_name }}
+                    </div>
+                  </div>
+                  <div class="row__forms">
+                    <div class="col-25">
+                      <label for="lname">Номер телефона</label>
+                    </div>
+                    <div class="col-75">
+                      {{ form.phone }}
+                    </div>
+                  </div> 
+                  <div class="row__forms">
+                    <div class="col-25">
+                      <label for="lname">Почта</label>
+                    </div>
+                    <div class="col-75">
+                      {{ form.email  }}
+                    </div>
+                  </div>
+                  <div class="row__forms">
+                    <div class="col-25">
+                      <label for="lname">Адрес проживания</label>
+                    </div>
+                    <div class="col-75">
+                      {{ form.city   }}
+                    </div>
+                  </div>
+                  <div class="row__forms">
+                    <div class="col-25">
+                      <label for="lname">Тема вопроса</label>
+                    </div>
+                    <div class="col-75">
+                      {{ form.title   }}
+                    </div>
+                  </div>
+                  <div class="row__forms">
+                    <div class="col-25">
+                      <label for="subject">Вопрос</label>
+                    </div>
+                    <div class="col-75">
+                      {{ form.text }}
+                    </div>
+                  </div>
+                  <div class="row__forms">
+                    <div class="col-25">
+                      <label for="lname">Прикрепить файл</label>
+                    </div>
+                    <div class="col-75">
+                      <img class="footer__icon" src="{% static './src/images/icons/file.png' %}" alt="Search">
+                      {{ form.file }}
+                    </div>
+                  </div>
+                  </div>
+                  <br>
+                  <div class="row__forms">
+                    <input type="submit" value="Отправить">
+                  </div>
+                  </form>
+      </div>
+    </div>
   </div>
-</div>
 </div>
 {%endblock%}

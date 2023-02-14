@@ -7,8 +7,8 @@ class Library(models.Model):
     title = models.CharField(verbose_name='Наименование', max_length=50)
     author = models.CharField(verbose_name="Автор", max_length=50)
     books = models.FileField(upload_to='files', blank=True, verbose_name="Добавить файл") 
-
-
+    is_active = models.BooleanField("Активный", default=True)
+    created = models.DateTimeField(verbose_name="Дата создание", auto_now_add=True)
 
     class Meta:
         verbose_name = "Добавить"
@@ -16,4 +16,4 @@ class Library(models.Model):
         
 
     def __str__(self):
-        return str(self.title)
+        return self.title

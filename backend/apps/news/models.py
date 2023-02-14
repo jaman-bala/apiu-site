@@ -6,7 +6,8 @@ class Articles(models.Model):
     full_text = RichTextUploadingField('Статья')
     img = models.ImageField('Добавить фото', upload_to='img', blank=True)
     date = models.DateTimeField('Дата публикации')
-    
+    is_active = models.BooleanField("Активный", default=True)
+    created = models.DateTimeField(verbose_name="Дата создание", auto_now_add=True)
 
 
     def __str__(self):

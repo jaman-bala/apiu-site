@@ -6,6 +6,8 @@ class Staff(models.Model):
     phone = models.CharField('Телефон', max_length=255, blank=True)
     email = models.EmailField('Почта', max_length=255, blank=True)
     kab = models.CharField('Кабинет', max_length=255, blank=True)
+    is_active = models.BooleanField("Активный", default=True)
+    created = models.DateTimeField(verbose_name="Дата создание", auto_now_add=True)
     
     
 

@@ -46,7 +46,7 @@ class OtherView(ListView):
 
 class OtherDetailView(DetailView):
     model = Other.objects.all()
-    template_name = 'tender/other.html'
+    template_name = 'tender/other_detail.html'
     context_object_name = 'other_detail'
     queryset = Other.objects.all()
 

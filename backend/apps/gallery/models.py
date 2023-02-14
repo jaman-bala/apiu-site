@@ -1,8 +1,6 @@
 from django.db import models
 from ckeditor_uploader.fields import RichTextUploadingField
 
-# Create your models here.
-
 
 class Gallery(models.Model):
     photo_add = models.ImageField('Фото', upload_to='img', blank=True,)
@@ -11,6 +9,7 @@ class Gallery(models.Model):
     description = RichTextUploadingField('Статья')
     date = models.DateTimeField('Дата публикации')
     created = models.DateTimeField(auto_now_add=True)
+    is_active = models.BooleanField("Активный", default=True)
 
 
 

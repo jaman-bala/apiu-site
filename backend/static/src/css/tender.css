@@ -4,19 +4,19 @@
 }
 
 .container__tender h2 {
-    text-align: center;
+    text-align: left;
     margin-top: 15px;
     font-size: 2rem;
 }
 
 .container__tender h6 {
-    text-align: center;
+    text-align: left;
     margin-top: 15px;
     font-size: 3rem;
 }
 
 .container__tender p {
-    text-align: center;
+    text-align: left;
     margin-top: 15px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1.5rem;
@@ -28,5 +28,17 @@
 
 
 .container__tender__detail {
-    text-align: center;
+    text-align: left;
+}
+
+.container__tender__detail h6 {
+    text-align: left;
+    padding-top: 10px;
+
+}
+
+
+.icons__file {
+    width: 70px;
+    height: 80px;
 }

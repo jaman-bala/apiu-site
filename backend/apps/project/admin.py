@@ -6,8 +6,39 @@ from .study import Study
 # Register your models here.
 
 
-admin.site.register(File)
-admin.site.register(Report)
-admin.site.register(Disain)
-admin.site.register(Study)
 
+@admin.register(File)
+class FileAdmin(admin.ModelAdmin):
+    list_display = (
+        'title',
+        'file',
+    )
+    search_fields = ('title',)
+    list_filter = ('created',)
+
+@admin.register(Disain)
+class DisainAdmin(admin.ModelAdmin):
+    list_display = (
+        'title',
+        'file',
+    )
+    search_fields = ('title',)
+    list_filter = ('created',)
+
+@admin.register(Report)
+class ReportAdmin(admin.ModelAdmin):
+    list_display = (
+        'title',
+        'file',
+    )
+    search_fields = ('title',)
+    list_filter = ('created',)
+
+@admin.register(Study)
+class StudyAdmin(admin.ModelAdmin):
+    list_display = (
+        'title',
+        'file',
+    )
+    search_fields = ('title',)
+    list_filter = ('created',)
