@@ -144,7 +144,8 @@ LOCALE_PATHS = [os.path.join(BASE_DIR, "locale")]
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
+    BASE_DIR / "static",
+    '/opt/apiu/backend/static/',
 ]
 
 
