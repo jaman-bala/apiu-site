@@ -12,7 +12,7 @@ SECRET_KEY = 'django-insecure-=@0k%^7cdpu7cq9=yu16&(2t-xqa$(6)gehker8awr@*2b03t'
 
 DEBUG = False
 ALLOWED_HOSTS = ["*"]
-CSRF_TRUSTED_ORIGINS = ['https://10.11.11.9']                       # ['https://apiu.kg']
+# CSRF_TRUSTED_ORIGINS = ['http://10.11.11.9']                       # ['https://apiu.kg']
 
 # Application definition
 INSTALLED_APPS = [
@@ -22,6 +22,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     # APP
     'backend.apps.tender',
     'backend.apps.cloude',
@@ -140,9 +141,13 @@ LOCALE_PATHS = [os.path.join(BASE_DIR, "locale")]
 
 # Static files (CSS, JavaScript, Images)
 
-ADMIN_MEDIA_PREFIX = '/static/admin/'
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
+
+
 
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
