@@ -13,13 +13,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-=@0k%776idpu7cq9=yu16&(2t-xqa$(6)gehker8awr@*2b03t'
+SECRET_KEY = 'django-insecure-=@0k%^7cdpu7cq9=yu16&(2t-xqa$(6)gehker8awr@*2b03t'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
-
+# CSRF_TRUSTED_ORIGINS = ['https://apiu.kg']
 
 # Application definition
 
@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # APP
+    'backend.apps.tender',
     'backend.apps.cloude',
     'backend.apps.news',
     'backend.apps.online',
@@ -39,7 +40,7 @@ INSTALLED_APPS = [
     'backend.apps.project',
     'backend.apps.main',
     'backend.apps.gallery',
-    'backend.apps.tender',
+    
 
     # Dependencies
     'ckeditor',
@@ -79,23 +80,23 @@ TEMPLATES = [
 WSGI_APPLICATION = 'backend.config.wsgi.application'
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
-
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': os.getenv("POSTGRES_DB",default='apiu_db'),
-#         'USER' : os.getenv("POSTGRES_USER",default='apiu_superuser'),
-#         'PASSWORD' : os.getenv("POSTGRES_PASSWORD",default='ZAQ!@#$%tgb'),
-#         'HOST' : os.getenv("POSTGRES_HOST",default='127.0.0.1'),
-#         'PORT' : os.getenv("POSTGRES_PORT", default='5432'),
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #     }
 # }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': os.getenv("POSTGRES_DB",default='apiu_db'),
+        'USER' : os.getenv("POSTGRES_USER",default='apiu_superuser'),
+        'PASSWORD' : os.getenv("POSTGRES_PASSWORD",default='ZAQ!@#$%tgb'),
+        'HOST' : os.getenv("POSTGRES_HOST",default='127.0.0.1'),
+        'PORT' : os.getenv("POSTGRES_PORT", default='5432'),
+    }
+}
 
 
 # Password validation
