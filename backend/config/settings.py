@@ -12,7 +12,7 @@ SECRET_KEY = 'django-insecure-=@0k%^7cdpu7cq9=yu16&(2t-xqa$(6)gehker8awr@*2b03t'
 
 DEBUG = True
 ALLOWED_HOSTS = ["*"]
-CSRF_TRUSTED_ORIGINS = ['http://apiu.kg']
+# CSRF_TRUSTED_ORIGINS = ['http://apiu.kg']
 
 # Application definition
 INSTALLED_APPS = [
@@ -144,10 +144,6 @@ LOCALE_PATHS = [os.path.join(BASE_DIR, "locale")]
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, '/static')
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
-STATICFILES_FINDERS = (
-    'django.contrib.staticfiles.finders.FileSystemFinder',
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-)
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
