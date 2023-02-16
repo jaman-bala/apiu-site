@@ -11,7 +11,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'django-insecure-=@0k%^7cdpu7cq9=yu16&(2t-xqa$(6)gehker8awr@*2b03t'
 
 DEBUG = False
-ALLOWED_HOSTS = ["apiu.kg"]
+ALLOWED_HOSTS = ["https://apiu.kg"]
 CSRF_TRUSTED_ORIGINS = ['https://apiu.kg']
 
 # Application definition
