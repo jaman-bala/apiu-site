@@ -10,7 +10,7 @@ from easy_thumbnails.conf import Settings as thumbnail_settings
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'django-insecure-=@0k%^7cdpu7cq9=yu16&(2t-xqa$(6)gehker8awr@*2b03t'
 
-DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = ["*"]
 # CSRF_TRUSTED_ORIGINS = ['http://apiu.kg']
 
@@ -142,7 +142,7 @@ LOCALE_PATHS = [os.path.join(BASE_DIR, "locale")]
 # Static files (CSS, JavaScript, Images)
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'src/static')
+STATIC_ROOT = os.path.join(BASE_DIR, '/static')
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
