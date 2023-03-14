@@ -4,12 +4,12 @@
     grid-gap: 30px;
     background-color: #e1edf7;
     border-radius: 10px;
-    border-color: rgb(226, 212, 212);
+    border-color: rgb(241, 178, 178);
     padding: 10px;
 }
   
 .grid-container > div {
-    background-color: rgb(128, 128, 128);
+    background-color: rgb(226, 212, 212);
     text-align: center;
     padding: 20px 0;
     font-size: 140px;
