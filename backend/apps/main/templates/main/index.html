@@ -120,15 +120,6 @@
       </ul>
 </div>
 
-  <ul class="stolb__cent">
-    {% for ga in gallery %}
-            <div class="card-image">
-              <a href="{% url 'gallery_detail' ga.id %}">
-                <img src="{{ ga.photo_add.url }}" alt="News" class="card-img">
-              </a>
-            </div>
-    {% endfor %}
-  </ul>
 </main1>
 
 <main2>
