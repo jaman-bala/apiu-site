@@ -141,17 +141,15 @@ global_settings.LANGUAGES = global_settings.LANGUAGES + [("ky", 'Кыргызч�
 LOCALE_PATHS = [os.path.join(BASE_DIR, "locale")]
 
 # Static files (CSS, JavaScript, Images)
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
 STATIC_URL = '/static/'
 STATIC_ROOT = '/opt/apiu/backend/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
-
+# MEDIA
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
-
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# STOREGE
 DEFAULT_FILE_STORAGE = "minio_storage.storage.MinioMediaStorage"
 MINIO_STORAGE_ENDPOINT = '10.11.11.8:9000'
 MINIO_STORAGE_ACCESS_KEY = 's3igtWTcQqq2uyp7'
