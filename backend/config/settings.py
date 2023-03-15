@@ -49,7 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    # 'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'backend.config.urls'
@@ -142,8 +142,10 @@ LOCALE_PATHS = [os.path.join(BASE_DIR, "locale")]
 
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
-STATIC_ROOT = '/opt/apiu/backend/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, '/static')
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+# STATIC_ROOT = '/opt/apiu/backend/static/'
+# STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 # MEDIA
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
