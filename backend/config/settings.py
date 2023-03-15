@@ -11,8 +11,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'django-insecure-=@0k%^7cdpu7cq9=yu16&(2t-xqa$(6)gehker8awr@*2b03t'
 
 DEBUG = False
-ALLOWED_HOSTS = ["*"]
-# CSRF_TRUSTED_ORIGINS = ['http://apiu.kg']
+ALLOWED_HOSTS = ["https://apiu.kg"]
+CSRF_TRUSTED_ORIGINS = ['https://apiu.kg']
 
 # Application definition
 INSTALLED_APPS = [
@@ -49,7 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    # 'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'backend.config.urls'
