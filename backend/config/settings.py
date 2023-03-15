@@ -12,7 +12,7 @@ SECRET_KEY = 'django-insecure-=@0k%^7cdpu7cq9=yu16&(2t-xqa$(6)gehker8awr@*2b03t'
 
 DEBUG = False
 ALLOWED_HOSTS = ["*"]
-# CSRF_TRUSTED_ORIGINS = ['https://apiu.kg']
+
 
 # Application definition
 INSTALLED_APPS = [
@@ -49,7 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-     'whitenoise.middleware.WhiteNoiseMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'backend.config.urls'
@@ -142,10 +142,10 @@ LOCALE_PATHS = [os.path.join(BASE_DIR, "locale")]
 
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
-STATIC_ROOT = 'static/'
+STATIC_ROOT = '/opt/apiu/backend/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 # MEDIA
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
