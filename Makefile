@@ -42,9 +42,3 @@ help:
 	@echo ":"
 	@cat Makefile | sed -n '/^\.PHONY: / h; /\(^\t@*echo\|^\t:\)/ {H; x; /PHONY/ s/.PHONY: \(.*\)\n.*"\(.*\)"/  make \1\t\2/p; d; x}'| sort -k2,2 |expand -t 20
 
-
-up:
-  @docker-compose -f docker-compose.yml up -d
-
-down:
-  @docker-compose -f docker-compose.yml down && docker network prune --force
