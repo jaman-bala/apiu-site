@@ -28,20 +28,5 @@ services:
     env_file: .env
     expose:
       - 5432
-
-  minio:
-    container_name: minio
-    command: server /data --console-address ":9001"
-    environment:
-      - MINIO_ROOT_USER=admin
-      - MINIO_ROOT_PASSWORD=ZAQ12345tgb
-    image: quay.io/minio/minio:latest
-    ports:
-      - '9000:9000'
-      - '9001:9001'
-    volumes:
-      - /docker/minio:/data
-    restart: unless-stopped
-
 volumes:
   postgres-data:
