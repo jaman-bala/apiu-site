@@ -20,3 +20,4 @@ COPY . .
 EXPOSE 8000
 
 ENTRYPOINT ["sh", "./dockerfiles/docker-entrypoint.sh"]
+
