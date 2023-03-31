@@ -10,7 +10,7 @@ from easy_thumbnails.conf import Settings as thumbnail_settings
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'django-insecure-=@0k%^7cdpu7cq9=yu16&(2t-xqa$(6)gehker8awr@*2b03t'
 
-DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = ["*"]
 
 
@@ -152,7 +152,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # STOREGE
 DEFAULT_FILE_STORAGE = "minio_storage.storage.MinioMediaStorage"
-MINIO_STORAGE_ENDPOINT = '10.11.11.8:9000'
+MINIO_STORAGE_ENDPOINT = 'http://base.apiu.kg:8080'
 MINIO_STORAGE_ACCESS_KEY = 's3igtWTcQqq2uyp7'
 MINIO_STORAGE_SECRET_KEY = 'DozBIJDceDimmGHLwUaMDiX8j13bF2oM'
 MINIO_STORAGE_USE_HTTPS = False
