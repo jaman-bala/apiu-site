@@ -4,20 +4,20 @@
 .container__detail h1{
     text-align: center;
     padding: 10px;
-    font-size: 21px;
+    font-size: 25px;
 
 }
 
 .container__detail p{
     padding: 10px;
-    font-size: 15px;
+    font-size: 20px;
     margin-top: 15px;
 }
 
 .container__detail img {
-    width: 650px;
-    height: 450px;
-    margin-left: 330px;
+    /* width: 650px !important;
+    height: 450px !important;
+    margin-left: 330px; */
 }
 
 .container__detail .text-mute{

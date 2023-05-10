@@ -20,3 +20,47 @@
     margin-left: 150px;
     
 }
+
+.prev{
+    cursor: pointer;
+    position: absolute;
+    top: 32%; 
+    left: 44%; 
+    width: auto; 
+    padding: 16px;
+    color: rgb(23, 156, 201);
+    font-weight: bold;
+    font-size: 30px; 
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+  
+  }
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 32%;
+    left: 47%; 
+    width: 50px; 
+    padding: 16px;
+    color: rgb(23, 156, 201);
+    font-weight: bold;
+    font-size: 30px; 
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+  
+  }
+  .baisal__slaide {
+    max-width: 450px;
+    height: 300px;
+    margin-left: 350px;
+    position: relative;
+  }
+  .boke iframe{
+    width: 350px !important;
+    height: 200px !important;
+    margin: 5px 50px;
+  }
+  .slides__p{
+    font-size: 20px;
+    padding: 30px 20px;
+  }

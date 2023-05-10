@@ -1,4 +1,10 @@
-
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border: none;
+    list-style: none;
+}
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 main3 {
@@ -6,7 +12,9 @@ main3 {
     align-items: center;
     justify-content: center;
 }
-
+.a{
+    text-decoration: none;
+}
 .container__swipers {
     margin-top: 110px;
     width: 100%;
@@ -42,10 +50,20 @@ main3 {
     font-family: 'georgia';
     text-align: left;
 }
-
+.card{
+    width: 600px;
+    height: 300px;
+}
+.card__img{
+    /* margin-left: 25px; */
+    margin-top: 10px !important;
+    margin-left: 20px;
+}
 .card-img-top {
-    width: 1200px;
-    height: 400px;
+    width: 550px !important;
+    height: 260px !important;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 
@@ -60,6 +78,7 @@ main3 {
     color: rgb(49, 151, 116);
     font-family: 'georgia';
     text-align: left;
+    font-size: 20px;
     margin-top: -15px;
 }
 

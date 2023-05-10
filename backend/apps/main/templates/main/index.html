@@ -94,11 +94,15 @@
       {% for el in news %}
       <div class="col-md-6 mb-4">
         <div class="card">
+          <div class="card__img">
           <a href="{% url 'news_detail' el.id %}">
             <img src="{{ el.img.url }}" alt="News" class="card-img-top">
           </a>
+        </div>
             <div class="card-body">
-              <h5>{{ el.title|truncatechars:35}}</h5>
+              <a href="{% url 'news_detail' el.id %}" class="a">
+                <h5>{{ el.title|truncatechars:35}}</h5> 
+              </a>
               <p >{{ el.full_text|truncatechars:65|safe }}</p>
             </div>
           </div>
@@ -109,16 +113,34 @@
 </fon>
 
 <main1>
-<div class="container">
-     <ul class="stolb">
+<!-- <div class="container"> -->
+
+
+  {% for videos in video  %}
+  <div class="baisal__slaide">
+    <p class="slides__p">Видео Галерия</p>
+        <div class="boke">
+          <iframe src="{{ videos.url}}"></iframe>
+        </div> 
+      </div>
+      {% endfor %}      
+     
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+     
+
+
+
+
+     <!-- <ul class="stolb">
        {% for videos in video  %}
             <li class="li">
               <iframe width="410" height="200"  src="{{ videos.url}}" frameborder="0"
                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>></iframe>
             </li>
         {% endfor %}
-      </ul>
-</div>
+      </ul> -->
+<!-- </div> -->
 
 </main1>
 

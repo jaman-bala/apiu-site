@@ -10,7 +10,7 @@ from easy_thumbnails.conf import Settings as thumbnail_settings
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'django-insecure-=@0k%^7cdpu7cq9=yu16&(2t-xqa$(6)gehker8awr@*2b03t'
 
-DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = ["*"]
 
 
@@ -73,23 +73,23 @@ TEMPLATES = [
 WSGI_APPLICATION = 'backend.config.wsgi.application'
 
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.getenv("POSTGRES_DB",default='apiu_db'),
-        'USER' : os.getenv("POSTGRES_USER",default='apiu_superuser'),
-        'PASSWORD' : os.getenv("POSTGRES_PASSWORD",default='ZAQ!@#$%tgb'),
-        'HOST' : os.getenv("POSTGRES_HOST",default='127.0.0.1'),
-        'PORT' : os.getenv("POSTGRES_PORT", default='5432'),
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': os.getenv("POSTGRES_DB",default='apiu_db'),
+#         'USER' : os.getenv("POSTGRES_USER",default='apiu_superuser'),
+#         'PASSWORD' : os.getenv("POSTGRES_PASSWORD",default='ZAQ!@#$%tgb'),
+#         'HOST' : os.getenv("POSTGRES_HOST",default='127.0.0.1'),
+#         'PORT' : os.getenv("POSTGRES_PORT", default='5432'),
+#     }
+# }
 
 
 # Password validation
@@ -140,12 +140,16 @@ django.conf.locale.LANG_INFO = LANG_INFO
 global_settings.LANGUAGES = global_settings.LANGUAGES + [("ky", 'Кыргызча')]
 LOCALE_PATHS = [os.path.join(BASE_DIR, "locale")]
 
-# Static files (CSS, JavaScript, Images)
+
 STATIC_URL = '/static/'
-STATIC_ROOT = 'static/'
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-]
+STATIC_ROOT = os.path.join(BASE_DIR, '/static')
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+# Static files (CSS, JavaScript, Images)
+# STATIC_URL = '/static/'
+# if DEBUG:
+#     STATIC_ROOT = os.path.join(BASE_DIR, '/static')
+# else:
+#     STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 
 # MEDIA
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -153,15 +157,15 @@ MEDIA_URL = '/media/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # STOREGE
-DEFAULT_FILE_STORAGE = "minio_storage.storage.MinioMediaStorage"
-MINIO_STORAGE_ENDPOINT = 'http://base.apiu.kg:8080'
-MINIO_STORAGE_ACCESS_KEY = 's3igtWTcQqq2uyp7'
-MINIO_STORAGE_SECRET_KEY = 'DozBIJDceDimmGHLwUaMDiX8j13bF2oM'
-MINIO_STORAGE_USE_HTTPS = False
-MINIO_STORAGE_MEDIA_BUCKET_NAME = 'media'
-MINIO_STORAGE_AUTO_CREATE_MEDIA_BUCKET = True
-MINIO_STORAGE_STATIC_BUCKET_NAME = 'static'
-MINIO_STORAGE_AUTO_CREATE_STATIC_BUCKET = True
+# DEFAULT_FILE_STORAGE = "minio_storage.storage.MinioMediaStorage"
+# MINIO_STORAGE_ENDPOINT = 'http://base.apiu.kg:8080'
+# MINIO_STORAGE_ACCESS_KEY = 's3igtWTcQqq2uyp7'
+# MINIO_STORAGE_SECRET_KEY = 'DozBIJDceDimmGHLwUaMDiX8j13bF2oM'
+# MINIO_STORAGE_USE_HTTPS = False
+# MINIO_STORAGE_MEDIA_BUCKET_NAME = 'media'
+# MINIO_STORAGE_AUTO_CREATE_MEDIA_BUCKET = True
+# MINIO_STORAGE_STATIC_BUCKET_NAME = 'static'
+# MINIO_STORAGE_AUTO_CREATE_STATIC_BUCKET = True
 
 
 CKEDITOR_UPLOAD_PATH = 'uploads/'
