@@ -1,3 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500&display=swap');
+.section__one {
+}
+.container__one {
+  width: 1400px !important;
+  margin: 0 auto; 
+  position: relative;
+
+}
+.container__img {
+  width: 1400px !important;
+  height: 1000px !important;
+  background-repeat: no-repeat;
+  background-size: cover; 
+}
+.container__img__h1{
+  color: #FFFF;
+  position: absolute;
+  left: 10%;
+  bottom: 20%;
+  font: 300 50px/90%'Mono';
+}
+.container__img__btn{
+ width: 200px;
+ height: 50px;
+ border-radius: 15px;
+ font-size: 20px;
+ background-color: #005cbf;
+ color: white;  
+ position: absolute;
+ left: 10%;
+ bottom: 10%;
+}
+
+
+.section__two {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container__news{
+  width: 1260px;
+  margin-top: 100px;
+}
+.news__cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.card__new__img {
+  width: 530px;
+  height: 550px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+.card__new__img:hover {
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+.news__img {
+  width: 530px !important;
+  height: 300px !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+}
+
+.new__description__p {
+  font: 300 30px/90%'Mono';
+  padding-top: 10px;
+  color: #95999c;
+}
+.card__new__title{
+  font: 400 40px/90%'Mono';
+  padding-left: 50px;
+}
+
+
+.container__gallery {
+  width: 1300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 50px auto;
+
+}
+.gallery__box {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.gallery__box__h2{
+  font: 400 40px/90%'Mono';
+  margin-left: 30px;
+}
+/* .gallery__box a{
+  color: black;
+  text-decoration: none;
+} */
+.gallery__box__img {
+}
+.gallery__img {
+  width: 500px;
+  height: 300px;
+  border-radius: 5px;
+}
+.gallery__box__img:hover {
+  transform: scale(1.1);
+  z-index: 1;
+}
+.gallery__box__video {
+ 
+}
+.video__iframe {
+  width: 500px;
+  height: 300px;
+  border-radius: 5px;
+}
+.video__iframe:hover {
+  transform: scale(1.1);
+  z-index: 1;
+}
 
 .text-center{
     font-size: 40px;

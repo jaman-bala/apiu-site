@@ -8,10 +8,10 @@ from backend.apps.news.models import Articles
     
 
 def index(request):
-    video = Video.objects.all()[:3]
-    gallery = Gallery.objects.all()[:5]
-    photos = Photo.objects.all()
-    news = Articles.objects.all()[:6]        # если добавить то только выйдет 6 информации[:6]
+    video = Video.objects.all()[:2]
+    gallery = Gallery.objects.all()[:2]
+    photos = Photo.objects.all()[:1]
+    news = Articles.objects.all()[:4]        # если добавить то только выйдет 6 информации[:6]
     context = {
         "photos":photos,
         "video":video,

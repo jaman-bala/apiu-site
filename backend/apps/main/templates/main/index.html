@@ -1,148 +1,75 @@
 {% extends 'main/base.html' %} {% block content %} {% load static %}
 {% load i18n %}
 
-<main3>
-  <div class="container__swipers">
-  <div class="swiper mySwiper">
+
+<main>
+  <section class="section__one">
     {%for photo in photos%}
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <img src="{{ photo.img1.url }}"  alt="Error404-img...">
-        <div class="carousel-caption">
-          <h5>{{ photo.title1 }}</h5>
-          <p>{{photo.text1}}</p>
-        </div>
-      </div>
-      
-      <div class="swiper-slide">
-        <img src="{{ photo.img2.url }}" alt="Error404-img...">
-        <div class="carousel-caption">
-          <h5>{{ photo.title2 }}</h5>
-          <p>{{photo.text2}}</p>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <img src="{{ photo.img3.url }}" alt="Error404-img...">
-        <div class="carousel-caption">
-          <h5>{{ photo.title3 }}</h5>
-          <p>{{photo.text3}}</p>
-        </div>
-      </div>
-      
-      <div class="swiper-slide">
-        <img src="{{ photo.img4.url }}" alt="Error404-img...">
-        <div class="carousel-caption">
-          <h5>{{ photo.title4 }}</h5>
-          <p>{{photo.text4}}</p>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <img src="{{ photo.img5.url }}" alt="Error404-img...">
-        <div class="carousel-caption">
-          <h5>{{ photo.title5 }}</h5>
-          <p>{{photo.text5}}</p>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <img src="{{ photo.img6.url }}" alt="Error404-img...">
-        <div class="carousel-caption">
-          <h5>{{ photo.title6 }}</h5>
-          <p>{{photo.text6}}</p>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <img src="{{ photo.img7.url }}" alt="Error404-img...">
-        <div class="carousel-caption">
-          <h5>{{ photo.title7 }}</h5>
-          <p>{{photo.text7}}</p>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <img src="{{ photo.img8.url }}" alt="Error404-img...">
-        <div class="carousel-caption">
-          <h5>{{ photo.title8 }}</h5>
-          <p>{{photo.text8}}</p>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <img src="{{ photo.img9.url }}"alt="Error404-img...">
-        <div class="carousel-caption">
-          <h5>{{ photo.title9 }}</h5>
-          <p>{{photo.text9}}</p>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <img src="{{ photo.img10.url }}"alt="Error404-img...">
-        <div class="carousel-caption">
-          <h5>{{ photo.title10 }}</h5>
-          <p>{{photo.text10}}</p>
-        </div>
+    <div class="container__one">
+      <img src="{{ photo.img1.url }}" alt="" class="container__img">
+     <h1 class="container__img__h1">{{photo.title}}</h1>
+      <a href="/"> <button class="container__img__btn">LEARN MORE</button></a> 
+    </div>
+    {% endfor %}
+  </section>
+  <section class="section__two">
+    <div class="container__news">
+      <div class="news__cards">
+        {% for el in news %}
+       <div class="card__new">
+          <div class="card__new__img">
+            <a href="{% url 'news_detail' el.id %}">
+            <img src="{{ el.img.url }}" alt="News" class="news__img">
+          </a>
+             <h3 class="card__new__title">{{ el.title|truncatechars:35}}</h3>
+            <p class="new__description__p">{{ el.full_text|truncatechars:155|safe }}</p>
+          </div>
+       </div>
+       {% endfor %}
       </div>
     </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-pagination"></div>
-    {%endfor%}
-  </div>
-</div>
-</main3>
-
-<fon class='fon'>
-  <div class="container">
-    <h1 class="ne">Новости</h1>
-    <div class="row">
-      {% for el in news %}
-      <div class="col-md-6 mb-4">
-        <div class="card">
-          <div class="card__img">
-          <a href="{% url 'news_detail' el.id %}">
-            <img src="{{ el.img.url }}" alt="News" class="card-img-top">
+  </section>
+  <section class="section__there">
+    <div class="container__gallery">
+      <div class="gallery__box">
+        <h2 class="gallery__box__h2">
+          <a href="{% url 'gallery' %}">
+          Галерия
+        </a>
+        </h2>
+        {% for galleries in gallery %}
+        <div class="gallery__box__img">
+          <a href="{% url 'gallery_detail' galleries.id %}">
+          <img src="{{ galleries.photo_add.url }}" alt="" class="gallery__img">
           </a>
         </div>
-            <div class="card-body">
-              <a href="{% url 'news_detail' el.id %}" class="a">
-                <h5>{{ el.title|truncatechars:35}}</h5> 
-              </a>
-              <p >{{ el.full_text|truncatechars:65|safe }}</p>
-            </div>
-          </div>
-        </div>
-      {% endfor %}
-    </div>
-  </div>
-</fon>
-
-<main1>
-<!-- <div class="container"> -->
-
-
-  {% for videos in video  %}
-  <div class="baisal__slaide">
-    <p class="slides__p">Видео Галерия</p>
-        <div class="boke">
-          <iframe src="{{ videos.url}}"></iframe>
-        </div> 
-      </div>
-      {% endfor %}      
-     
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-     
-
-
-
-
-     <!-- <ul class="stolb">
-       {% for videos in video  %}
-            <li class="li">
-              <iframe width="410" height="200"  src="{{ videos.url}}" frameborder="0"
-               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>></iframe>
-            </li>
         {% endfor %}
-      </ul> -->
-<!-- </div> -->
+      </div>
+      <div class="gallery__box">
+        <h2 class="gallery__box__h2">Видео Галерия</h2>
+        {% for videos in video  %}
+        <div class="gallery__box__video">
+          <a href="{{ videos.url}}" target="_blank">
+          <iframe src="{{ videos.url}}"  class="video__iframe">
+          </iframe> 
+        </a>
+        </div>
+        {% endfor %} 
+      </div>
+      
+     </div>
+  </section>
+</main>
 
-</main1>
+
+
+
+
+
+
+
+
+
 
 <main2>
     <h1 class="text-center">Наши партнеры</h1>
