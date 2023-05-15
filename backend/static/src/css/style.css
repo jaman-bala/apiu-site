@@ -99,10 +99,10 @@
   font: 400 40px/90%'Mono';
   margin-left: 30px;
 }
-/* .gallery__box a{
+.gallery__box__h2__a{
   color: black;
   text-decoration: none;
-} */
+}
 .gallery__box__img {
 }
 .gallery__img {
