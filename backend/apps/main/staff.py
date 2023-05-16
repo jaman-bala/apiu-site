@@ -1,6 +1,7 @@
 from django.db import models
 
 class Staff(models.Model):
+    photo = models.ImageField('Добавить фото', upload_to='photo', blank=True)
     title = models.CharField('Ф.И.О', max_length=255, blank=True)
     position = models.CharField('Должность', max_length=255, blank=True)
     phone = models.CharField('Телефон', max_length=255, blank=True)

@@ -1,49 +1,8 @@
 {% extends 'main/base.html' %} {% block content %} {% load static %}
 <section class="section__one">
-	<div class="container__box">
-		<div class="box__dir">
-			<div class="director">
-				<div class="direcrot__box">
-					<img src="https://st-1.akipress.org/cdn-st-0/qX4/J/801211.9406f28bb91c8821b468f9804f3400d7.500.jpg" alt="">
-				</div>
-				<h1 class="box__h1">Тулеев Тамчыбек Карыбекович</h1>
-				<p class="box__p">Директор</p>
-			</div>
-		</div>
-		
-		<div class="box__employees">
-			<div class="employees">
-				<div class="direcrot__box">
-					<img src="https://st-1.akipress.org/cdn-st-0/qX4/J/801211.9406f28bb91c8821b468f9804f3400d7.500.jpg" alt="">
-				</div>
-				<h1 class="box__h1">Калыков  Байсалбек  Талипжанович</h1>
-				<p class="box__p">должность</p>
-			</div>
-			<div class="employees">
-				 <div class="direcrot__box">
-					<img src="https://st-1.akipress.org/cdn-st-0/qX4/J/801211.9406f28bb91c8821b468f9804f3400d7.500.jpg" alt="">
-				 </div>
-				 <h1 class="box__h1">Калыков Байсалбек Талипжанович</h1>
-				<p class="box__p">должность</p>
-			</div>
-			<div class="employees">
-				<div class="direcrot__box">
-					<img src="https://st-1.akipress.org/cdn-st-0/qX4/J/801211.9406f28bb91c8821b468f9804f3400d7.500.jpg" alt="">
-				</div>
-				<h1 class="box__h1">Калыков Байсалбек Талипжанович</h1>
-				<p class="box__p">должность</p>
-			</div>
-			<div class="employees">
-				<div class="direcrot__box">
-					<img src="https://st-1.akipress.org/cdn-st-0/qX4/J/801211.9406f28bb91c8821b468f9804f3400d7.500.jpg" alt="">
-				</div>
-				<h1 class="box__h1">Калыков Байсалбек Талипжанович</h1>
-				<p class="box__p">должность</p>
-			</div>
-		</div>
-	</div>
-</section>
-<div class="page-wrapper">
+	
+
+<!-- <div class="page-wrapper">
 	
 	<div class="left-panel-wrapper">
 		<div class="left-panel">
@@ -55,6 +14,7 @@
 					<table class="table">
 						<thead>
 							<tr>
+								<th>Фотографии</th>
 								<th>Ф.И.О</th>
 								<th>Должность</th>
 								<th>Телефон добавочный </th>
@@ -66,6 +26,11 @@
 						<tbody>
 							{% for staf in staff %}
 							<tr>
+								<td>
+									<div class="direcrot__box">
+										<img src="{{ staf.photo.url }}" alt="">
+									</div>
+									</td>
 								<td>{{ staf.title }}</td>
 								<td>{{ staf.position }}</td>
 								<td>{{ staf.phone }}</td>
@@ -80,7 +45,7 @@
 	</div>
 	
 
-	<div class="content-wrapper">
+	<!-- <div class="content-wrapper">
 		<div class="about">
 			<p> <b>Адрес:</b> г. Бишкек, ул. Киевская, 96 а, 5 этаж<br>
 				<b>Телефоны:</b> (312) 665 625, (312) 975 974,<br>
@@ -123,6 +88,39 @@
 				</li>
 				</ul>
 		</div>
-	</div>
+	</div> -->
+</div> -->
+<div class="employees__table">
+	<h4 class="table__h4"> Данные сотрудников</h4>
+	<table class="table__employees">
+	<thead>
+		<tr>
+			<th>Фотографии</th>
+			<th>Ф.И.О</th>
+			<th>Должность</th>
+			<th>Телефон добавочный </th>
+			<th>Эл. почта</th>
+			<th>Кабинет</th>
+			
+		</tr>
+	</thead>
+	<tbody>
+		{% for staf in staff %}
+		<tr>
+			<td>
+				<div class="direcrot__box">
+					<img src="{{ staf.photo.url }}" alt="">
+				</div>
+				</td>
+			<td>{{ staf.title }}</td>
+			<td>{{ staf.position }}</td>
+			<td>{{ staf.phone }}</td>
+			<td>{{ staf.email }}</td>
+			<td>{{ staf.kab }}</td>	
+		</tr>
+		{%endfor%}
+	</tbody>
+</table>
 </div>
+</section>
 {%endblock%}
