@@ -12,7 +12,7 @@
     <div class="container__video__gallery">
         <h1 class="video__gallery__h1">Видео Галерия</h1>
         <div class="video">
-            {% for vid in videos %}
+            {% for vid in videos_gallery %}
         <div class="video__gallery">
             <a href="{{ vid.url}}" target="_blank">
                 <iframe src="{{ vid.url}}"  class="iframe__video">

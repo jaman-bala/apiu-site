@@ -12,20 +12,16 @@ def index(request):
     photos = Photo.objects.all()[:1]
     news = Articles.objects.all()[:4]        # если добавить то только выйдет 6 информации[:6]
     context = {
-        "photos":photos,
-        "video":video,
+        "photos": photos,
+        "video": video,
         "news": news,
         "gallery": gallery,
     }
     return render(request, 'main/index.html', context)
 
     
-
-
 def about(request):
     return render(request, 'main/about.html')   
-
-
 
 
 def staff(request):
