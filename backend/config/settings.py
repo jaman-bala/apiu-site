@@ -73,23 +73,23 @@ TEMPLATES = [
 WSGI_APPLICATION = 'backend.config.wsgi.application'
 
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.getenv("POSTGRES_DB",default='apiu_db'),
-        'USER' : os.getenv("POSTGRES_USER",default='apiu_superuser'),
-        'PASSWORD' : os.getenv("POSTGRES_PASSWORD",default='ZAQ!@#$%tgb'),
-        'HOST' : os.getenv("POSTGRES_HOST",default='127.0.0.1'),
-        'PORT' : os.getenv("POSTGRES_PORT", default='5432'),
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': os.getenv("POSTGRES_DB",default='apiu_db'),
+#         'USER' : os.getenv("POSTGRES_USER",default='apiu_superuser'),
+#         'PASSWORD' : os.getenv("POSTGRES_PASSWORD",default='ZAQ!@#$%tgb'),
+#         'HOST' : os.getenv("POSTGRES_HOST",default='127.0.0.1'),
+#         'PORT' : os.getenv("POSTGRES_PORT", default='5432'),
+#     }
+# }
 
 
 # Password validation
