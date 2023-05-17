@@ -61,13 +61,15 @@
               <li><a href="{% url 'project' %}">ПОДР</a>   
               </ul>
           <li><a href="{% url 'news_home' %}">НОВОСТИ</a></li>
-          <li><a href="{% url 'gallery' %}">ГАЛЕРЕЯ</a></li>
+          <li><a href="{% url 'gallery' %}">ГАЛЕРЕЯ</a>
+          <ul>
+              <li><a href="{% url 'video' %}">ВИДЕО</a>
+          </ul>
           <li><a href="{% url 'tender' %}">ТЕНДЕРЫ</a>
             <ul>
               <li><a href="{% url 'vacancy' %}">ВАКАНСИИ</a></li>
               <li><a href="{% url 'other' %}">ДРУГОЕ</a></li>
             </ul>
-          
           <li><a href="">ОБРАТНАЯ СВЯЗЬ</a>
           <ul>
             <li><a href="{% url 'online' %}">ВОПРОС</a></li>

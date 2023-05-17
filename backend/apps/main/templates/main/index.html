@@ -8,7 +8,7 @@
     <div class="container__one">
       <img src="{{ photo.img1.url }}" alt="" class="container__img">
      <h1 class="container__img__h1">{{photo.title}}</h1>
-      <a href="/"> <button class="container__img__btn">LEARN MORE</button></a> 
+      <a href="{% url 'news_home' %}"> <button class="container__img__btn">Новости</button></a>
     </div>
     {% endfor %}
   </section>
@@ -46,7 +46,11 @@
         {% endfor %}
       </div>
       <div class="gallery__box">
-        <h2 class="gallery__box__h2">Видео Галерия</h2>
+        <h2 class="gallery__box__h2">
+            <a href="{% url 'gallery' %}" class="gallery__box__h2__a">
+            Видео Галерия
+         </a>
+        </h2>
         {% for videos in video  %}
         <div class="gallery__box__video">
           <a href="{{ videos.url}}" target="_blank">

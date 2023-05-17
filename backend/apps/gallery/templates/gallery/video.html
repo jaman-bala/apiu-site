@@ -5,27 +5,27 @@
 
 
  <main7>
-           
 
 
 
-
+<vodeo>
     <div class="container__video__gallery">
-      <h1 class="video__gallery__h1">Видео Галерия</h1>
-      <div class="video">
-      <div class="video__gallery">
-          <img src="http://127.0.0.1:8000/media/img/esa_Mbjo7JN.jpg" alt="" class="iframe__video">
-      </div>
-      <div class="video__gallery">
-          <img src="http://127.0.0.1:8000/media/img/esa_Mbjo7JN.jpg" alt="" class="iframe__video">
-      </div>
-      <div class="video__gallery">
-          <img src="http://127.0.0.1:8000/media/img/esa_Mbjo7JN.jpg" alt="" class="iframe__video">
-      </div>
-  </div>
+        <h1 class="video__gallery__h1">Видео Галерия</h1>
+        <div class="video">
+            {% for vid in videos %}
+        <div class="video__gallery">
+            <a href="{{ vid.url}}" target="_blank">
+                <iframe src="{{ vid.url}}"  class="iframe__video">
+                </iframe>
+              </a>
+        </div>
+        {% endfor %}
     </div>
-   
-  </main7>
+      </div>
+
+ </div>
+</vodeo>
+
 
 
 

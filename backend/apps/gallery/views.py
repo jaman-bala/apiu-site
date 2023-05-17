@@ -3,7 +3,7 @@ from .models import Gallery
 from django.db.models import Q
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import DetailView, ListView
-from backend.apps.main.additional import Video
+from .models import Video
 
 class GalleryView(ListView):
         model = Gallery
@@ -30,9 +30,9 @@ class GalleryDetailView(DetailView):
         queryset = Gallery.objects.all()
 
 
-class Video(ListView):
+class VideoView(ListView):
         model = Video.objects.all()
-        template_name = "gallery/gallery.html"
+        template_name = "gallery/video.html"
         context_object_name = 'videos'
         paginate_by = 100
         queryset = Video.objects.all()
