@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.utils.safestring import mark_safe
-from .models import Gallery
+from .models import Gallery, Video
 
 
 
@@ -15,3 +15,10 @@ class GalleryAdmin(admin.ModelAdmin):
 
     def preview(self, obj):
         return mark_safe(f'<img src="{obj.photo_add.url}" style="max-height: 330px;">')
+
+
+@admin.register(Video)
+class VideoAdmin(admin.ModelAdmin):
+    list_display = ('title', 'url', 'is_active', 'created')
+    search_fields = ('title',)
+    list_filter = ("is_active", "created",)
