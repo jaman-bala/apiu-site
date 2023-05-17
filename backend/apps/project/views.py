@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import File
+from .models import File, Category, Product
 from .disain import Disain
 from .report import Report
 from .study import Study
@@ -7,9 +7,13 @@ from .study import Study
 
 
 def project(request):
-    project = File.objects.all()
+    files = File.objects.all()
+    category = Category.objects.all()
+    projects = Product.objects.all()
     context = {
-        "project": project
+        "category": category,
+        "projects": projects,
+        "files": files,
     }
     return render(request, 'project/project.html', context )
 
