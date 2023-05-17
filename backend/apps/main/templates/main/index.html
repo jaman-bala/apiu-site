@@ -2,7 +2,7 @@
 {% load i18n %}
 
 
-<main>
+
   <section class="section__one">
     {%for photo in photos%}
     <div class="container__one">
@@ -21,8 +21,8 @@
             <a href="{% url 'news_detail' el.id %}">
             <img src="{{ el.img.url }}" alt="News" class="news__img">
           </a>
-             <h3 class="card__new__title">{{ el.title|truncatechars:10}}</h3>
-            <p class="new__description__p">{{ el.full_text|truncatechars:20|safe }}</p>
+             <h3 class="card__new__title">{{ el.title|truncatechars:35}}</h3>
+           <!-- <h6 class="new__description__p">{{ el.full_text|truncatechars:45|safe }}</h6>-->
           </div>
        </div>
        {% endfor %}
@@ -63,7 +63,7 @@
       
      </div>
   </section>
-</main>
+
 
 
 
