@@ -4,7 +4,7 @@
 }
 .container__one {
   width: 1400px !important;
-  margin: 0 auto; 
+  margin: 0 -100px; 
   position: relative;
 
 }
@@ -35,34 +35,46 @@
 
 
 .section__two {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 1300px;
+  margin: 0 auto;
 }
 .container__news {
   width: 1260px;
-  margin-top: 100px;
+  height: 1000px;
+  margin-top: 100px;  
+  
 }
-.news__cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 50px;
-}
+.news__cards__baisal {
+ width: 100%;
+ height: 100%;
+ display: flex;
+ justify-content: space-between;
+ flex-wrap: wrap;
 
-.card__new__img {
+}
+.card__new{
   width: 530px;
+  height: 500px;
+  margin-bottom: 20px;
+}
+/* .card__new:nth-child(3){
+ margin-left: 730px;
+} */
+.card__new__img {
+  width: 530px ;
   height: 480px;
   border-radius: 5px;
   display: flex;
-  flex-direction: column;
+ flex-direction: column;
   box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
   margin-bottom: 50px;
   cursor: pointer;
+
 }
-.card__new__img:hover {
+/* .card__new__img:hover {
   transform: scale(1.1);
   z-index: 1;
-}
+} */
 
 .news__img {
   width: 530px;
@@ -82,19 +94,30 @@
   padding-left: 50px;
 }
 
-
+.div{
+ display: flex;
+ align-items: center;
+ 
+}
 .container__gallery {
-  width: 1300px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 50px auto;
-
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 120px;
+   margin-left: -800px; 
 }
 .gallery__box {
   display: flex;
   flex-direction: column;
   gap: 50px;
+  margin-bottom: 40px;
+}
+.gallery__box__vid {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 50px;
+  margin-bottom: 40px;
 }
 .gallery__box__h2{
   font: 400 40px/90%'Mono';
@@ -131,7 +154,7 @@
 .text-center{
     font-size: 40px;
     text-align: center;
-    margin-top: 15px;
+    margin-top: 455px;
 }
 .container-box {
     width: 90%;
@@ -169,11 +192,14 @@
     transform: scale(1.3);
     z-index: 2;
 }
-
+main2{
+  margin-top: 300px;
+}
 .footer {
     /* background: #3c5da8; */
     background: #000000;
     color: rgb(255, 255, 255);
+    margin-top: 200px;
   }
 .footer__title {
     font-weight: 500;

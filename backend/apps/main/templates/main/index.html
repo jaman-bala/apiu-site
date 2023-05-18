@@ -14,7 +14,7 @@
   </section>
   <section class="section__two">
     <div class="container__news">
-      <div class="news__cards">
+      <div class="news__cards__baisal">
         {% for el in news %}
        <div class="card__new">
           <div class="card__new__img">
@@ -22,14 +22,16 @@
             <img src="{{ el.img.url }}" alt="News" class="news__img">
           </a>
              <h3 class="card__new__title">{{ el.title|truncatechars:35}}</h3>
-           <!-- <h6 class="new__description__p">{{ el.full_text|truncatechars:45|safe }}</h6>-->
+           <h6 class="new__description__p">{{ el.full_text|truncatechars:45|safe }}</h6>
           </div>
        </div>
        {% endfor %}
       </div>
     </div>
+   
   </section>
   <section class="section__there">
+    <div class="div">
     <div class="container__gallery">
       <div class="gallery__box">
         <h2 class="gallery__box__h2">
@@ -45,7 +47,7 @@
         </div>
         {% endfor %}
       </div>
-      <div class="gallery__box">
+      <div class="gallery__box__vid">
         <h2 class="gallery__box__h2">
             <a href="{% url 'video' %}" class="gallery__box__h2__a">
             Видео Галерия
@@ -62,6 +64,7 @@
       </div>
       
      </div>
+    </div>
   </section>
 
 

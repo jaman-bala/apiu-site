@@ -10,7 +10,7 @@ def index(request):
     video = Video.objects.all()[:2]
     gallery = Gallery.objects.all()[:2]
     photos = Photo.objects.all()[:1]
-    news = Articles.objects.all()[:4]        # если добавить то только выйдет 6 информации[:6]
+    news = Articles.objects.all()[:3]        # если добавить то только выйдет 6 информации[:6]
     context = {
         "photos": photos,
         "video": video,
