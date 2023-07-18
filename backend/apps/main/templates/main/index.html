@@ -19,7 +19,7 @@
             <a href="{% url 'news_detail' el.id %}">
             <img src="{{ el.img.url }}" alt="News" class="news__img">
           </a>
-             <h3 class="card__new__title">{{ el.title|truncatechars:35}}</h3>
+             <h3 class="card__new__title">{{ el.title|truncatechars:10}}</h3>
            <h6 class="new__description__p">{{ el.full_text|truncatechars:45|safe }}</h6>
           </div>
        </div>
@@ -28,6 +28,7 @@
     </div>
    
   </section>
+  <container>
   <section class="section__there">
     <div class="div">
     <div class="container__gallery">
@@ -62,6 +63,7 @@
      </div>
     </div>
   </section>
+</container>
 
 <main2>
     <h1 class="text-center">Наши партнеры</h1>
