@@ -1,8 +1,6 @@
 {% extends 'main/base.html' %} {% block content %} {% load static %}
 {% load i18n %}
 
-
-
   <section class="section__one">
     {%for photo in photos%}
     <div class="container__one">
@@ -36,7 +34,6 @@
       <div class="gallery__box">
         <h2 class="gallery__box__h2">
           <a href="{% url 'gallery' %}" class="gallery__box__h2__a">
-          Галерия
         </a>
         </h2>
         {% for galleries in gallery %}
@@ -50,7 +47,6 @@
       <div class="gallery__box__vid">
         <h2 class="gallery__box__h2">
             <a href="{% url 'video' %}" class="gallery__box__h2__a">
-            Видео Галерия
          </a>
         </h2>
         {% for videos in video  %}
@@ -66,17 +62,6 @@
      </div>
     </div>
   </section>
-
-
-
-
-
-
-
-
-
-
-
 
 <main2>
     <h1 class="text-center">Наши партнеры</h1>
